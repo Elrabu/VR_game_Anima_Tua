@@ -3,24 +3,20 @@ using UnityEngine;
 public class BallBullet : BulletScript
 {
     public float shootForce;
-    
+
     public float timeToDestroy;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        setUpBullet(shootForce);
+        setUpBullet(shootForce, timeToDestroy);
     }
 
-    // Update is called once per frame
-    void Update()
+    //Use this to override the base class:
+   /* public override void HandleCollision(Collision collision)
     {
-        RemoveBullet(timeToDestroy);
-    }
-
-    void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log("Collided with " + collision.gameObject.name);
-        //Destroy(gameObject);
-    }
+        Debug.Log("Child collision" + collision.gameObject.name);
+        //call the method of the base class aswell:
+        base.HandleCollision(collision);
+    } */
 }
