@@ -4,12 +4,18 @@ public class BulletScript : MonoBehaviour
 {  
     private float lifetime;
     Rigidbody rigidbody;
-    public void setUpBullet(float shootForce, float timeToDestroy)
+
+    protected GameObject spawnedParticle;
+    protected Transform spawnPoint;
+
+    public void setUpBullet(float shootForce, float timeToDestroy, GameObject spawned, Transform point)
     {
         rigidbody = GetComponent<Rigidbody>();
         GetComponent<Rigidbody>().AddForce(transform.forward * shootForce);
 
         lifetime = timeToDestroy;
+        spawnedParticle = spawned;
+        spawnPoint = point;
     }
 
     void Update()
@@ -24,10 +30,19 @@ public class BulletScript : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         HandleCollision(collision);
+        spawnParticleSystem(spawnedParticle, spawnPoint);
     }
 
     public virtual void HandleCollision(Collision collision) //base class method that can be overwritten
     {
         Debug.Log("Collided with" + collision.gameObject.name);
     }
+
+    void spawnParticleSystem(GameObject spawnedParticle, Transform spawnPoint)
+    {
+        GameObject particle = Instantiate(spawnedParticle, spawnPoint.position, spawnPoint.rotation);
+        particle.GetComponent<ParticleSystem>().Play();
+        Destroy(particle, 0.5f);
+    }
+    
 }
