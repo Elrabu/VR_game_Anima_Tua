@@ -18,7 +18,7 @@ public class ShootTestScript : MonoBehaviour
     void Update()
     {
         float value = shoot.action.ReadValue<float>();
-        Debug.Log("Value: " + value);
+        //Debug.Log("Value: " + value);
         if (value == 1 && trackShoot <= 0)
         {
             Instantiate(bulletPrefab, spawnPoint.position, spawnPoint.rotation);
