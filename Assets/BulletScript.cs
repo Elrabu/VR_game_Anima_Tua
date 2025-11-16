@@ -1,25 +1,49 @@
 using UnityEngine;
 
 public class BulletScript : MonoBehaviour
-{
-
-    public float shootForce = 1000;
+{  
+    private float lifetime;
     Rigidbody rigidbody;
-    public float timeToDestroy = 10;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    protected GameObject spawnedParticle;
+    protected Transform spawnPoint;
+
+    public void setUpBullet(float shootForce, float timeToDestroy, GameObject spawned, Transform point)
     {
         rigidbody = GetComponent<Rigidbody>();
-        rigidbody.AddForce(transform.forward * shootForce);
+        GetComponent<Rigidbody>().AddForce(transform.forward * shootForce);
+
+        lifetime = timeToDestroy;
+        spawnedParticle = spawned;
+        spawnPoint = point;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        timeToDestroy -= Time.deltaTime;
-        if (timeToDestroy <= 0)
+        lifetime -= Time.deltaTime;
+        if (lifetime <= 0)
         {
             Destroy(gameObject);
         }
     }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        HandleCollision(collision);
+        spawnParticleSystem(spawnedParticle, spawnPoint);
+    }
+
+    public virtual void HandleCollision(Collision collision) //base class method that can be overwritten
+    {
+        Debug.Log("Collided with" + collision.gameObject.name);
+        Destroy(gameObject);
+    }
+
+    void spawnParticleSystem(GameObject spawnedParticle, Transform spawnPoint)
+    {
+        GameObject particle = Instantiate(spawnedParticle, spawnPoint.position, spawnPoint.rotation);
+        particle.GetComponent<ParticleSystem>().Play();
+        Destroy(particle, 0.5f);
+    }
+    
 }
