@@ -35,7 +35,7 @@ public class BulletScript : MonoBehaviour
 
     public virtual void HandleCollision(Collision collision) //base class method that can be overwritten
     {
-        Debug.Log("Collided with" + collision.gameObject.name);
+       // Debug.Log("Collided with" + collision.gameObject.name);
         Destroy(gameObject);
     }
 
