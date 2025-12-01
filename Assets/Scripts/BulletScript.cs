@@ -3,7 +3,7 @@ using UnityEngine;
 public class BulletScript : MonoBehaviour
 {  
     private float lifetime;
-    Rigidbody rigidbody;
+    new Rigidbody rigidbody; //use new keyword because Unity thinks hiding was intended
 
     protected GameObject spawnedParticle;
     protected Transform spawnPoint;
