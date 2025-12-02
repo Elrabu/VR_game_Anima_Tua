@@ -7,7 +7,7 @@ public class CharacterControllerFollowScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 worldOffset = new Vector3(0.3f, -0.5f, 0f);
+        Vector3 worldOffset = new Vector3(0f, -0.5f, 0f);
         Debug.Log("Position: " + cam.transform.position);
         transform.position = cam.transform.position + worldOffset;
     }
