@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class OpenCloseBook : MonoBehaviour
 {
-    private Animator mAnimator;
+    [SerializeField] private Animator mAnimator;
     [SerializeField] private InputActionProperty interactleft;
     [SerializeField] private InputActionProperty interactright;
     private bool bookOpen = false;
@@ -12,29 +12,35 @@ public class OpenCloseBook : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        mAnimator = GetComponent<Animator>();
-        mAnimator.SetTrigger("Close");
+        if (mAnimator != null)
+        {
+            mAnimator.SetTrigger("Close");
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        float value = interactleft.action.ReadValue<float>();
-        
-        if (value == 1)
+        if (mAnimator != null)
         {
-            if (bookOpen == false && trackcooldown <= 0) //check for closed book and cooldown 0
+            float value = interactleft.action.ReadValue<float>();
+            float value2 = interactright.action.ReadValue<float>();
+        
+            if (value == 1 || value2 == 1)
             {
-                mAnimator.SetTrigger("Open");
-                bookOpen = true;
-                trackcooldown = cooldown;
-            } else if (bookOpen == true && trackcooldown <= 0) //check for opened book and cooldown 0
-            {
-                mAnimator.SetTrigger("Close");
-                bookOpen = false;
-                trackcooldown = cooldown;
+                if (bookOpen == false && trackcooldown <= 0) //check for closed book and cooldown 0
+                {
+                    mAnimator.SetTrigger("Open");
+                    bookOpen = true;
+                    trackcooldown = cooldown;
+                } else if (bookOpen == true && trackcooldown <= 0) //check for opened book and cooldown 0
+                {
+                    mAnimator.SetTrigger("Close");
+                    bookOpen = false;
+                    trackcooldown = cooldown;
+                }
             }
+            trackcooldown -= Time.deltaTime;
         }
-        trackcooldown -= Time.deltaTime;
     }
 }
