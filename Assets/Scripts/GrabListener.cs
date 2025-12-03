@@ -30,6 +30,6 @@ public class GrabListener : MonoBehaviour
     void OnRelease(SelectExitEventArgs args)
     {
         currentlyHeld = null;
-        Debug.Log("Released: " + args.interactableObject.transform.name);
+        //Debug.Log("Released: " + args.interactableObject.transform.name);
     }
 }
