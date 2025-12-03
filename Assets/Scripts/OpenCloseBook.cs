@@ -36,18 +36,23 @@ public class OpenCloseBook : MonoBehaviour
             if (itemRight != null)
             {
                 bookRight = itemRight.transform.name;
+                bookLeft = null;
             } else if (itemLeft != null)
             {
                 bookLeft = itemLeft.transform.name;
+                bookRight = null;
             } else
             {
                 bookLeft = "null";
                 bookRight = "null";
             }
-            //Debug.Log("Left: " + bookLeft + "Right: " + bookRight);
+            Debug.Log("Left: " + bookLeft + "Right: " + bookRight);
         
             if (valueLeft == 1 && bookLeft == "book" || valueRight == 1 && bookRight == "book")
             {
+                //Check here if book is being helf in the right of left hand
+                //also check if bookOpen is true, then spawn fire particle effect (Gameobject + particle System) on other hand
+                //Allow shooting projectiles
                 if (bookOpen == false && trackcooldown <= 0) //check for closed book and cooldown 0
                 {
                     mAnimator.SetTrigger("Open");
