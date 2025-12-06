@@ -8,6 +8,9 @@ public class OpenCloseBook : MonoBehaviour
     [SerializeField] private InputActionProperty interactright;
     [SerializeField] private GrabListener grabListenerRight;
     [SerializeField] private GrabListener grabListenerLeft;
+    public Transform spawnPoint;
+    public GameObject hand;
+    public GameObject firePrefab;
     private bool bookOpen = false;
     private float cooldown = 1f;
     float trackcooldown;
@@ -20,6 +23,12 @@ public class OpenCloseBook : MonoBehaviour
         {
             mAnimator.SetTrigger("Close");
         }
+        GameObject fire = Instantiate(firePrefab, spawnPoint.position, spawnPoint.rotation);
+        Debug.Log("Fire = " + fire);
+        GameObjectFollowScript follow = fire.GetComponent<GameObjectFollowScript>();
+        Debug.Log("Follow script found? " + (follow != null));
+        follow.SetHand(hand);
+
     }
 
     // Update is called once per frame
@@ -46,11 +55,13 @@ public class OpenCloseBook : MonoBehaviour
                 bookLeft = "null";
                 bookRight = "null";
             }
-            Debug.Log("Left: " + bookLeft + "Right: " + bookRight);
+           // Debug.Log("Left: " + bookLeft + "Right: " + bookRight);
         
             if (valueLeft == 1 && bookLeft == "book" || valueRight == 1 && bookRight == "book")
             {
-                //Check here if book is being helf in the right of left hand
+                
+
+                //Check here if book is being helf in the right or left hand
                 //also check if bookOpen is true, then spawn fire particle effect (Gameobject + particle System) on other hand
                 //Allow shooting projectiles
                 if (bookOpen == false && trackcooldown <= 0) //check for closed book and cooldown 0
