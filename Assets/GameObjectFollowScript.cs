@@ -2,10 +2,17 @@ using UnityEngine;
 
 public class GameObjectFollowScript : MonoBehaviour
 {
-    public GameObject hand;
-    // Update is called once per frame
+    private GameObject hand;
+
+    public void SetHand(GameObject handObject)
+    {
+        hand = handObject;
+    }
     void Update()
     {
-        transform.position = hand.transform.position;
+        if (hand != null)
+        {
+             transform.position = hand.transform.position;
+        }
     }
 }
