@@ -23,6 +23,12 @@ public class OpenCloseBook : MonoBehaviour
         {
             mAnimator.SetTrigger("Close");
         }
+        spawnFire();
+        
+    }
+
+    void spawnFire()
+    {
         GameObject fire = Instantiate(firePrefab, spawnPoint.position, spawnPoint.rotation);
         Debug.Log("Fire = " + fire);
         GameObjectFollowScript follow = fire.GetComponent<GameObjectFollowScript>();
