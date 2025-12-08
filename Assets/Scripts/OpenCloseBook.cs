@@ -51,11 +51,19 @@ public class OpenCloseBook : MonoBehaviour
     {
         if (currentFire != null)
         {
-            Destroy(currentFire);
+            var ps = currentFire.GetComponent<ParticleSystem>();
+            var ps_main = ps.main;
+            //use Unity built in System to let the particles fade out
+            ps_main.stopAction = ParticleSystemStopAction.Destroy;
+            ps.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+
             currentFire = null;
             fireactive = false;
 
             handshootScript.gameObject.SetActive(false); //Deactivate fireball shooter
+
+            
+
         }
     }
 
