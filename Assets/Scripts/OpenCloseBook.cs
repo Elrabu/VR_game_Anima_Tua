@@ -15,12 +15,13 @@ public class OpenCloseBook : MonoBehaviour
     private GameObject currentFire;
     private bool bookOpen = false;
     private float cooldown = 1f;
-    float trackcooldown;
-    string bookRight;
-    string bookLeft;
+    private float trackcooldown;
+    private string bookRight;
+    private string bookLeft;
     private string lastBookHand = null;
     private string currentBookHand = null;
-    bool fireactive = false;
+    private bool fireactive = false;
+    private Transform handshootScript;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -29,7 +30,6 @@ public class OpenCloseBook : MonoBehaviour
             mAnimator.SetTrigger("Close");
         }    
     }
-
     void spawnFire(Transform point, GameObject hand)
     {
         if (!fireactive)
@@ -41,6 +41,9 @@ public class OpenCloseBook : MonoBehaviour
         follow.SetHand(hand);
       //  Debug.Log("Hand = " + hand);
         fireactive = true;  
+        
+        handshootScript = hand.transform.GetChild(0);
+        handshootScript.gameObject.SetActive(true); //Activate fireball shooter
         }
     }
 
@@ -51,6 +54,8 @@ public class OpenCloseBook : MonoBehaviour
             Destroy(currentFire);
             currentFire = null;
             fireactive = false;
+
+            handshootScript.gameObject.SetActive(false); //Deactivate fireball shooter
         }
     }
 
@@ -113,7 +118,7 @@ public class OpenCloseBook : MonoBehaviour
                 }
             }
 
-            Debug.Log("Left: " + bookLeft + "Right: " + bookRight);
+           // Debug.Log("Left: " + bookLeft + "Right: " + bookRight);
             if (bookLeft == null && bookRight == null) //despawn fire if both book become null
             {
                 despawnFire();
