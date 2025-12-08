@@ -18,6 +18,8 @@ public class OpenCloseBook : MonoBehaviour
     float trackcooldown;
     string bookRight;
     string bookLeft;
+    private string lastBookHand = null;
+    private string currentBookHand = null;
     bool fireactive = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -64,15 +66,17 @@ public class OpenCloseBook : MonoBehaviour
         {
             var itemRight = grabListenerRight.CurrentlyHeld;
             var itemLeft = grabListenerLeft.CurrentlyHeld;
-            if (itemRight != null)
+            if (itemRight != null) //assign values if book is in right hand
             {
                 bookRight = itemRight.transform.name;
                 bookLeft = null;
-            } else if (itemLeft != null)
+                currentBookHand = "right";
+            } else if (itemLeft != null) //assign values if book is in left hand
             {
                 bookLeft = itemLeft.transform.name;
                 bookRight = null;
-            } else
+                currentBookHand = "left";
+            } else //set values to null if book was dropped
             {
                 bookLeft = null;
                 bookRight = null;
@@ -112,11 +116,15 @@ public class OpenCloseBook : MonoBehaviour
             Debug.Log("Left: " + bookLeft + "Right: " + bookRight);
             if (bookLeft == null && bookRight == null) //despawn fire if both book become null
             {
-                
+                despawnFire();
+            }
+            if (lastBookHand != currentBookHand)
+            {
                 despawnFire();
             }
 
             trackcooldown -= Time.deltaTime;
         }
+        lastBookHand = currentBookHand;
     }
 }
