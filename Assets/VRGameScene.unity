@@ -3964,7 +3964,7 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  bulletPrefab: {fileID: 314902055440044755, guid: 1ee6a16c5736e3d4091647954b3c858c, type: 3}
+  bulletPrefab: {fileID: 5380251738750858116, guid: 1ee6a16c5736e3d4091647954b3c858c, type: 3}
   spawnPoint: {fileID: 407314049}
   secondsBetweenShoot: 0.5
 --- !u!23 &651250536
@@ -4754,7 +4754,7 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  bulletPrefab: {fileID: 314902055440044755, guid: 1ee6a16c5736e3d4091647954b3c858c, type: 3}
+  bulletPrefab: {fileID: 5380251738750858116, guid: 1ee6a16c5736e3d4091647954b3c858c, type: 3}
   spawnPoint: {fileID: 1800767519}
   secondsBetweenShoot: 0.2
   grabListener: {fileID: 1954347487}
@@ -8300,7 +8300,7 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  bulletPrefab: {fileID: 314902055440044755, guid: 1ee6a16c5736e3d4091647954b3c858c, type: 3}
+  bulletPrefab: {fileID: 5380251738750858116, guid: 1ee6a16c5736e3d4091647954b3c858c, type: 3}
   spawnPoint: {fileID: 1417916289}
   secondsBetweenShoot: 0.5
 --- !u!23 &1431417551
