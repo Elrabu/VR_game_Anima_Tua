@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CharacterControllerFollowScript : MonoBehaviour
 {
-    public Camera cam;
+    [SerializeField] private Camera cam;
 
     // Update is called once per frame
     void Update()

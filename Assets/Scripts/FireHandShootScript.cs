@@ -3,10 +3,10 @@ using UnityEngine.InputSystem;
 
 public class FireHandShootScript : MonoBehaviour
 {
-    public InputActionProperty shoot; //need to be InputActionProperty!!
-    public GameObject bulletPrefab;
-    public Transform spawnPoint;
-    public float secondsBetweenShoot = 0.1f;
+    [SerializeField] private InputActionProperty shoot; //need to be InputActionProperty!!
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private Transform spawnPoint;
+    [SerializeField] private float secondsBetweenShoot = 0.1f;
     float trackShoot;
     void Update()
     {

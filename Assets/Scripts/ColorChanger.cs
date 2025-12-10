@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ColorChanger : MonoBehaviour
 {
-    public Color hitColor = Color.red;
+    [SerializeField] private Color hitColor = Color.red;
 
     public void ChangeColor()
     {

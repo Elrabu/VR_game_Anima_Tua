@@ -7,7 +7,7 @@ public class GrabListener : MonoBehaviour
     [SerializeField] private UnityEngine.XR.Interaction.Toolkit.Interactors.XRBaseInteractor interactor;
     private IXRSelectInteractable currentlyHeld;
 
-    public IXRSelectInteractable CurrentlyHeld => currentlyHeld;
+    public IXRSelectInteractable CurrentlyHeld => currentlyHeld; //exposes the private currentlyHeld as public
 
     void OnEnable()
     {

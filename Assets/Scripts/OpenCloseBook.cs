@@ -8,10 +8,10 @@ public class OpenCloseBook : MonoBehaviour
     [SerializeField] private InputActionProperty interactright;
     [SerializeField] private GrabListener grabListenerRight;
     [SerializeField] private GrabListener grabListenerLeft;
-    public Transform spawnPoint;
-    public GameObject followHandRight;
-    public GameObject followHandLeft;
-    public GameObject firePrefab;
+    [SerializeField] private Transform spawnPoint;
+    [SerializeField] private GameObject followHandRight;
+    [SerializeField] private GameObject followHandLeft;
+    [SerializeField] private GameObject firePrefab;
     private GameObject currentFire;
     private bool bookOpen = false;
     private float cooldown = 1f;
