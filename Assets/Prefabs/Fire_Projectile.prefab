@@ -161,7 +161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootForce: 100
   timeToDestroy: 10
-  particle: {fileID: 6397606437721853625, guid: fe25d9bb169e7ef4890eaa0adb8764d5, type: 3}
+  particle: {fileID: 5910897184986251020, guid: 49feb77627f46ce42b2b9830d883c7f1, type: 3}
   spawn: {fileID: 351984550430317429}
 --- !u!54 &4639976125363146588
 Rigidbody:
@@ -200,12 +200,12 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 72
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 5
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3

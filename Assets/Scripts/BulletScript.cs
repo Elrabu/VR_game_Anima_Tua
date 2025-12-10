@@ -27,18 +27,15 @@ public class BulletScript : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.name != "book")
-        {
-            HandleCollision(collision);
-            spawnParticleSystem(spawnedParticle, spawnPoint);
-        }
+        HandleCollision(collision);
+        spawnParticleSystem(spawnedParticle, spawnPoint);
     }
 
-    public virtual void HandleCollision(Collision collision) //base class method that can be overwritten
+    public virtual void HandleCollision(Collider collision) //base class method that can be overwritten
     {
-        Debug.Log("Collided with " + collision.gameObject.name);
+        //Debug.Log("Collided with " + collision.gameObject.name);
 
         ColorChanger changer = collision.gameObject.GetComponent<ColorChanger>();
 

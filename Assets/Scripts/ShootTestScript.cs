@@ -3,13 +3,13 @@ using UnityEngine.InputSystem;
 
 public class ShootTestScript : MonoBehaviour
 {
-    public InputActionProperty shoot; //need to be InputActionProperty!!
-    public GameObject bulletPrefab;
-    public Transform spawnPoint;
-    public float secondsBetweenShoot = 0.1f;
+    [SerializeField] private InputActionProperty shoot; //need to be InputActionProperty!!
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private Transform spawnPoint;
+    [SerializeField] private float secondsBetweenShoot = 0.1f;
+    [SerializeField] private GrabListener grabListener;
     float trackShoot;
     string gun;
-    [SerializeField] private GrabListener grabListener;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
