@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class SFXManager : MonoBehaviour
 {
@@ -11,11 +12,12 @@ public class SFXManager : MonoBehaviour
         else Destroy(gameObject);
     }
 
-    public void PlaySFXClip(AudioClip audioClip, Vector3 spawnPosition, float volume)
+    public void PlaySFXClip(AudioClip audioClip, AudioMixerGroup sfxMixerGroup, Vector3 spawnPosition, float volume)
     {
         AudioSource audioSource = Instantiate(sfxObject, spawnPosition, Quaternion.identity);
         audioSource.clip = audioClip;
         audioSource.volume = volume;
+        audioSource.outputAudioMixerGroup = sfxMixerGroup;
 
         // Get the current measured room size from DynamicReverb.instance
         if (DynamicReverb.instance != null)
