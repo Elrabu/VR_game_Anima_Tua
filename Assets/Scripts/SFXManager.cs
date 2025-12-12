@@ -1,27 +1,55 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SFXManager : MonoBehaviour
 {
     public static SFXManager instance;
-    public AudioSource sfxObject;
+    public AudioSource sfxObject; // Prefab with AudioSource
 
-    public void Awake()
+    private void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-        }
+        if (instance == null) instance = this;
+        else Destroy(gameObject);
     }
 
-    public void PlaySFXClip(AudioClip audioClip, Transform spawnTransform, float volume)
+    public void PlaySFXClip(AudioClip audioClip, Vector3 spawnPosition, float volume)
     {
-        AudioSource audioSource = Instantiate(sfxObject, spawnTransform.position, Quaternion.identity);
+        AudioSource audioSource = Instantiate(sfxObject, spawnPosition, Quaternion.identity);
         audioSource.clip = audioClip;
         audioSource.volume = volume;
+
+        // Get the current measured room size from DynamicReverb.instance
+        if (DynamicReverb.instance != null)
+        {
+            float avgDist = DynamicReverb.instance.avgDistance;
+            AdjustReverb(audioSource, avgDist);
+        }
+        else
+        {
+            Debug.LogWarning("No DynamicReverb instance found – Hall effect skipped.");
+        }
+
         audioSource.Play();
-        float clipLength = audioSource.clip.length;
-        Destroy(audioSource.gameObject, clipLength);
+        Destroy(audioSource.gameObject, audioClip.length);
+    }
+
+    private void AdjustReverb(AudioSource source, float avgDist)
+    {
+        AudioReverbFilter filter = source.gameObject.AddComponent<AudioReverbFilter>();
+
+        if (avgDist < 5f)       // Small room
+        {
+            filter.decayTime = 0.5f;
+            filter.room = -200;
+        }
+        else if (avgDist < 12f) // Medium room
+        {
+            filter.decayTime = 1.2f;
+            filter.room = -100;
+        }
+        else                    // Large hall
+        {
+            filter.decayTime = 2.5f;
+            filter.room = 0;
+        }
     }
 }

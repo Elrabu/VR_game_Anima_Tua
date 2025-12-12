@@ -25,7 +25,7 @@ public class ShootTestScript : MonoBehaviour
         if (value == 1 && trackShoot <= 0)
         {
             Instantiate(bulletPrefab, spawnPoint.position, spawnPoint.rotation);
-            SFXManager.instance.PlaySFXClip(shootClip, transform, 1f);
+            SFXManager.instance.PlaySFXClip(shootClip, transform.position, 1f);
             trackShoot = secondsBetweenShoot;
         }
         trackShoot -= Time.deltaTime;
