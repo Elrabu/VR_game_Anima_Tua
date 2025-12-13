@@ -16,7 +16,7 @@ public class ButtonClickTestScript : MonoBehaviour
         var item = grabListener.CurrentlyHeld;
         if (item != null)
         {
-            Debug.Log("Item: " + item.transform.name);
+           // Debug.Log("Item: " + item.transform.name);
         }
         //grabListener.DestroyHeldGameObject();
         //Debug.Log("Button was clicked!");
