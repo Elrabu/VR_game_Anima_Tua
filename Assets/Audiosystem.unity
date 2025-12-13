@@ -960,7 +960,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a45323abd181acd4ba267bfdcf096be0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitColor: {r: 1, g: 0, b: 0, a: 1}
+  hitColor:
+    r: 1
+    g: 0
+    b: 0
+    a: 1
 --- !u!1 &266419699
 GameObject:
   m_ObjectHideFlags: 0
@@ -1272,7 +1276,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a45323abd181acd4ba267bfdcf096be0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitColor: {r: 1, g: 0, b: 0, a: 1}
+  hitColor:
+    r: 1
+    g: 0
+    b: 0
+    a: 1
 --- !u!1 &361944409
 GameObject:
   m_ObjectHideFlags: 0
@@ -1751,7 +1759,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a45323abd181acd4ba267bfdcf096be0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitColor: {r: 1, g: 0, b: 0, a: 1}
+  hitColor:
+    r: 1
+    g: 0
+    b: 0
+    a: 1
 --- !u!1 &432432459
 GameObject:
   m_ObjectHideFlags: 0
@@ -1950,7 +1962,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a45323abd181acd4ba267bfdcf096be0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitColor: {r: 1, g: 0, b: 0, a: 1}
+  hitColor:
+    r: 1
+    g: 0
+    b: 0
+    a: 1
 --- !u!1 &469287193
 GameObject:
   m_ObjectHideFlags: 0
@@ -2262,7 +2278,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a45323abd181acd4ba267bfdcf096be0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitColor: {r: 1, g: 0, b: 0, a: 1}
+  hitColor:
+    r: 1
+    g: 0
+    b: 0
+    a: 1
 --- !u!1 &508616720
 GameObject:
   m_ObjectHideFlags: 0
@@ -2892,7 +2912,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 6418903147852764849, guid: e28413b17bab9c641936cb2004385d61, type: 3}
   spawnPoint: {fileID: 2060085394}
   secondsBetweenShoot: 0.1
-  grabListener: {fileID: 1931058248}
+  shootClip: {fileID: 0}
+  sfxMixerGroup: {fileID: 0}
 --- !u!1 &568081736
 GameObject:
   m_ObjectHideFlags: 0
@@ -3307,6 +3328,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 5380251738750858116, guid: 1ee6a16c5736e3d4091647954b3c858c, type: 3}
   spawnPoint: {fileID: 407314049}
   secondsBetweenShoot: 0.5
+  trackShoot: 0
 --- !u!23 &651250536
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3929,7 +3951,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 5380251738750858116, guid: 1ee6a16c5736e3d4091647954b3c858c, type: 3}
   spawnPoint: {fileID: 1800767519}
   secondsBetweenShoot: 0.2
-  grabListener: {fileID: 1954347487}
+  shootClip: {fileID: 0}
+  sfxMixerGroup: {fileID: 0}
 --- !u!114 &877653413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4323,7 +4346,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a45323abd181acd4ba267bfdcf096be0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitColor: {r: 1, g: 0, b: 0, a: 1}
+  hitColor:
+    r: 1
+    g: 0
+    b: 0
+    a: 1
 --- !u!1 &911501284
 GameObject:
   m_ObjectHideFlags: 0
@@ -4473,7 +4500,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a45323abd181acd4ba267bfdcf096be0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitColor: {r: 1, g: 0, b: 0, a: 1}
+  hitColor:
+    r: 1
+    g: 0
+    b: 0
+    a: 1
 --- !u!1 &923323682
 GameObject:
   m_ObjectHideFlags: 0
@@ -6389,8 +6420,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 10
   Damage: 0
-  flashColor: {r: 1, g: 1, b: 1, a: 1}
+  flashColor:
+    r: 1
+    g: 1
+    b: 1
+    a: 1
   flashDuration: 0.5
+  mAnimator: {fileID: 0}
+  rend: {fileID: 0}
+  originalColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
 --- !u!1 &1336668005
 GameObject:
   m_ObjectHideFlags: 0
@@ -6700,6 +6742,16 @@ MonoBehaviour:
   followHandRight: {fileID: 5686134209048670667}
   followHandLeft: {fileID: 109434732642483906}
   firePrefab: {fileID: 8592427169013271424, guid: 132545a7874d39540b0fcc82c22e401d, type: 3}
+  currentFire: {fileID: 0}
+  bookOpen: 0
+  cooldown: 1
+  trackcooldown: 0
+  bookRight: 
+  bookLeft: 
+  lastBookHand: 
+  currentBookHand: 
+  fireactive: 0
+  handshootScript: {fileID: 0}
 --- !u!1 &1351368490
 GameObject:
   m_ObjectHideFlags: 0
@@ -7325,6 +7377,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 5380251738750858116, guid: 1ee6a16c5736e3d4091647954b3c858c, type: 3}
   spawnPoint: {fileID: 1417916289}
   secondsBetweenShoot: 0.5
+  trackShoot: 0
 --- !u!23 &1431417551
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8793,7 +8846,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a45323abd181acd4ba267bfdcf096be0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitColor: {r: 1, g: 0, b: 0, a: 1}
+  hitColor:
+    r: 1
+    g: 0
+    b: 0
+    a: 1
 --- !u!1 &1700040307
 GameObject:
   m_ObjectHideFlags: 0
@@ -9081,7 +9138,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a45323abd181acd4ba267bfdcf096be0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitColor: {r: 1, g: 0, b: 0, a: 1}
+  hitColor:
+    r: 1
+    g: 0
+    b: 0
+    a: 1
 --- !u!1 &1819906847
 GameObject:
   m_ObjectHideFlags: 0
@@ -10776,7 +10837,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a45323abd181acd4ba267bfdcf096be0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitColor: {r: 1, g: 0, b: 0, a: 1}
+  hitColor:
+    r: 1
+    g: 0
+    b: 0
+    a: 1
 --- !u!1 &2111238076
 GameObject:
   m_ObjectHideFlags: 0
