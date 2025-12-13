@@ -9,7 +9,6 @@ public class EnemyHandlerScript : MonoBehaviour
     [SerializeField] private float flashDuration = 0.5f;
     
     private Animator mAnimator;
-
     private Renderer rend;
     private Color originalColor;
     void Start()
