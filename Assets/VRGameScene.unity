@@ -6389,8 +6389,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 10
   Damage: 0
-  flashMaterial: {fileID: 2100000, guid: 70d24142d73bf7a4d987b1cedc4442fd, type: 2}
-  flashTime: 0.05
+  flashColor: {r: 1, g: 1, b: 1, a: 1}
+  flashDuration: 0.5
 --- !u!1 &1336668005
 GameObject:
   m_ObjectHideFlags: 0
