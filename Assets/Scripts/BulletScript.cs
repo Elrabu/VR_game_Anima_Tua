@@ -3,7 +3,7 @@ using UnityEngine;
 public class BulletScript : MonoBehaviour
 {  
     private float lifetime;
-    Rigidbody rigidbody;
+    new Rigidbody rigidbody; //use new keyword because Unity thinks hiding was intended
 
     protected GameObject spawnedParticle;
     protected Transform spawnPoint;
@@ -27,15 +27,23 @@ public class BulletScript : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collision)
     {
         HandleCollision(collision);
         spawnParticleSystem(spawnedParticle, spawnPoint);
     }
 
-    public virtual void HandleCollision(Collision collision) //base class method that can be overwritten
+    public virtual void HandleCollision(Collider collision) //base class method that can be overwritten
     {
-       // Debug.Log("Collided with" + collision.gameObject.name);
+        //Debug.Log("Collided with " + collision.gameObject.name);
+
+        ColorChanger changer = collision.gameObject.GetComponent<ColorChanger>();
+
+        if (changer != null)
+        {
+            changer.ChangeColor();   // change object color
+        }
+
         Destroy(gameObject);
     }
 

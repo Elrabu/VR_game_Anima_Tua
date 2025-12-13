@@ -7,7 +7,7 @@ public class GrabListener : MonoBehaviour
     [SerializeField] private UnityEngine.XR.Interaction.Toolkit.Interactors.XRBaseInteractor interactor;
     private IXRSelectInteractable currentlyHeld;
 
-    public IXRSelectInteractable CurrentlyHeld => currentlyHeld;
+    public IXRSelectInteractable CurrentlyHeld => currentlyHeld; //exposes the private currentlyHeld as public
 
     void OnEnable()
     {
@@ -30,26 +30,6 @@ public class GrabListener : MonoBehaviour
     void OnRelease(SelectExitEventArgs args)
     {
         currentlyHeld = null;
-       // Debug.Log("Released: " + args.interactableObject.transform.name);
-    }
-
-    public void DestroyHeldGameObject()
-    {
-        if (currentlyHeld == null)
-        {
-            return;
-        }
-
-        // 1. Tell XRIT to stop selecting it
-        interactor.EndManualInteraction();
-
-        // 2. Cache GameObject reference before clearing
-        GameObject go = currentlyHeld.transform.gameObject;
-
-        // 3. Clear internal reference
-        currentlyHeld = null;
-
-        // 4. Destroy object from scene
-        Destroy(go);
+        //Debug.Log("Released: " + args.interactableObject.transform.name);
     }
 }

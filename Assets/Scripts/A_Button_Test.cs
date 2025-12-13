@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class A_Button_Test : MonoBehaviour
 {
 
-    public InputActionProperty button;
+    [SerializeField] private InputActionProperty button;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

@@ -3,10 +3,10 @@ using UnityEngine.InputSystem;
 
 public class AnimateHandOnInput : MonoBehaviour
 {
-    public InputActionProperty triggerValue;
-    public InputActionProperty gripValue;
+    [SerializeField] private InputActionProperty triggerValue;
+    [SerializeField] private InputActionProperty gripValue;
 
-    public Animator handAnimator;
+    [SerializeField] private Animator handAnimator;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
