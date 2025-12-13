@@ -3,8 +3,8 @@ using System.Collections;
 
 public class ParticleTest_Script : MonoBehaviour
 {
-    public GameObject spawnedParticle;
-    public Transform spawnPoint;
+    [SerializeField] private GameObject spawnedParticle;
+    [SerializeField] private Transform spawnPoint;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 748d1550524ec8243b77b8fde397d98e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootForce: 1000
+  shootForce: 500
   timeToDestroy: 10
   particle: {fileID: 8649212710888478833, guid: 4b5bc86ffe9bd87418fe8edea44d199c, type: 3}
   spawn: {fileID: 3702465866290681627}
