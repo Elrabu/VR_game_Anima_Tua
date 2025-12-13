@@ -31,9 +31,7 @@ public class DynamicReverb : MonoBehaviour
         avgDistance = MeasureSpaceAround(transform.position);
     }
 
-    /// <summary>
-    /// Raycast in 6 directions from a position to measure average distance to walls
-    /// </summary>
+    // Raycast in 6 directions from a position to measure average distance to walls
     private float MeasureSpaceAround(Vector3 position)
     {
         Vector3[] directions = {
@@ -57,9 +55,8 @@ public class DynamicReverb : MonoBehaviour
         return totalDist / directions.Length;
     }
 
-    /// <summary>
-    /// Ensures there is always a DynamicReverb instance in the scene
-    /// </summary>
+  
+    // Ensures there is always a DynamicReverb instance in the scene
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     private static void AutoCreateInstance()
     {
