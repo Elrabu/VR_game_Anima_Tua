@@ -6,4 +6,9 @@ public class TestFunctionLogger : MonoBehaviour
     {
         Debug.Log("Test Message!");
     }
+
+    public void printTestMessage2()
+    {
+        Debug.Log("Better Test Message");
+    }
 }

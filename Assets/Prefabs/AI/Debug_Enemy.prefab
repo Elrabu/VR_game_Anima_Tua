@@ -171,7 +171,7 @@ MonoBehaviour:
     m_Bits: 8
   whatIsPlayer:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 0
   timeBetweenAttacks: 0.5
   patrolSpeed: 1
   chaseSpeed: 1.3
