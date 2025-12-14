@@ -671,7 +671,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8239709823568232872, guid: a8418ff19ce5c424c817e6433cc7c331, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.428
+      value: -9.8
       objectReference: {fileID: 0}
     - target: {fileID: 8239709823568232872, guid: a8418ff19ce5c424c817e6433cc7c331, type: 3}
       propertyPath: m_LocalPosition.y
@@ -679,7 +679,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8239709823568232872, guid: a8418ff19ce5c424c817e6433cc7c331, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.603
+      value: -26.16
       objectReference: {fileID: 0}
     - target: {fileID: 8239709823568232872, guid: a8418ff19ce5c424c817e6433cc7c331, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1056,6 +1056,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1646115011}
+    - target: {fileID: 6952039149482708333, guid: 55d5f53eac96cc04083dd905a67a5f35, type: 3}
+      propertyPath: sightRange
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6952039149482708333, guid: 55d5f53eac96cc04083dd905a67a5f35, type: 3}
       propertyPath: 'waypoints.Array.data[0]'
       value: 
