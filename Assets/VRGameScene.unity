@@ -12479,6 +12479,7 @@ GameObject:
   - component: {fileID: 2617305538618547756}
   - component: {fileID: 2356197644336093743}
   - component: {fileID: 2221535208842376360}
+  - component: {fileID: 2617305538618547757}
   m_Layer: 0
   m_Name: metal_door
   m_TagString: Untagged
@@ -12656,6 +12657,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4180827280482415625}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &2617305538618547757
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952710026606893229}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6554496026349837702, guid: 98b4ba4f8df33c440960b4a53e615f14, type: 3}
 --- !u!4 &2652317128399372821
 Transform:
   m_ObjectHideFlags: 0
@@ -12990,7 +13013,7 @@ Transform:
   m_GameObject: {fileID: 1051239767985963033}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.375, y: -0.12689996, z: -0.0020999461}
+  m_LocalPosition: {x: -0.29900002, y: -0.12689996, z: 0.05600004}
   m_LocalScale: {x: 0.2, y: 0.05, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13199,7 +13222,7 @@ Transform:
   m_GameObject: {fileID: 8610092141537982895}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.375, y: -0.1269, z: -0.0021}
+  m_LocalPosition: {x: -0.299, y: -0.1269, z: 0.056}
   m_LocalScale: {x: 0.2, y: 0.05, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
