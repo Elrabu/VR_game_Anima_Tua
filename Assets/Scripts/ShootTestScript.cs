@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Audio;
 
 public class ShootTestScript : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class ShootTestScript : MonoBehaviour
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private float secondsBetweenShoot = 0.1f;
     [SerializeField] private GrabListener grabListener;
+    [SerializeField] private AudioClip shootClip;
+    [SerializeField] private AudioMixerGroup sfxMixerGroup;
+
     float trackShoot;
     string gun;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -36,6 +40,7 @@ public class ShootTestScript : MonoBehaviour
         if (value == 1 && trackShoot <= 0 && gun == gameObject.transform.name)
         {
             Instantiate(bulletPrefab, spawnPoint.position, spawnPoint.rotation);
+            SFXManager.instance.PlaySFXClip(shootClip, sfxMixerGroup, transform.position, 1f);
             trackShoot = secondsBetweenShoot;
         }
         trackShoot -= Time.deltaTime;
