@@ -12,6 +12,10 @@ public class OpenCloseBook : MonoBehaviour
     [SerializeField] private GameObject followHandRight;
     [SerializeField] private GameObject followHandLeft;
     [SerializeField] private GameObject firePrefab;
+    [SerializeField] private AudioClip bookOpenClip;
+    [SerializeField] private AudioClip bookCloseClip;
+    [SerializeField] private UnityEngine.Audio.AudioMixerGroup sfxMixerGroup;
+
     private GameObject currentFire;
     private bool bookOpen = false;
     private float cooldown = 1f;
@@ -104,7 +108,13 @@ public class OpenCloseBook : MonoBehaviour
 
                 
                 if (bookOpen == false && trackcooldown <= 0) //check for closed book and cooldown 0
-                {
+                {   
+                    SFXManager.instance.PlaySFXClip(
+                        bookOpenClip,
+                        sfxMixerGroup,
+                        transform.position,
+                        1.0f
+                    );
                     mAnimator.SetTrigger("Open");
                     bookOpen = true;
                     trackcooldown = cooldown;
@@ -118,7 +128,13 @@ public class OpenCloseBook : MonoBehaviour
                         spawnFire(spawnPoint, followHandRight); 
                     }
                 } else if (bookOpen == true && trackcooldown <= 0) //check for opened book and cooldown 0
-                {
+                {   
+                    SFXManager.instance.PlaySFXClip(
+                        bookOpenClip,
+                        sfxMixerGroup,
+                        transform.position,
+                        1.0f
+                    );
                     mAnimator.SetTrigger("Close");
                     bookOpen = false;
                     trackcooldown = cooldown;

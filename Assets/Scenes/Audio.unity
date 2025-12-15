@@ -5291,18 +5291,6 @@ PrefabInstance:
       propertyPath: Health
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 8038532992563133643, guid: 95276fb8cdb209c4cb32d52491729857, type: 3}
-      propertyPath: enemyHitClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 105e240d49836f04cb61702835549c8e, type: 3}
-    - target: {fileID: 8038532992563133643, guid: 95276fb8cdb209c4cb32d52491729857, type: 3}
-      propertyPath: sfxMixerGroup
-      value: 
-      objectReference: {fileID: -7443645410857703731, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
-    - target: {fileID: 8038532992563133643, guid: 95276fb8cdb209c4cb32d52491729857, type: 3}
-      propertyPath: enemyDeathClip
-      value: 
-      objectReference: {fileID: 8300000, guid: d3acd96f34b5a9946add2c65abb7d55d, type: 3}
     - target: {fileID: 8368310857841125339, guid: 95276fb8cdb209c4cb32d52491729857, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -7381,18 +7369,6 @@ PrefabInstance:
       propertyPath: Health
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 8038532992563133643, guid: 95276fb8cdb209c4cb32d52491729857, type: 3}
-      propertyPath: enemyHitClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 105e240d49836f04cb61702835549c8e, type: 3}
-    - target: {fileID: 8038532992563133643, guid: 95276fb8cdb209c4cb32d52491729857, type: 3}
-      propertyPath: sfxMixerGroup
-      value: 
-      objectReference: {fileID: -7443645410857703731, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
-    - target: {fileID: 8038532992563133643, guid: 95276fb8cdb209c4cb32d52491729857, type: 3}
-      propertyPath: enemyDeathClip
-      value: 
-      objectReference: {fileID: 8300000, guid: d3acd96f34b5a9946add2c65abb7d55d, type: 3}
     - target: {fileID: 8368310857841125339, guid: 95276fb8cdb209c4cb32d52491729857, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -11198,18 +11174,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1837257402747904665, guid: a8418ff19ce5c424c817e6433cc7c331, type: 3}
-      propertyPath: bookOpenClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 93416cc295079e74399fc810da368f1e, type: 3}
-    - target: {fileID: 1837257402747904665, guid: a8418ff19ce5c424c817e6433cc7c331, type: 3}
-      propertyPath: bookCloseClip
-      value: 
-      objectReference: {fileID: 8300000, guid: d43a2901090717c4280ef40023677d73, type: 3}
-    - target: {fileID: 1837257402747904665, guid: a8418ff19ce5c424c817e6433cc7c331, type: 3}
-      propertyPath: sfxMixerGroup
-      value: 
-      objectReference: {fileID: -7443645410857703731, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
     - target: {fileID: 6358669021188094109, guid: a8418ff19ce5c424c817e6433cc7c331, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -14770,18 +14734,6 @@ PrefabInstance:
       propertyPath: Health
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 8038532992563133643, guid: 95276fb8cdb209c4cb32d52491729857, type: 3}
-      propertyPath: enemyHitClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 105e240d49836f04cb61702835549c8e, type: 3}
-    - target: {fileID: 8038532992563133643, guid: 95276fb8cdb209c4cb32d52491729857, type: 3}
-      propertyPath: sfxMixerGroup
-      value: 
-      objectReference: {fileID: -7443645410857703731, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
-    - target: {fileID: 8038532992563133643, guid: 95276fb8cdb209c4cb32d52491729857, type: 3}
-      propertyPath: enemyDeathClip
-      value: 
-      objectReference: {fileID: 8300000, guid: d3acd96f34b5a9946add2c65abb7d55d, type: 3}
     - target: {fileID: 8368310857841125339, guid: 95276fb8cdb209c4cb32d52491729857, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -16700,18 +16652,6 @@ PrefabInstance:
       propertyPath: Health
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 8038532992563133643, guid: 95276fb8cdb209c4cb32d52491729857, type: 3}
-      propertyPath: enemyHitClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 105e240d49836f04cb61702835549c8e, type: 3}
-    - target: {fileID: 8038532992563133643, guid: 95276fb8cdb209c4cb32d52491729857, type: 3}
-      propertyPath: sfxMixerGroup
-      value: 
-      objectReference: {fileID: -7443645410857703731, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
-    - target: {fileID: 8038532992563133643, guid: 95276fb8cdb209c4cb32d52491729857, type: 3}
-      propertyPath: enemyDeathClip
-      value: 
-      objectReference: {fileID: 8300000, guid: d3acd96f34b5a9946add2c65abb7d55d, type: 3}
     - target: {fileID: 8368310857841125339, guid: 95276fb8cdb209c4cb32d52491729857, type: 3}
       propertyPath: m_Layer
       value: 6

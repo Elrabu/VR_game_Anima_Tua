@@ -1,3 +1,4 @@
+
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
@@ -5,6 +6,8 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 public class GrabListener : MonoBehaviour
 {
     [SerializeField] private UnityEngine.XR.Interaction.Toolkit.Interactors.XRBaseInteractor interactor;
+
+
     private IXRSelectInteractable currentlyHeld;
 
     public IXRSelectInteractable CurrentlyHeld => currentlyHeld; //exposes the private currentlyHeld as public
@@ -22,7 +25,8 @@ public class GrabListener : MonoBehaviour
     }
 
     void OnGrab(SelectEnterEventArgs args)
-    {
+    {   
+
         currentlyHeld = args.interactableObject;
        // Debug.Log("Grabbed: " + args.interactableObject.transform.name);
     }

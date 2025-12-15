@@ -7,6 +7,9 @@ public class EnemyHandlerScript : MonoBehaviour
     [SerializeField] private int Damage;
     [SerializeField] private Color flashColor = Color.white;
     [SerializeField] private float flashDuration = 0.5f;
+    [SerializeField] private AudioClip enemyDeathClip;
+    [SerializeField] private AudioClip enemyHitClip;
+    [SerializeField] private UnityEngine.Audio.AudioMixerGroup sfxMixerGroup;
     
     private Animator mAnimator;
     private Renderer rend;
@@ -23,6 +26,12 @@ public class EnemyHandlerScript : MonoBehaviour
         if (collision.gameObject.name == "Fire_Projectile(Clone)" )
         {
             takeDamage(1);
+            SFXManager.instance.PlaySFXClip(
+                enemyHitClip,
+                sfxMixerGroup,
+                transform.position,
+                1.0f
+            );
             playHitEffect();
         } 
     }
@@ -46,7 +55,13 @@ public class EnemyHandlerScript : MonoBehaviour
     void Update()
     {
         if (Health <= 0)
-        {
+        {   
+            SFXManager.instance.PlaySFXClip(
+                enemyDeathClip,
+                sfxMixerGroup,
+                transform.position,
+                1.0f
+            );
             Destroy(gameObject);
         }
     }

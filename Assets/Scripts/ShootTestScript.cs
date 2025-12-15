@@ -42,6 +42,7 @@ public class ShootTestScript : MonoBehaviour
             Instantiate(bulletPrefab, spawnPoint.position, spawnPoint.rotation);
             SFXManager.instance.PlaySFXClip(shootClip, sfxMixerGroup, transform.position, 1f);
             trackShoot = secondsBetweenShoot;
+            
         }
         trackShoot -= Time.deltaTime;
     }
