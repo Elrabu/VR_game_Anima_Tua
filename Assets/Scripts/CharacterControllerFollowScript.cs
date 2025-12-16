@@ -3,11 +3,15 @@ using UnityEngine;
 public class CharacterControllerFollowScript : MonoBehaviour
 {
     [SerializeField] private Camera cam;
+    private Quaternion initialRotation;
 
-    // Update is called once per frame
+    void Start()
+    {
+        initialRotation = transform.rotation;
+    }
     void Update()
     {
-        Vector3 worldOffset = new Vector3(0f, -0.5f, 0f);
+        Vector3 worldOffset = new Vector3(0f, -0.5f, -0.1f);
         //Debug.Log("Position: " + cam.transform.position);
         transform.position = cam.transform.position + worldOffset;
 
@@ -17,7 +21,9 @@ public class CharacterControllerFollowScript : MonoBehaviour
 
         if (forward.sqrMagnitude > 0.01f)
         {
-            transform.rotation = Quaternion.LookRotation(forward);
+            // transform.rotation = Quaternion.LookRotation(forward);
+            Quaternion targetRotation = Quaternion.LookRotation(forward) * initialRotation;
+            transform.rotation = targetRotation;
         }
     }
 }
