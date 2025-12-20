@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class SocketPhysicsLock : MonoBehaviour
+public class SocketMovementTypeSwitcher : MonoBehaviour
 {
     private UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor socket;
 
@@ -26,10 +26,8 @@ public class SocketPhysicsLock : MonoBehaviour
     {
         if (args.interactableObject is UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grab)
         {
-            grab.movementType = UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable.MovementType.Instantaneous;
-
-            Rigidbody rb = grab.GetComponent<Rigidbody>();
-            if (rb) rb.isKinematic = true;
+           // Rigidbody rb = grab.GetComponent<Rigidbody>();
+            //if (rb) rb.isKinematic = true;
 
             SetColliders(grab.transform, false);
         }
@@ -39,11 +37,11 @@ public class SocketPhysicsLock : MonoBehaviour
     {
         if (args.interactableObject is UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grab)
         {
-            grab.movementType = UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable.MovementType.VelocityTracking;
 
             Rigidbody rb = grab.GetComponent<Rigidbody>();
-            if (rb) rb.isKinematic = false;
-
+            rb.isKinematic = false;
+            rb.useGravity = true;
+            
             SetColliders(grab.transform, true);
         }
     }
