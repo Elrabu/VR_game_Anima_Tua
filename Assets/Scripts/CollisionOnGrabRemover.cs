@@ -19,12 +19,18 @@ public class CollisionOnGrabRemover : MonoBehaviour
 
     void OnGrab(SelectEnterEventArgs args)
     {
-
+        if (args.interactableObject is UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grab) 
+        {
+            SetColliders(grab.transform, false);
+        }
     }
 
     void OnRelease(SelectExitEventArgs args)
     {
-
+        if (args.interactableObject is UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grab)
+        {
+            SetColliders(grab.transform, true);
+        }
     }
 
      private void SetColliders(Transform root, bool enabled)
@@ -33,10 +39,6 @@ public class CollisionOnGrabRemover : MonoBehaviour
 
         foreach (Collider col in colliders)
         {
-            // Skip the grab collider
-            if (col.gameObject.name == "book")
-                continue;
-
             col.enabled = enabled;
         }
     }
