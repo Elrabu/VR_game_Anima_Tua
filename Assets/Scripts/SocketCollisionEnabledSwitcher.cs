@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class SocketMovementTypeSwitcher : MonoBehaviour
+public class SocketCollisionEnabledSwitcher : MonoBehaviour
 {
     private UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor socket;
 
@@ -23,8 +23,8 @@ public class SocketMovementTypeSwitcher : MonoBehaviour
     }
 
     private void OnSelectEntered(SelectEnterEventArgs args)
-    {
-        if (args.interactableObject is UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grab)
+    {   //casts args.interactableObject to XRGrabInteractable and assigns it to "grab"
+        if (args.interactableObject is UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grab) 
         {
            // Rigidbody rb = grab.GetComponent<Rigidbody>();
             //if (rb) rb.isKinematic = true;
@@ -34,7 +34,7 @@ public class SocketMovementTypeSwitcher : MonoBehaviour
     }
 
     private void OnSelectExited(SelectExitEventArgs args)
-    {
+    {   //casts args.interactableObject to XRGrabInteractable and assigns it to "grab"
         if (args.interactableObject is UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grab)
         {
 
