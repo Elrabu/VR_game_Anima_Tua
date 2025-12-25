@@ -55,8 +55,15 @@ public class SocketCollisionEnabledSwitcher : MonoBehaviour
         {
             // Skip the grab collider
             if (col.gameObject.name == "book")
+            {
+                Animator animator = col.gameObject.GetComponentInChildren<Animator>(); //get Animator from book Game Object
+                if (animator != null && enabled == false && animator.GetBool("IsOpen"))
+                {
+                    animator.SetBool("IsOpen", false);
+                    animator.SetTrigger("Close");
+                }
                 continue;
-
+            }
             col.enabled = enabled;
         }
     }
