@@ -27,7 +27,6 @@ public class OpenCloseBook : MonoBehaviour
         if (mAnimator != null)
         {
             mAnimator.SetTrigger("Close");
-            mAnimator.SetBool("IsClosed", true);
         }    
     }
     void spawnFire(Transform point, GameObject hand)
