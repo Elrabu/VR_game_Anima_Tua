@@ -13,7 +13,6 @@ public class OpenCloseBook : MonoBehaviour
     [SerializeField] private GameObject followHandLeft;
     [SerializeField] private GameObject firePrefab;
     private GameObject currentFire;
-    private bool bookOpen = false;
     private float cooldown = 1f;
     private float trackcooldown;
     private string bookRight;
@@ -61,9 +60,6 @@ public class OpenCloseBook : MonoBehaviour
             fireactive = false;
 
             handshootScript.gameObject.SetActive(false); //Deactivate fireball shooter
-
-            
-
         }
     }
 
@@ -101,12 +97,11 @@ public class OpenCloseBook : MonoBehaviour
                 //Check here if book is being helf in the right or left hand
                 //also check if bookOpen is true, then spawn fire particle effect (Gameobject + particle System) on other hand
                 //Allow shooting projectiles
-
                 
-                if (bookOpen == false && trackcooldown <= 0) //check for closed book and cooldown 0
+                if (mAnimator.GetBool("IsOpen") == false && trackcooldown <= 0) //check for closed book and cooldown 0
                 {
                     mAnimator.SetTrigger("Open");
-                    bookOpen = true;
+                    mAnimator.SetBool("IsOpen", true);
                     trackcooldown = cooldown;
 
                     //Instantiate at specific hand
@@ -117,10 +112,10 @@ public class OpenCloseBook : MonoBehaviour
                     {
                         spawnFire(spawnPoint, followHandRight); 
                     }
-                } else if (bookOpen == true && trackcooldown <= 0) //check for opened book and cooldown 0
+                } else if (mAnimator.GetBool("IsOpen") == true && trackcooldown <= 0) //check for opened book and cooldown 0
                 {
                     mAnimator.SetTrigger("Close");
-                    bookOpen = false;
+                    mAnimator.SetBool("IsOpen", false);
                     trackcooldown = cooldown;
                     despawnFire(); //despawn current fire;
                 }
