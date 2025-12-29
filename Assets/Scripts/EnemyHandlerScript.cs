@@ -19,7 +19,7 @@ public class EnemyHandlerScript : MonoBehaviour
     
     void OnTriggerEnter(Collider collision)
     {
-        Debug.Log("Interacted with: " + collision.gameObject.name);
+        //Debug.Log("Interacted with: " + collision.gameObject.name);
         if (collision.gameObject.name == "Fire_Projectile(Clone)" )
         {
             takeDamage(1);
