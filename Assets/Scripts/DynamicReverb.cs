@@ -64,7 +64,7 @@ public class DynamicReverb : MonoBehaviour
         {
             GameObject drObj = new GameObject("DynamicReverbManager");
             instance = drObj.AddComponent<DynamicReverb>();
-            Debug.Log("DynamicReverb instance auto-created at runtime.");
+         //   Debug.Log("DynamicReverb instance auto-created at runtime.");
         }
     }
 }

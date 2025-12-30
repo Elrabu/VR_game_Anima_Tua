@@ -2,9 +2,10 @@ using UnityEngine;
 
 public class PlayerHealthScript : MonoBehaviour
 {
-    private int playerHealth = 10;
+    private int playerHealth = 5;
     private float cooldown = 0.5f;
     private float cooldownTimer = 0f;
+    private bool dead = false;
 
     void Update()
     {
@@ -19,11 +20,21 @@ public class PlayerHealthScript : MonoBehaviour
             damagePlayer(1);
             cooldownTimer = cooldown;
         }
+        if (playerHealth <= 0 && dead == false)
+        {
+            Debug.Log("You Died!");
+            dead = true;
+            playerHealth = 5;
+            //change szene
+        }
     }
 
     void damagePlayer(int damage)
     {
-        playerHealth -= damage;
-        Debug.Log("Current Health: " + playerHealth);
+        if (playerHealth > 0)
+        {
+            playerHealth -= damage;
+            Debug.Log("Current Health: " + playerHealth);
+        }
     }
 }
