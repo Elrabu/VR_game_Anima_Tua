@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealthScript : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class PlayerHealthScript : MonoBehaviour
     {
        cooldownTimer -= Time.deltaTime;
       // Debug.Log(cooldownTimer);
+      
     }
 
     void OnTriggerStay(Collider other)
@@ -26,6 +28,7 @@ public class PlayerHealthScript : MonoBehaviour
             dead = true;
             playerHealth = 5;
             //change szene
+            SceneManager.LoadScene("RespawnScene");
         }
     }
 
