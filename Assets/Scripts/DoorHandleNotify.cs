@@ -1,14 +1,21 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
+[RequireComponent(typeof(UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable))]
 public class DoorHandleNotify : MonoBehaviour
 {
-    public DoorAudioController doorAudio;
     private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grab;
+    public DoorAudioController doorAudio;
 
     void Awake()
     {
         grab = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
+
+        // automatisch im Parent suchen (Prefab-freundlich)
+        doorAudio = GetComponentInParent<DoorAudioController>();
+
+        if (doorAudio == null)
+            Debug.LogWarning("DoorAudioController nicht gefunden!", this);
     }
 
     void OnEnable()
@@ -23,6 +30,7 @@ public class DoorHandleNotify : MonoBehaviour
 
     void OnRelease(SelectExitEventArgs args)
     {
-        doorAudio.ResetOpenSound();
+        if (doorAudio != null)
+            doorAudio.ResetOpenSound();
     }
 }
