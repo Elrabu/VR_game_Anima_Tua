@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class ButtonClickTestScript : MonoBehaviour
+public class TeleportButtonScript : MonoBehaviour
 {
     [SerializeField] private Button myButton;
-    //[SerializeField] private GrabListener grabListener;
 
     private void Start()
     {
@@ -13,6 +13,6 @@ public class ButtonClickTestScript : MonoBehaviour
 
     private void OnMyButtonClicked()
     {
-        Debug.Log("button clicked");
+        SceneManager.LoadScene("VRGameScene");
     }
 }
