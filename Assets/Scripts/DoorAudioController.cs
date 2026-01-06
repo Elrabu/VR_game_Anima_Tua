@@ -26,9 +26,9 @@ public class DoorAudioController : MonoBehaviour
     void Update()
     {
         float angleDelta = Quaternion.Angle(lastRotation, transform.rotation);
-        float currentAngle = GetLocalYaw();
+        float currentAngle = Mathf.Abs(GetLocalYaw());
 
-        // 🔊 CREAK (movement based)
+        // CREAK (movement based)
         if (angleDelta > movementThreshold)
         {
             if (!creakAudio.isPlaying)
@@ -44,7 +44,7 @@ public class DoorAudioController : MonoBehaviour
                 creakAudio.Stop();
         }
 
-        // 🔒 LATCH
+        // LATCH
         if (currentAngle <= closeAngle && !latchPlayed && Time.time - lastLatchTime > latchCooldown)
         {
             latchAudio.pitch = Random.Range(0.98f, 1.02f);
@@ -55,6 +55,7 @@ public class DoorAudioController : MonoBehaviour
 
         if (currentAngle > closeAngle + 1f)
             latchPlayed = false;
+
 
         lastRotation = transform.rotation;
     }
