@@ -12,6 +12,8 @@ public class OpenCloseBook : MonoBehaviour
     [SerializeField] private GameObject followHandRight;
     [SerializeField] private GameObject followHandLeft;
     [SerializeField] private GameObject firePrefab;
+    [SerializeField] private AudioClip fireStartSound;    
+    [SerializeField] private AudioSource ignitionSource;
     private GameObject currentFire;
     private float cooldown = 1f;
     private float trackcooldown;
@@ -38,9 +40,18 @@ public class OpenCloseBook : MonoBehaviour
         GameObjectFollowScript follow = currentFire.GetComponent<GameObjectFollowScript>();
       //  Debug.Log("Follow script found? " + (follow != null));
         follow.SetHand(hand);
-      //  Debug.Log("Hand = " + hand);
-        fireactive = true;  
-        
+       // Debug.Log("Hand = " + hand);
+        fireactive = true;
+
+        var ignitionSource = hand.GetComponentInParent<AudioSource>();
+        if (ignitionSource != null && fireStartSound != null)
+        {
+            ignitionSource.PlayOneShot(fireStartSound);
+        }
+        else
+        {
+            Debug.LogWarning("No AudioSource found on hand or parent for ignition sound.");
+        }
         handshootScript = hand.transform.GetChild(0);
         handshootScript.gameObject.SetActive(true); //Activate fireball shooter
         }
@@ -49,7 +60,13 @@ public class OpenCloseBook : MonoBehaviour
     void despawnFire()
     {
         if (currentFire != null)
-        {
+        {   
+
+            if (ignitionSource != null)
+            {
+                ignitionSource.Stop();
+            }
+
             var ps = currentFire.GetComponent<ParticleSystem>();
             var ps_main = ps.main;
             //use Unity built in System to let the particles fade out
