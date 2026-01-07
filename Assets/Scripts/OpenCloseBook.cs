@@ -43,7 +43,7 @@ public class OpenCloseBook : MonoBehaviour
        // Debug.Log("Hand = " + hand);
         fireactive = true;
 
-        var ignitionSource = hand.GetComponentInParent<AudioSource>();
+        ignitionSource = hand.GetComponentInParent<AudioSource>();
         if (ignitionSource != null && fireStartSound != null)
         {
             ignitionSource.PlayOneShot(fireStartSound);
