@@ -26,9 +26,6 @@ public class SocketBurgerTestScript : MonoBehaviour
     {   //casts args.interactableObject to XRGrabInteractable and assigns it to "grab"
         if (args.interactableObject is UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grab) 
         {
-           // Rigidbody rb = grab.GetComponent<Rigidbody>();
-            //if (rb) rb.isKinematic = true;
-
             SetColliders(grab.transform, false);
         }
     }
@@ -52,7 +49,7 @@ public class SocketBurgerTestScript : MonoBehaviour
 
         foreach (Collider col in colliders)
         {
-            if (col.gameObject.name == "socket")
+            if (col.gameObject.name == "socket" || col.gameObject.name == "book")
             {
                 continue;
             }
