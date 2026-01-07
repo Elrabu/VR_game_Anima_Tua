@@ -9,7 +9,7 @@ public class FireHandShootScript : MonoBehaviour
     [SerializeField] private float secondsBetweenShoot = 0.1f;
     float trackShoot;
     void Update()
-    {
+    {           
         float value = shoot.action.ReadValue<float>();
         
         if (value == 1 && trackShoot <= 0)
