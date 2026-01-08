@@ -27,7 +27,7 @@ public class GrabListener : MonoBehaviour
     void OnGrab(SelectEnterEventArgs args)
     {
         currentlyHeld = args.interactableObject;
-        Debug.Log("Grabbed: " + args.interactableObject.transform.name);
+        //Debug.Log("Grabbed: " + args.interactableObject.transform.name);
 
         if (grabAudioSource && grabClip)
         {
