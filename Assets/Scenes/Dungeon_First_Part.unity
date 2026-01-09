@@ -1374,7 +1374,7 @@ AudioSource:
   m_GameObject: {fileID: 149087952}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 6223885664646400602, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
+  OutputAudioMixerGroup: {fileID: -1340859798342540267, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 54afc9244a210bb4492ab8a814989997, type: 3}
   m_PlayOnAwake: 0
@@ -2469,11 +2469,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3533943655575222337, guid: 5557bde19bf772846b82167a38231d91, type: 3}
---- !u!4 &330367992 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1537451304014181395, guid: 25467d15cd032c74982562846cf7aade, type: 3}
-  m_PrefabInstance: {fileID: 2769075616594674348}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &336050784 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2328068783268304284, guid: 5557bde19bf772846b82167a38231d91, type: 3}
@@ -2628,7 +2623,7 @@ AudioSource:
   m_GameObject: {fileID: 380981406}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 6223885664646400602, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
+  OutputAudioMixerGroup: {fileID: -7443645410857703731, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
@@ -3243,7 +3238,7 @@ AudioSource:
   m_GameObject: {fileID: 443907011}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 6223885664646400602, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
+  OutputAudioMixerGroup: {fileID: 1735604554147197955, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 8a7488c5c5f051f41b87b89844d36a52, type: 3}
   m_PlayOnAwake: 0
@@ -3921,7 +3916,7 @@ AudioSource:
   m_GameObject: {fileID: 556410859}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 6223885664646400602, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
+  OutputAudioMixerGroup: {fileID: 4161433350943608661, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 48b9f704856681547be20b172398220d, type: 3}
   m_PlayOnAwake: 0
@@ -4462,7 +4457,7 @@ AudioSource:
   m_GameObject: {fileID: 635919096}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 6223885664646400602, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
+  OutputAudioMixerGroup: {fileID: -1340859798342540267, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 20466025ef561fe4fbd56b336c2cba53, type: 3}
   m_PlayOnAwake: 0
@@ -7190,7 +7185,7 @@ AudioSource:
   m_GameObject: {fileID: 980920860}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 6223885664646400602, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
+  OutputAudioMixerGroup: {fileID: -1340859798342540267, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
@@ -9656,7 +9651,7 @@ AudioSource:
   m_GameObject: {fileID: 1342284863}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 6223885664646400602, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
+  OutputAudioMixerGroup: {fileID: 1735604554147197955, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: a196241249b2dbf43be03a758689a20a, type: 3}
   m_PlayOnAwake: 0
@@ -11555,7 +11550,7 @@ AudioSource:
   m_GameObject: {fileID: 1633579374}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 6223885664646400602, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
+  OutputAudioMixerGroup: {fileID: -770438937595114861, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
@@ -11941,7 +11936,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 330367992}
+  m_Father: {fileID: 1444652167}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1679279528
 AudioSource:
@@ -11952,7 +11947,7 @@ AudioSource:
   m_GameObject: {fileID: 1679279526}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 6223885664646400602, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
+  OutputAudioMixerGroup: {fileID: -770438937595114861, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
@@ -12413,7 +12408,7 @@ AudioSource:
   m_GameObject: {fileID: 1764603370}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 6223885664646400602, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
+  OutputAudioMixerGroup: {fileID: 4161433350943608661, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 48b9f704856681547be20b172398220d, type: 3}
   m_PlayOnAwake: 0
@@ -16066,9 +16061,6 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 1537451304014181395, guid: 25467d15cd032c74982562846cf7aade, type: 3}
-      insertIndex: 3
-      addedObject: {fileID: 1679279527}
     - targetCorrespondingSourceObject: {fileID: 3466492482057178784, guid: 25467d15cd032c74982562846cf7aade, type: 3}
       insertIndex: 0
       addedObject: {fileID: 1764603371}
@@ -16081,6 +16073,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7850711595634785293, guid: 25467d15cd032c74982562846cf7aade, type: 3}
       insertIndex: 1
       addedObject: {fileID: 556410860}
+    - targetCorrespondingSourceObject: {fileID: 7850711595634785293, guid: 25467d15cd032c74982562846cf7aade, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1679279527}
     - targetCorrespondingSourceObject: {fileID: 6373901646709868300, guid: 25467d15cd032c74982562846cf7aade, type: 3}
       insertIndex: 0
       addedObject: {fileID: 2129045662}
