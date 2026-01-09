@@ -4,6 +4,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class SocketBurgerTestScript : MonoBehaviour
 {
     private UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor socket;
+    [SerializeField]private BurgerStack burgerStack;
 
     private void Awake()
     {
@@ -27,6 +28,12 @@ public class SocketBurgerTestScript : MonoBehaviour
         if (args.interactableObject is UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grab) 
         {
             SetColliders(grab.transform, false);
+
+            BurgerIngredient ingredient = grab.GetComponent<BurgerIngredient>();
+            if (ingredient == null || burgerStack == null)
+                return;
+
+            burgerStack.AddIngredient(ingredient);
         }
     }
 
