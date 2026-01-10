@@ -6,22 +6,32 @@ public class BurgerStack : MonoBehaviour
     public List<BurgerIngredientType> currentStack = new(); //List with current Burger Ingredients
     private readonly BurgerIngredientType[] correctRecipe =
     {
-        //BurgerIngredientType.BottomBun,
+        BurgerIngredientType.BottomBun,
         BurgerIngredientType.Patty,
         BurgerIngredientType.Pickles,
         BurgerIngredientType.TopBun
     };
 
+    private bool completed = false;
+
+    private void Awake()
+    {
+        currentStack = new List<BurgerIngredientType>
+        {
+            BurgerIngredientType.BottomBun
+        };
+    }
+
     public void AddIngredient(BurgerIngredient ingredient)
     {
+        if (completed)
+            return;
+
         currentStack.Add(ingredient.ingredientType);
+        Debug.Log($"{name}: {string.Join(", ", currentStack)}");
         CheckBurger();
     }
 
-    public void RemoveIngredient(BurgerIngredient ingredient)
-    {
-        currentStack.Remove(ingredient.ingredientType);
-    }
 
     private void CheckBurger()
     {
@@ -34,6 +44,7 @@ public class BurgerStack : MonoBehaviour
                 return;
         }
 
+        completed = true;
         Debug.Log("Correct burger assembled!");
     }
 }

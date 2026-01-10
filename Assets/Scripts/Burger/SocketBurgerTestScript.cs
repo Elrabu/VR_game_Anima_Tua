@@ -4,7 +4,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class SocketBurgerTestScript : MonoBehaviour
 {
     private UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor socket;
-    [SerializeField]private BurgerStack burgerStack;
+    [SerializeField] private BurgerStack burgerStack;
 
     private void Awake()
     {
