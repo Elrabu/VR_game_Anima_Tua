@@ -14,19 +14,28 @@ public class SocketBurgerTestScript : MonoBehaviour
     private void OnEnable()
     {
         socket.selectEntered.AddListener(OnSelectEntered);
-        socket.selectExited.AddListener(OnSelectExited);
+       // socket.selectExited.AddListener(OnSelectExited);
     }
 
     private void OnDisable()
     {
         socket.selectEntered.RemoveListener(OnSelectEntered);
-        socket.selectExited.RemoveListener(OnSelectExited);
+       // socket.selectExited.RemoveListener(OnSelectExited);
     }
 
     private void OnSelectEntered(SelectEnterEventArgs args)
     {   //casts args.interactableObject to XRGrabInteractable and assigns it to "grab"
         if (args.interactableObject is UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grab) 
         {
+            //Debug.Log(grab.gameObject.name);
+            if (grab.gameObject.name == "patty")
+            {
+                Transform child = grab.transform.Find("patty_raw");
+                if (child == null || child.gameObject.activeInHierarchy)
+                {
+                    return;
+                } 
+            }
             SetColliders(grab.transform, false);
 
             BurgerIngredient ingredient = grab.GetComponent<BurgerIngredient>();
@@ -37,7 +46,7 @@ public class SocketBurgerTestScript : MonoBehaviour
         }
     }
 
-    private void OnSelectExited(SelectExitEventArgs args)
+    /*private void OnSelectExited(SelectExitEventArgs args)
     {   //casts args.interactableObject to XRGrabInteractable and assigns it to "grab"
         if (args.interactableObject is UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grab)
         {
@@ -48,7 +57,7 @@ public class SocketBurgerTestScript : MonoBehaviour
             
             SetColliders(grab.transform, true);
         }
-    }
+    } */
 
     private void SetColliders(Transform root, bool enabled)
     {
