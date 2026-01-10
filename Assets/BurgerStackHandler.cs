@@ -13,6 +13,7 @@ public class BurgerStack : MonoBehaviour
     };
 
     private bool completed = false;
+    public bool CompletedBurger => completed; //exposes the variable
 
     private void Awake()
     {
