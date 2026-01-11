@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1304814813051796283}
   - component: {fileID: 6405477802956294928}
+  - component: {fileID: 3323836332791448433}
   m_Layer: 0
   m_Name: Close Door
   m_TagString: Untagged
@@ -129,6 +130,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3323836332791448433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298126561942073842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1839338817676574b8d041e080c12626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  mixer: {fileID: 24100000, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
+  echoWetParam: EchoWet
+  maxDistance: 20
 --- !u!1 &1050346901683082574
 GameObject:
   m_ObjectHideFlags: 0
@@ -988,6 +1005,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8190646961283729550}
   - component: {fileID: 941598720575636226}
+  - component: {fileID: 858369517113106169}
   m_Layer: 0
   m_Name: Open Door
   m_TagString: Untagged
@@ -1107,3 +1125,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &858369517113106169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8643179898130171642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1839338817676574b8d041e080c12626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  mixer: {fileID: 24100000, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
+  echoWetParam: EchoWet
+  maxDistance: 20

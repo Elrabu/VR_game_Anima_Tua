@@ -240,6 +240,7 @@ GameObject:
   m_Component:
   - component: {fileID: 824102230858400713}
   - component: {fileID: 2610382890738124999}
+  - component: {fileID: 4207443966964112870}
   m_Layer: 0
   m_Name: Close Door
   m_TagString: Untagged
@@ -273,7 +274,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 7772379859619389630, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 9946d3c55a20f05419d26ab60c4ee5c1, type: 3}
+  m_Resource: {fileID: 8300000, guid: 6557d621675bb4641b55a7f2b6092582, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -359,6 +360,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4207443966964112870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3254449398930310750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1839338817676574b8d041e080c12626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  mixer: {fileID: 24100000, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
+  echoWetParam: EchoWet
+  maxDistance: 20
 --- !u!1 &4129808500926282163
 GameObject:
   m_ObjectHideFlags: 0
@@ -988,6 +1005,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3295400503553587940}
   - component: {fileID: 6199454073052157640}
+  - component: {fileID: 4601946339170278129}
   m_Layer: 0
   m_Name: Open Door
   m_TagString: Untagged
@@ -1107,3 +1125,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4601946339170278129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8831381256946312805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1839338817676574b8d041e080c12626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  mixer: {fileID: 24100000, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
+  echoWetParam: EchoWet
+  maxDistance: 20

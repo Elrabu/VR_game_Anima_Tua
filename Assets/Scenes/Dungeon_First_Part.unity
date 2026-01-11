@@ -1058,6 +1058,7 @@ GameObject:
   m_Component:
   - component: {fileID: 106630415}
   - component: {fileID: 106630416}
+  - component: {fileID: 106630417}
   m_Layer: 0
   m_Name: RightShootSound
   m_TagString: Untagged
@@ -1091,7 +1092,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 6223885664646400602, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: d24b583342b7e1d45916bb54ce09591e, type: 3}
+  m_Resource: {fileID: 8300000, guid: 86a1bf795758e374896fffff63d99ecf, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1177,6 +1178,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &106630417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106630414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1839338817676574b8d041e080c12626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 380981407}
+  mixer: {fileID: 24100000, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
+  reverbParam: Reverb
+  maxDistance: 20
 --- !u!1001 &106748396
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2356,6 +2373,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4207443966964112870, guid: b6b61e7d056486149b87b350510d260d, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 380981407}
+    - target: {fileID: 4601946339170278129, guid: b6b61e7d056486149b87b350510d260d, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 380981407}
     - target: {fileID: 5719810906313924296, guid: b6b61e7d056486149b87b350510d260d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -45.5
@@ -3222,6 +3247,7 @@ GameObject:
   m_Component:
   - component: {fileID: 443907013}
   - component: {fileID: 443907012}
+  - component: {fileID: 443907014}
   m_Layer: 0
   m_Name: Close Door
   m_TagString: Untagged
@@ -3341,6 +3367,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4584863276496849058}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &443907014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443907011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1839338817676574b8d041e080c12626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 380981407}
+  mixer: {fileID: 24100000, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
+  reverbParam: Reverb
+  maxDistance: 20
 --- !u!1001 &445245453
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3885,6 +3927,7 @@ GameObject:
   m_Component:
   - component: {fileID: 556410860}
   - component: {fileID: 556410861}
+  - component: {fileID: 556410862}
   m_Layer: 0
   m_Name: LeftIgnitionSound
   m_TagString: Untagged
@@ -4004,6 +4047,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &556410862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556410859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1839338817676574b8d041e080c12626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 380981407}
+  mixer: {fileID: 24100000, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
+  reverbParam: Reverb
+  maxDistance: 20
 --- !u!4 &556765386 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8238842391878586930, guid: 4fca0a61b11f20845b53941e06e1a423, type: 3}
@@ -6119,6 +6178,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 858369517113106169, guid: e6df4749e7029254da91d3fc5394a4ef, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 380981407}
     - target: {fileID: 1236228319296345759, guid: e6df4749e7029254da91d3fc5394a4ef, type: 3}
       propertyPath: m_LocalPosition.x
       value: -31.75
@@ -6159,6 +6222,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3323836332791448433, guid: e6df4749e7029254da91d3fc5394a4ef, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 380981407}
     - target: {fileID: 3732754192620104450, guid: e6df4749e7029254da91d3fc5394a4ef, type: 3}
       propertyPath: m_Name
       value: Door_wooden (1)
@@ -6473,6 +6540,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 858369517113106169, guid: e6df4749e7029254da91d3fc5394a4ef, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 380981407}
     - target: {fileID: 1236228319296345759, guid: e6df4749e7029254da91d3fc5394a4ef, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.5
@@ -6513,6 +6584,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3323836332791448433, guid: e6df4749e7029254da91d3fc5394a4ef, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 380981407}
     - target: {fileID: 3732754192620104450, guid: e6df4749e7029254da91d3fc5394a4ef, type: 3}
       propertyPath: m_Name
       value: Door_wooden (2)
@@ -7273,6 +7348,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &980920869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980920860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1839338817676574b8d041e080c12626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 380981407}
+  mixer: {fileID: 24100000, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
+  reverbParam: Reverb
+  maxDistance: 20
 --- !u!4 &986670745 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5190512876684407528, guid: ede9b36f7cb047a46905c11e5122215d, type: 3}
@@ -9635,6 +9726,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1342284865}
   - component: {fileID: 1342284864}
+  - component: {fileID: 1342284866}
   m_Layer: 0
   m_Name: Open Door
   m_TagString: Untagged
@@ -9754,6 +9846,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4584863276496849058}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1342284866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342284863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1839338817676574b8d041e080c12626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 380981407}
+  mixer: {fileID: 24100000, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
+  reverbParam: Reverb
+  maxDistance: 20
 --- !u!1001 &1352157749
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11402,6 +11510,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4207443966964112870, guid: b6b61e7d056486149b87b350510d260d, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 380981407}
+    - target: {fileID: 4601946339170278129, guid: b6b61e7d056486149b87b350510d260d, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 380981407}
     - target: {fileID: 5719810906313924296, guid: b6b61e7d056486149b87b350510d260d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.75
@@ -11519,6 +11635,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1633579375}
   - component: {fileID: 1633579376}
+  - component: {fileID: 1633579377}
   m_Layer: 0
   m_Name: GrabSoundRight
   m_TagString: Untagged
@@ -11638,6 +11755,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1633579377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633579374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1839338817676574b8d041e080c12626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 380981407}
+  mixer: {fileID: 24100000, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
+  reverbParam: Reverb
+  maxDistance: 20
 --- !u!1001 &1646769044
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11916,6 +12049,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1679279527}
   - component: {fileID: 1679279528}
+  - component: {fileID: 1679279529}
   m_Layer: 0
   m_Name: GrabSoundLeft
   m_TagString: Untagged
@@ -12035,6 +12169,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1679279529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679279526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1839338817676574b8d041e080c12626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 380981407}
+  mixer: {fileID: 24100000, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
+  reverbParam: Reverb
+  maxDistance: 20
 --- !u!1001 &1683247554
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12377,6 +12527,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1764603371}
   - component: {fileID: 1764603372}
+  - component: {fileID: 1764603373}
   m_Layer: 0
   m_Name: RightIgnitionSound
   m_TagString: Untagged
@@ -12496,6 +12647,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1764603373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1764603370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1839338817676574b8d041e080c12626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 380981407}
+  mixer: {fileID: 24100000, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
+  reverbParam: Reverb
+  maxDistance: 20
 --- !u!1001 &1775947054
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13008,6 +13175,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4207443966964112870, guid: b6b61e7d056486149b87b350510d260d, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 380981407}
+    - target: {fileID: 4601946339170278129, guid: b6b61e7d056486149b87b350510d260d, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 380981407}
     - target: {fileID: 5719810906313924296, guid: b6b61e7d056486149b87b350510d260d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -20.086466
@@ -15311,6 +15486,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2129045662}
   - component: {fileID: 2129045663}
+  - component: {fileID: 2129045664}
   m_Layer: 0
   m_Name: LeftShootSound
   m_TagString: Untagged
@@ -15344,7 +15520,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 6223885664646400602, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: d24b583342b7e1d45916bb54ce09591e, type: 3}
+  m_Resource: {fileID: 8300000, guid: 86a1bf795758e374896fffff63d99ecf, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -15430,6 +15606,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2129045664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129045661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1839338817676574b8d041e080c12626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 380981407}
+  mixer: {fileID: 24100000, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
+  reverbParam: Reverb
+  maxDistance: 20
 --- !u!1001 &2132949293
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15969,7 +16161,7 @@ PrefabInstance:
     - target: {fileID: 2018334193806942438, guid: 25467d15cd032c74982562846cf7aade, type: 3}
       propertyPath: fireShootSound
       value: 
-      objectReference: {fileID: 8300000, guid: d24b583342b7e1d45916bb54ce09591e, type: 3}
+      objectReference: {fileID: 8300000, guid: 86a1bf795758e374896fffff63d99ecf, type: 3}
     - target: {fileID: 2018334193806942438, guid: 25467d15cd032c74982562846cf7aade, type: 3}
       propertyPath: shootAudioSource
       value: 
@@ -15981,7 +16173,7 @@ PrefabInstance:
     - target: {fileID: 4024275974431502814, guid: 25467d15cd032c74982562846cf7aade, type: 3}
       propertyPath: grabClip
       value: 
-      objectReference: {fileID: 8300000, guid: 40c0272c24e041840ac27840cd7339b6, type: 3}
+      objectReference: {fileID: 8300000, guid: db53f0838db099743a8f6f58284f9b46, type: 3}
     - target: {fileID: 4024275974431502814, guid: 25467d15cd032c74982562846cf7aade, type: 3}
       propertyPath: grabAudioSource
       value: 
@@ -15989,7 +16181,7 @@ PrefabInstance:
     - target: {fileID: 5541783298126088064, guid: 25467d15cd032c74982562846cf7aade, type: 3}
       propertyPath: grabClip
       value: 
-      objectReference: {fileID: 8300000, guid: 40c0272c24e041840ac27840cd7339b6, type: 3}
+      objectReference: {fileID: 8300000, guid: db53f0838db099743a8f6f58284f9b46, type: 3}
     - target: {fileID: 5541783298126088064, guid: 25467d15cd032c74982562846cf7aade, type: 3}
       propertyPath: grabAudioSource
       value: 
@@ -16053,7 +16245,7 @@ PrefabInstance:
     - target: {fileID: 8976457706827176643, guid: 25467d15cd032c74982562846cf7aade, type: 3}
       propertyPath: fireShootSound
       value: 
-      objectReference: {fileID: 8300000, guid: d24b583342b7e1d45916bb54ce09591e, type: 3}
+      objectReference: {fileID: 8300000, guid: 86a1bf795758e374896fffff63d99ecf, type: 3}
     - target: {fileID: 8976457706827176643, guid: 25467d15cd032c74982562846cf7aade, type: 3}
       propertyPath: shootAudioSource
       value: 
@@ -16098,6 +16290,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6494379380901726663, guid: 25467d15cd032c74982562846cf7aade, type: 3}
       insertIndex: -1
       addedObject: {fileID: 980920867}
+    - targetCorrespondingSourceObject: {fileID: 6494379380901726663, guid: 25467d15cd032c74982562846cf7aade, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 980920869}
     - targetCorrespondingSourceObject: {fileID: 6526328859401897239, guid: 25467d15cd032c74982562846cf7aade, type: 3}
       insertIndex: -1
       addedObject: {fileID: 19289138}
@@ -16663,7 +16858,7 @@ GameObject:
   - component: {fileID: 8226705520920959443}
   m_Layer: 0
   m_Name: CubeHandle
-  m_TagString: Untagged
+  m_TagString: DoorHandle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
