@@ -27,13 +27,18 @@ public class GrabListener : MonoBehaviour
     void OnGrab(SelectEnterEventArgs args)
     {
         currentlyHeld = args.interactableObject;
-        //Debug.Log("Grabbed: " + args.interactableObject.transform.name);
 
-        if (grabAudioSource && grabClip)
+        var grabbedTransform = args.interactableObject.transform;
+
+        if (!grabbedTransform.CompareTag("DoorHandle"))
         {
-            grabAudioSource.PlayOneShot(grabClip);
+            if (grabAudioSource && grabClip)
+            {
+                grabAudioSource.PlayOneShot(grabClip);
+            }
         }
     }
+
 
     void OnRelease(SelectExitEventArgs args)
     {

@@ -2611,7 +2611,7 @@ MonoBehaviour:
   surfaces: []
   footOrigin: {fileID: 380981407}
   rayDistance: 1.5
-  stepDistance: 0.3
+  stepDistance: 0.4
   requireGrounded: 0
   characterController: {fileID: 380981408}
 --- !u!82 &380981412

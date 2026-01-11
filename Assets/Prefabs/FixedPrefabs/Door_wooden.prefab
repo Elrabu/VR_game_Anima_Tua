@@ -580,7 +580,7 @@ GameObject:
   - component: {fileID: 6226321472456863793}
   m_Layer: 0
   m_Name: CubeHandle
-  m_TagString: Untagged
+  m_TagString: DoorHandle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
