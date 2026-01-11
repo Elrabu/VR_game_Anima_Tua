@@ -9,5 +9,5 @@ public class FootstepSurface : ScriptableObject
 
     [Header("Randomization")]
     public Vector2 volumeRange = new Vector2(0.8f, 1.0f);
-    public Vector2 pitchRange  = new Vector2(0.9f, 1.1f);
+    public Vector2 pitchRange  = new Vector2(0.1f, 0.3f);
 }
