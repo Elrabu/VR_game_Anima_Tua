@@ -27,6 +27,7 @@ public class SocketBurgerTestScript : MonoBehaviour
     {   //casts args.interactableObject to XRGrabInteractable and assigns it to "grab"
         if (args.interactableObject is UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grab) 
         {
+            SetColliders(grab.transform, false);
             //Debug.Log(grab.gameObject.name);
             if (grab.gameObject.name == "patty")
             {
@@ -36,7 +37,7 @@ public class SocketBurgerTestScript : MonoBehaviour
                     return;
                 } 
             }
-            SetColliders(grab.transform, false);
+            
 
             BurgerIngredient ingredient = grab.GetComponent<BurgerIngredient>();
             if (ingredient == null || burgerStack == null)
