@@ -29,7 +29,7 @@ public class SocketBurgerTestScript : MonoBehaviour
         {
             SetColliders(grab.transform, false);
             //Debug.Log(grab.gameObject.name);
-            if (grab.gameObject.name == "patty")
+            if (grab.gameObject.name == "patty" || grab.gameObject.name == "patty(Clone)")
             {
                 Transform child = grab.transform.Find("patty_raw");
                 if (child == null || child.gameObject.activeInHierarchy)
