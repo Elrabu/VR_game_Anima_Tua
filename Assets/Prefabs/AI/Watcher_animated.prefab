@@ -604,7 +604,7 @@ MonoBehaviour:
     m_Bits: 128
   obstacleLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 264
   detectionRange: 10
   detectionHeight: 3
   isDebug: 0
