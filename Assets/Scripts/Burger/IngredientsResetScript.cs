@@ -11,7 +11,15 @@ public class IngredientsResetScript : MonoBehaviour
     [SerializeField] private Transform pattySpawn;
     [SerializeField] private Transform breadTopSpawn;
     [SerializeField] private Transform pickelsSpawn;
-    [SerializeField] private void ResetIngredient()
+
+    void Start()
+    {
+        Instantiate(breadBottom, breadBottomSpawn.position, breadBottomSpawn.rotation);
+        Instantiate(patty, pattySpawn.position, pattySpawn.rotation);
+        Instantiate(breadTop, breadTopSpawn.position, breadTopSpawn.rotation);
+        Instantiate(pickels, pickelsSpawn.position, pickelsSpawn.rotation);
+    }
+    public void ResetIngredient()
     {
         Instantiate(breadBottom, breadBottomSpawn.position, breadBottomSpawn.rotation);
         Instantiate(patty, pattySpawn.position, pattySpawn.rotation);

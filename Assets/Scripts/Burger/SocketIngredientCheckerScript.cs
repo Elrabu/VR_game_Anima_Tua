@@ -33,7 +33,12 @@ public class SocketIngredientCheckerScript : MonoBehaviour
 
     private void OnSocket1Filled(SelectEnterEventArgs args)
     {
-        AddIngredient(args);
+        Transform child = args.interactableObject.transform.Find("patty_grilled");
+        if (child != null)
+        {
+            AddIngredient(args);
+        }
+
         socket2.enabled = true;
     }
 
