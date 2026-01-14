@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class NEWBurgercompleteChecker : MonoBehaviour
 {
+    [SerializeField] private GameObject tape;
+    [SerializeField] private Transform tapespawn;
     private void OnTriggerEnter(Collider other)
     {
         var checker = other.GetComponent<SocketIngredientCheckerScript>();
@@ -12,12 +14,11 @@ public class NEWBurgercompleteChecker : MonoBehaviour
         if (checker.CompletedBurger)
         {
             Debug.Log("Completed burger entered the box!");
-            // Do success logic here
+            Instantiate(tape, tapespawn.position, tapespawn.rotation);
         }
         else
         {
             Debug.Log("Burger not completed yet");
-            // Do failure / reject logic here
         }
     }
 }
