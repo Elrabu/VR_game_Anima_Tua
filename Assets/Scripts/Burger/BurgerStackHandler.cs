@@ -6,7 +6,7 @@ public class BurgerStack : MonoBehaviour
     public List<BurgerIngredientType> currentStack = new(); //List with current Burger Ingredients
     private readonly BurgerIngredientType[] correctRecipe =
     {
-        BurgerIngredientType.BottomBun,
+
         BurgerIngredientType.Patty,
         BurgerIngredientType.Pickles,
         BurgerIngredientType.TopBun
@@ -17,10 +17,10 @@ public class BurgerStack : MonoBehaviour
 
     private void Awake()
     {
-        currentStack = new List<BurgerIngredientType>
+        /*currentStack = new List<BurgerIngredientType>
         {
             BurgerIngredientType.BottomBun
-        };
+        }; */
     }
 
     public void AddIngredient(BurgerIngredient ingredient)
