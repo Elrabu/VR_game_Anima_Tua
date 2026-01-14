@@ -3,10 +3,10 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealthScript : MonoBehaviour
 {
-    private int playerHealth = 5;
-    private float cooldown = 0.5f;
-    private float cooldownTimer = 0f;
-    private bool dead = false;
+    [SerializeField] private int playerHealth = 5;
+    [SerializeField] private float cooldown = 0.5f;
+    [SerializeField] private float cooldownTimer = 0f;
+    [SerializeField] private bool dead = false;
 
     void Update()
     {
