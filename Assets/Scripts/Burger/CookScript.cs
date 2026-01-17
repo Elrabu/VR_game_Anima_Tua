@@ -4,14 +4,23 @@ using System.Collections;
 public class CookScript : MonoBehaviour
 {
     [SerializeField] private GameObject smokePrefab;
+    private GameObject smoke;
     //private GameObject patty;
     void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.name == "patty" || collision.gameObject.name == "patty(Clone)")
         {
             //Debug.Log("Interacted with: " + collision.gameObject.name);
-            Instantiate(smokePrefab, collision.gameObject.transform.position, smokePrefab.transform.rotation);
+            smoke = Instantiate(smokePrefab, collision.gameObject.transform.position, smokePrefab.transform.rotation);
             StartCoroutine(Cook(collision.gameObject));
+        }
+    }
+
+    void OnTriggerExit(Collider collision)
+    {
+        if (collision.gameObject.name == "patty" || collision.gameObject.name == "patty(Clone)")
+        {
+            Destroy(smoke);
         }
     }
 

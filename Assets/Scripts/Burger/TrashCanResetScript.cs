@@ -20,7 +20,7 @@ public class TrashCanResetScript : MonoBehaviour
         Debug.Log("Interacted with: " + collision.gameObject.name);
         ResetIngredient();
     }
-
+    
      void Start()
     {
         Spawn(breadBottom, breadBottomSpawn);
