@@ -4,6 +4,7 @@ public class NEWBurgercompleteChecker : MonoBehaviour
 {
     [SerializeField] private GameObject tape;
     [SerializeField] private Transform tapespawn;
+    private bool spawned = false;
     private void OnTriggerEnter(Collider other)
     {
         var checker = other.GetComponent<SocketIngredientCheckerScript>();
@@ -13,8 +14,12 @@ public class NEWBurgercompleteChecker : MonoBehaviour
 
         if (checker.CompletedBurger)
         {
-            Debug.Log("Completed burger entered the box!");
-            Instantiate(tape, tapespawn.position, tapespawn.rotation);
+            if (spawned == false)
+            {
+                Debug.Log("Completed burger entered the box!");
+                Instantiate(tape, tapespawn.position, tapespawn.rotation);
+                spawned = true;
+            }  
         }
         else
         {
