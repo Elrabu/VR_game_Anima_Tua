@@ -27,7 +27,7 @@ public class CookScript : MonoBehaviour
     IEnumerator Cook(GameObject patty)
     {
         // Wait 2 seconds
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0.1f);
 
         Transform grilled = patty.transform.Find("patty_grilled");
         Transform raw = patty.transform.Find("patty_raw");

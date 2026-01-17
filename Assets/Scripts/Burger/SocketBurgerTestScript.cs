@@ -46,20 +46,6 @@ public class SocketBurgerTestScript : MonoBehaviour
             burgerStack.AddIngredient(ingredient);
         }
     }
-
-    /*private void OnSelectExited(SelectExitEventArgs args)
-    {   //casts args.interactableObject to XRGrabInteractable and assigns it to "grab"
-        if (args.interactableObject is UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grab)
-        {
-
-            Rigidbody rb = grab.GetComponent<Rigidbody>();
-            rb.isKinematic = false;
-            rb.useGravity = true;
-            
-            SetColliders(grab.transform, true);
-        }
-    } */
-
     private void SetColliders(Transform root, bool enabled)
     {
          Collider[] colliders = root.GetComponentsInChildren<Collider>(true);
