@@ -19,11 +19,11 @@ public class CharacterControllerFollowScript : MonoBehaviour
 
         forward.y = 0f; //remove pitch and roll influence
 
-        if (forward.sqrMagnitude > 0.01f)
+       /* if (forward.sqrMagnitude > 0.01f)
         {
             // transform.rotation = Quaternion.LookRotation(forward);
             Quaternion targetRotation = Quaternion.LookRotation(forward) * initialRotation;
             transform.rotation = targetRotation;
-        }
+        } */
     }
 }
