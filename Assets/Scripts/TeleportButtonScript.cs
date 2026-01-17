@@ -13,6 +13,6 @@ public class TeleportButtonScript : MonoBehaviour
 
     private void OnMyButtonClicked()
     {
-        SceneManager.LoadScene("VRGameScene");
+        SceneManager.LoadScene("Dungeon_First_Part");
     }
 }
