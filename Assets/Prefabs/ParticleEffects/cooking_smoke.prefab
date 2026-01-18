@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7243212444035580972}
   m_Layer: 0
   m_Name: cooking_smoke
-  m_TagString: Untagged
+  m_TagString: CookingSmoke
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
