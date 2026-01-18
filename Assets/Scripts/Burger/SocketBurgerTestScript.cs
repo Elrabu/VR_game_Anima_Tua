@@ -29,7 +29,7 @@ public class SocketBurgerTestScript : MonoBehaviour
         {
             SetColliders(grab.transform, false);
             //Debug.Log(grab.gameObject.name);
-            if (grab.gameObject.name == "patty")
+            if (grab.gameObject.name == "patty" || grab.gameObject.name == "patty(Clone)")
             {
                 Transform child = grab.transform.Find("patty_raw");
                 if (child == null || child.gameObject.activeInHierarchy)
@@ -46,20 +46,6 @@ public class SocketBurgerTestScript : MonoBehaviour
             burgerStack.AddIngredient(ingredient);
         }
     }
-
-    /*private void OnSelectExited(SelectExitEventArgs args)
-    {   //casts args.interactableObject to XRGrabInteractable and assigns it to "grab"
-        if (args.interactableObject is UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grab)
-        {
-
-            Rigidbody rb = grab.GetComponent<Rigidbody>();
-            rb.isKinematic = false;
-            rb.useGravity = true;
-            
-            SetColliders(grab.transform, true);
-        }
-    } */
-
     private void SetColliders(Transform root, bool enabled)
     {
          Collider[] colliders = root.GetComponentsInChildren<Collider>(true);
