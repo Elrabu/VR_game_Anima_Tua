@@ -15,6 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/RespawnScene.unity
     guid: 49956377f9ea2fc46bee623432130213
   m_configObjects:
+    com.unity.dt.app-ui: {fileID: 11400000, guid: 99f9c9493070a9d4c979a8fec7c5a8d3, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 35845fe01580c41289b024647b1d1c53, type: 3}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: d35dbe54ce6169742b5e47cb6d6366d5, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: a684e9248e7ed3343afc0c6606ae5cc6, type: 2}
