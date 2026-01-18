@@ -26,8 +26,12 @@ public class SocketCollisionEnabledSwitcher : MonoBehaviour
     {   //casts args.interactableObject to XRGrabInteractable and assigns it to "grab"
         if (args.interactableObject is UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grab) 
         {
-           // Rigidbody rb = grab.GetComponent<Rigidbody>();
-            //if (rb) rb.isKinematic = true;
+            //remove cooking some if put here:
+            GameObject[] smokes = GameObject.FindGameObjectsWithTag("CookingSmoke");
+            foreach (GameObject smoke in smokes)
+            {
+                Destroy(smoke);
+            }
 
             SetColliders(grab.transform, false);
         }

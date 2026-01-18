@@ -53,5 +53,11 @@ public class TrashCanResetScript : MonoBehaviour
         }
 
         spawnedIngredients.Clear();
+
+        GameObject[] smokes = GameObject.FindGameObjectsWithTag("CookingSmoke");
+        foreach (GameObject smoke in smokes)
+        {
+            Destroy(smoke);
+        }
     }
 }
