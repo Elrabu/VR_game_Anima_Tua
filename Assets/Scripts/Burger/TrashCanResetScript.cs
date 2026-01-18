@@ -8,11 +8,13 @@ public class TrashCanResetScript : MonoBehaviour
     [SerializeField] private GameObject patty;
     [SerializeField] private GameObject breadTop;
     [SerializeField] private GameObject pickels;
+    [SerializeField] private GameObject plate;
 
     [SerializeField] private Transform breadBottomSpawn;
     [SerializeField] private Transform pattySpawn;
     [SerializeField] private Transform breadTopSpawn;
     [SerializeField] private Transform pickelsSpawn;
+    [SerializeField] private Transform plateSpawn;
 
     private readonly List<GameObject> spawnedIngredients = new(); //all currrent ingredients
     void OnTriggerEnter(Collider collision)
@@ -27,6 +29,7 @@ public class TrashCanResetScript : MonoBehaviour
         Spawn(patty, pattySpawn);
         Spawn(breadTop, breadTopSpawn);
         Spawn(pickels, pickelsSpawn);
+        Spawn(plate, plateSpawn);
     }
     public void ResetIngredient()
     {
@@ -36,6 +39,7 @@ public class TrashCanResetScript : MonoBehaviour
         Spawn(patty, pattySpawn);
         Spawn(breadTop, breadTopSpawn);
         Spawn(pickels, pickelsSpawn);
+        Spawn(plate, plateSpawn);
     }
 
     private void Spawn(GameObject prefab, Transform spawnPoint)

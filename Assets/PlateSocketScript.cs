@@ -3,28 +3,21 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class PlateSocketScript : MonoBehaviour
 {
-   private UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor socket;
-    [SerializeField] private GameObject tape;
-    [SerializeField] private Transform tapespawn;
+   /* [SerializeField] private GameObject tape;
+    [SerializeField] private Transform tapespawn; */
+    [SerializeField] private UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor socket;
     private bool spawned = false;
     private bool plate = false;
     public bool filledplate => plate;
 
-    private void Awake()
-    {
-        socket = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor>();
-    }
-
     private void OnEnable()
     {
         socket.selectEntered.AddListener(OnSelectEntered);
-       // socket.selectExited.AddListener(OnSelectExited);
     }
 
     private void OnDisable()
     {
         socket.selectEntered.RemoveListener(OnSelectEntered);
-       // socket.selectExited.RemoveListener(OnSelectExited);
     }
 
     private void OnSelectEntered(SelectEnterEventArgs args)
@@ -59,8 +52,9 @@ public class PlateSocketScript : MonoBehaviour
             if (spawned == false)
             {
                 Debug.Log("Completed burger entered the box!");
-                Instantiate(tape, tapespawn.position, tapespawn.rotation);
+              //  Instantiate(tape, tapespawn.position, tapespawn.rotation);
                 spawned = true;
+                plate = true;
             }  
         }
         else

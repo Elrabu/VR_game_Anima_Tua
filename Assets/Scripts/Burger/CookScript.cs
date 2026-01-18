@@ -24,9 +24,10 @@ public class CookScript : MonoBehaviour
 
     void OnTriggerExit(Collider collision)
     {
-        cooking = false;
+       
         if (collision.gameObject.name == "patty" || collision.gameObject.name == "patty(Clone)")
         {
+            cooking = false;
             Destroy(smoke);
         }
     }
@@ -40,6 +41,7 @@ public class CookScript : MonoBehaviour
         {
             Transform grilled = patty.transform.Find("patty_grilled");
             Transform raw = patty.transform.Find("patty_raw");
+            Debug.Log(cooking);
 
             if (grilled != null && raw != null && cooking)
             {
