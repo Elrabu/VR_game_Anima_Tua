@@ -19,12 +19,11 @@ public class TrashCanResetScript : MonoBehaviour
     private readonly List<GameObject> spawnedIngredients = new(); //all currrent ingredients
     void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.name == "player_diner")
+         Debug.Log("Interacted with: " + collision.gameObject.name);
+        if (collision.gameObject.name != "VR Player")
         {
-            
+            ResetIngredient();
         }
-        Debug.Log("Interacted with: " + collision.gameObject.name);
-        ResetIngredient();
     }
     
      void Start()
