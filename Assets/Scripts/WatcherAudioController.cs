@@ -8,29 +8,52 @@ public class WatcherAudioController : MonoBehaviour
     public AudioClip[] floatingClips;
     public AudioClip attentionClip;
     public AudioClip attackClip;
+
     private bool isFloating = false;
 
-
-    public void PlayFloatingLoop()
-    {   
+    // Called by your StateMachineBehaviour when entering the Floating state
+    public void StartFloating()
+    {
         isFloating = true;
-        while(isFloating){
+        PlayNextFloatingClip();
+    }
+
+    // Called by behaviour when leaving Floating state (enter Attention/Attack/etc.)
+    public void StopFloating()
+    {
+        isFloating = false;
+        loopSource.Stop();
+    }
+
+    private void PlayNextFloatingClip()
+    {
+        if (floatingClips == null || floatingClips.Length == 0) return;
+
         int index = Random.Range(0, floatingClips.Length);
         loopSource.clip = floatingClips[index];
         loopSource.Play();
+    }
+
+    private void Update()
+    {
+        // Every frame: if we are in floating mode and nothing is playing,
+        // start the next random clip.
+        if (isFloating && !loopSource.isPlaying)
+        {
+            PlayNextFloatingClip();
         }
     }
 
     public void PlayAttention()
-    {   
-        isFloating = false;
+    {
+        StopFloating();
         if (attentionClip != null)
             sfxSource.PlayOneShot(attentionClip);
     }
 
     public void PlayAttack()
-    {   
-        isFloating = false;
+    {
+        StopFloating();
         if (attackClip != null)
             sfxSource.PlayOneShot(attackClip);
     }
