@@ -3,10 +3,11 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealthScript : MonoBehaviour
 {
-    [SerializeField] private int playerHealth = 5;
+    [SerializeField] private int playerHealth = 10;
     [SerializeField] private float cooldown = 0.5f;
     [SerializeField] private float cooldownTimer = 0f;
     [SerializeField] private bool dead = false;
+    [SerializeField] private Heartbeat heartbeat;
 
     void Update()
     {
@@ -24,14 +25,22 @@ public class PlayerHealthScript : MonoBehaviour
         if (other.gameObject.layer == 6 && cooldownTimer <= 0f)
         {
             damagePlayer(1);
+        if (heartbeat != null)
+        {
+            heartbeat.TriggerHeartbeat(Mathf.Lerp(60f, 120f, 1f - (playerHealth / 10f)));
+        }
+             
             cooldownTimer = cooldown;
+
         }
         if (playerHealth <= 0 && dead == false)
         {
             Debug.Log("You Died!");
             dead = true;
-            playerHealth = 5;
-            //change szene
+            playerHealth = 10;
+            if (heartbeat != null)
+                heartbeat.StopHeartbeat();
+            //change scene
             SceneManager.LoadScene("RespawnScene");
         }
     }
