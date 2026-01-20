@@ -15,6 +15,10 @@ public class PlayerHealthScript : MonoBehaviour
       
     }
 
+
+    /*
+    7 Leben Herz klopfen beginnt und schneller und lauter
+    */
     void OnTriggerStay(Collider other)
     {
         if (other.gameObject.layer == 6 && cooldownTimer <= 0f)
