@@ -5522,6 +5522,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1632285685}
   m_CullTransparentMesh: 0
+--- !u!1 &1639788651
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1639788653}
+  - component: {fileID: 1639788652}
+  m_Layer: 0
+  m_Name: Inventory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1639788652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639788651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ab5d913c9fcc60479a705fa1f8cf6fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory:
+    goldCoins: 0
+    isFull: 0
+    items: []
+--- !u!4 &1639788653
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639788651}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.5474107, y: -6.4576044, z: 16.46272}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1676530942
 GameObject:
   m_ObjectHideFlags: 0
@@ -15426,6 +15474,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92949fe6727a2624a8f2719f4a289f4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHealth: 5
+  cooldown: 0.5
+  cooldownTimer: 0
+  dead: 0
 --- !u!1 &6711873609330813325
 GameObject:
   m_ObjectHideFlags: 0
@@ -17532,3 +17584,4 @@ SceneRoots:
   - {fileID: 8749018965018967965}
   - {fileID: 5524637953011588546}
   - {fileID: 2799270826906393354}
+  - {fileID: 1639788653}
