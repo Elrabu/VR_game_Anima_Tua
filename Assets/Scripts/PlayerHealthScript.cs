@@ -9,6 +9,8 @@ public class PlayerHealthScript : MonoBehaviour
     [SerializeField] private bool dead = false;
     [SerializeField] private Heartbeat heartbeat;
 
+
+    
     void Update()
     {
        cooldownTimer -= Time.deltaTime;
@@ -39,7 +41,7 @@ public class PlayerHealthScript : MonoBehaviour
             dead = true;
             playerHealth = 10;
             if (heartbeat != null)
-                heartbeat.StopHeartbeat();
+                heartbeat.PlayTinitus();
             //change scene
             SceneManager.LoadScene("RespawnScene");
         }
