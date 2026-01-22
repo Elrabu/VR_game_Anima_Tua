@@ -3,12 +3,25 @@ using System.Collections.Generic;
 
 public class SaveData : MonoBehaviour
 {
+    public static SaveData Instance;
     public Settings settings = new Settings();
 
     private void Start()
     {
         //SaveToJson();
-        LoadFromJson();
+        //LoadFromJson();
+    }
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
     public void SaveToJson()
@@ -23,6 +36,13 @@ public class SaveData : MonoBehaviour
     public void LoadFromJson()
     {
         string filePath = Application.persistentDataPath + "/SettingsData.json";
+
+        if (!System.IO.File.Exists(filePath))
+        {
+            Debug.Log("No save file found!");
+            return;
+        }
+
         string settingsData = System.IO.File.ReadAllText(filePath);
 
         settings = JsonUtility.FromJson<Settings>(settingsData);
