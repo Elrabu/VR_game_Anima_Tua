@@ -5533,7 +5533,7 @@ GameObject:
   - component: {fileID: 1639788653}
   - component: {fileID: 1639788652}
   m_Layer: 0
-  m_Name: Inventory
+  m_Name: saveData
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5551,10 +5551,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ab5d913c9fcc60479a705fa1f8cf6fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory:
-    goldCoins: 0
-    isFull: 0
-    items: []
+  settings:
+    snapTurnEnabled: 1
+    continuousTurnEnabled: 1
+    tunnelingVignetteEnabled: 1
+    levels:
+    - name: Dungeon1
+      completed: 1
 --- !u!4 &1639788653
 Transform:
   m_ObjectHideFlags: 0
