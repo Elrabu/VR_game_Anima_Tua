@@ -44,7 +44,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -89,7 +89,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -173,7 +173,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -218,7 +218,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -302,7 +302,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -347,7 +347,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -696,8 +696,8 @@ MonoBehaviour:
   flashColor: {r: 1, g: 1, b: 1, a: 1}
   flashDuration: 0.5
   damageDeathAudioSource: {fileID: 1681749594645993153}
-  damageClip: {fileID: 0}
-  deathClip: {fileID: 0}
+  damageClip: {fileID: 8300000, guid: ea56d8d69985a0b42afd09950da17c30, type: 3}
+  deathClip: {fileID: 8300000, guid: 1baf1e06c3df4f845a5f5e759a58da3f, type: 3}
 --- !u!65 &5616829020299799688
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -785,4 +785,5 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 1f6c4ed93688c274caa4dcf8696c6ac0, type: 3}
   - {fileID: 8300000, guid: 6eb9f4b9146baf843b3e600e94e741bc, type: 3}
   attentionClip: {fileID: 0}
-  attackClip: {fileID: 0}
+  attackClip: {fileID: 8300000, guid: 91ba48fa17e7c5f49acd246b256d297f, type: 3}
+  clipDistance: 0.907002
