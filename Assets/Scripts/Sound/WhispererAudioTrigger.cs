@@ -2,15 +2,22 @@ using UnityEngine;
 
 public class WhispererAudioTrigger : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
+    private AudioSource audioSource;
+    private bool hasPlayed = false;
+
+
+    void Awake(){
+        audioSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (hasPlayed) return;
+
+        if (other.CompareTag("Player"))
+        {
+            audioSource.Play();
+            hasPlayed = true;
+        }
     }
 }
