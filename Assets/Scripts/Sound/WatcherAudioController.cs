@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class WatcherAudioController : MonoBehaviour
 {
@@ -9,38 +10,47 @@ public class WatcherAudioController : MonoBehaviour
     public AudioClip attentionClip;
     public AudioClip attackClip;
 
-    private bool isFloating = false;
+    [SerializeField] private float clipDistance = 0f;
 
-    // Called by your StateMachineBehaviour when entering the Floating state
+    private Coroutine floatingRoutine;
+
+    // Called when entering Floating state
     public void StartFloating()
     {
-        isFloating = true;
-        PlayNextFloatingClip();
+        StopFloating();
+        floatingRoutine = StartCoroutine(FloatingLoop());
     }
 
-    // Called by behaviour when leaving Floating state (enter Attention/Attack/etc.)
+    // Called when leaving Floating state
     public void StopFloating()
     {
-        isFloating = false;
+        if (floatingRoutine != null)
+        {
+            StopCoroutine(floatingRoutine);
+            floatingRoutine = null;
+        }
+
         loopSource.Stop();
     }
 
-    private void PlayNextFloatingClip()
+    private IEnumerator FloatingLoop()
     {
-        if (floatingClips == null || floatingClips.Length == 0) return;
-
-        int index = Random.Range(0, floatingClips.Length);
-        loopSource.clip = floatingClips[index];
-        loopSource.Play();
-    }
-
-    private void Update()
-    {
-        // Every frame: if we are in floating mode and nothing is playing,
-        // start the next random clip.
-        if (isFloating && !loopSource.isPlaying)
+        while (true)
         {
-            PlayNextFloatingClip();
+            if (floatingClips == null || floatingClips.Length == 0)
+                yield break;
+
+            // Pick random clip
+            AudioClip clip = floatingClips[Random.Range(0, floatingClips.Length)];
+            loopSource.clip = clip;
+            loopSource.Play();
+
+            // Wait until clip is finished
+            yield return new WaitForSeconds(clip.length);
+
+            // Wait additional distance (if any)
+            if (clipDistance > 0f)
+                yield return new WaitForSeconds(clipDistance);
         }
     }
 
