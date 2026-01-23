@@ -685,6 +685,18 @@ PrefabInstance:
       propertyPath: obstacleLayer.m_Bits
       value: 264
       objectReference: {fileID: 0}
+    - target: {fileID: 3017723045679341674, guid: 4b53dab10d167bd428ddd860b14cd4d1, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3017723045679341674, guid: 4b53dab10d167bd428ddd860b14cd4d1, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 5737970004581766438, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
+    - target: {fileID: 3017723045679341674, guid: 4b53dab10d167bd428ddd860b14cd4d1, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6659241120218169076, guid: 4b53dab10d167bd428ddd860b14cd4d1, type: 3}
       propertyPath: m_Intensity
       value: 186.83353
@@ -2747,6 +2759,18 @@ PrefabInstance:
     - target: {fileID: 2522601252118358528, guid: 4b53dab10d167bd428ddd860b14cd4d1, type: 3}
       propertyPath: detectionHeight
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3017723045679341674, guid: 4b53dab10d167bd428ddd860b14cd4d1, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3017723045679341674, guid: 4b53dab10d167bd428ddd860b14cd4d1, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 5737970004581766438, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
+    - target: {fileID: 3017723045679341674, guid: 4b53dab10d167bd428ddd860b14cd4d1, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6659241120218169076, guid: 4b53dab10d167bd428ddd860b14cd4d1, type: 3}
       propertyPath: m_Intensity
@@ -11073,6 +11097,18 @@ PrefabInstance:
       propertyPath: detectionHeight
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3017723045679341674, guid: 4b53dab10d167bd428ddd860b14cd4d1, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3017723045679341674, guid: 4b53dab10d167bd428ddd860b14cd4d1, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 5737970004581766438, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
+    - target: {fileID: 3017723045679341674, guid: 4b53dab10d167bd428ddd860b14cd4d1, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6659241120218169076, guid: 4b53dab10d167bd428ddd860b14cd4d1, type: 3}
       propertyPath: m_Intensity
       value: 186.83353
@@ -11878,6 +11914,18 @@ PrefabInstance:
     - target: {fileID: 2522601252118358528, guid: 4b53dab10d167bd428ddd860b14cd4d1, type: 3}
       propertyPath: detectionHeight
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3017723045679341674, guid: 4b53dab10d167bd428ddd860b14cd4d1, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3017723045679341674, guid: 4b53dab10d167bd428ddd860b14cd4d1, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 5737970004581766438, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
+    - target: {fileID: 3017723045679341674, guid: 4b53dab10d167bd428ddd860b14cd4d1, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6659241120218169076, guid: 4b53dab10d167bd428ddd860b14cd4d1, type: 3}
       propertyPath: m_Intensity
