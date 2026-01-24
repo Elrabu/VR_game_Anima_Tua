@@ -5,6 +5,8 @@ public class SaveContinuousTurnData : MonoBehaviour
 {
     private bool continuousTurn = false;
     [SerializeField] private Toggle toggle;
+    [SerializeField] private Toggle snaptoggle;
+    [SerializeField] private GameObject continuousturnProvider;
     public void Start()
     {
         SaveData.Instance.LoadFromJson();
@@ -18,6 +20,7 @@ public class SaveContinuousTurnData : MonoBehaviour
         if (continuousTurn)
         {
             continuousTurn = false;
+            continuousturnProvider.SetActive(false);
             SaveData.Instance.settings.continuousTurnEnabled = false;
             SaveData.Instance.SaveToJson();
             Debug.Log("disabledContinuousTurn");
@@ -25,6 +28,8 @@ public class SaveContinuousTurnData : MonoBehaviour
         else
         {
             continuousTurn = true;
+            continuousturnProvider.SetActive(true);
+            snaptoggle.isOn = false;
             SaveData.Instance.settings.continuousTurnEnabled = true;
             SaveData.Instance.SaveToJson();
             Debug.Log("enabledContinuousTurn");
