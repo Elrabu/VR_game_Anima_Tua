@@ -1228,6 +1228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggle: {fileID: 316840400}
+  vignette: {fileID: 1306315376}
 --- !u!1 &361944409
 GameObject:
   m_ObjectHideFlags: 0
@@ -5174,6 +5175,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggle: {fileID: 1251620381}
+  snaptoggle: {fileID: 5715416336807138419}
+  continuousturnProvider: {fileID: 8881787709036297272}
 --- !u!1 &1259665345
 GameObject:
   m_ObjectHideFlags: 0
@@ -17604,6 +17607,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggle: {fileID: 5715416336807138419}
+  Continuoustoggle: {fileID: 1251620381}
+  snapturnProvider: {fileID: 4709285313767333319}
 --- !u!4 &6810714935132358687
 Transform:
   m_ObjectHideFlags: 0
