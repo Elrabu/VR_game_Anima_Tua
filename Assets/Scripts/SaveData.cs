@@ -21,7 +21,7 @@ public class SaveData : MonoBehaviour
         }
 
         Instance = this;
-        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject); //Does not need to be attached to another Game Object in another scene
     }
 
     public void SaveToJson()
