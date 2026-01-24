@@ -159,6 +159,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 748d1550524ec8243b77b8fde397d98e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shootClip: {fileID: 8300000, guid: 86a1bf795758e374896fffff63d99ecf, type: 3}
+  impactClip: {fileID: 8300000, guid: 17de87f105b2a2f4f8eb4a988965d851, type: 3}
+  sfxMixer: {fileID: 6223885664646400602, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
   shootForce: 100
   timeToDestroy: 10
   particle: {fileID: 5910897184986251020, guid: 49feb77627f46ce42b2b9830d883c7f1, type: 3}
