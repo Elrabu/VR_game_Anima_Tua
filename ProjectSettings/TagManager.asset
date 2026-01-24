@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Book
   - DoorHandle
+  - CookingSmoke
   - Ground
   layers:
   - Default
