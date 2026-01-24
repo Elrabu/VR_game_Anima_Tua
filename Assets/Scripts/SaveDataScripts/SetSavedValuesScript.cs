@@ -2,10 +2,11 @@ using UnityEngine;
 
 public class SetSavedValuesScript : MonoBehaviour
 {
-    public GameObject snapVignette;
-    public GameObject continuousVignette;
-    public GameObject snapturnProvider;
-    public GameObject continuousturnProvider;
+    [SerializeField] private GameObject snapVignette;
+    [SerializeField] private GameObject continuousVignette;
+    [SerializeField] private GameObject vignette;
+    [SerializeField] private GameObject snapturnProvider;
+    [SerializeField] private GameObject continuousturnProvider;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -24,9 +25,15 @@ public class SetSavedValuesScript : MonoBehaviour
             continuousturnProvider.SetActive(false);
         }
 
-        if (SaveData.Instance.settings.tunnelingVignetteEnabled)
+        if (SaveData.Instance.settings.tunnelingVignetteEnabled && SaveData.Instance.settings.continuousTurnEnabled)
         {
             continuousVignette.SetActive(true);
+        } else if (SaveData.Instance.settings.tunnelingVignetteEnabled && SaveData.Instance.settings.snapTurnEnabled)
+        {
+            snapVignette.SetActive(true);
+        } else if (SaveData.Instance.settings.tunnelingVignetteEnabled)
+        {
+            vignette.SetActive(true);
         }
     }
 }

@@ -47,7 +47,7 @@ public class SaveData : MonoBehaviour
 
         settings = JsonUtility.FromJson<Settings>(settingsData);
         Debug.Log("Data loaded");
-        Debug.Log(settings.snapTurnEnabled +""+ settings.continuousTurnEnabled +""+ settings.tunnelingVignetteEnabled +""+ settings.levels[0]);
+        Debug.Log(settings.snapTurnEnabled +""+ settings.continuousTurnEnabled +""+ settings.tunnelingVignetteEnabled);
     }
 }
 
