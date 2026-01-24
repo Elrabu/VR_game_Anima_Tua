@@ -64,5 +64,4 @@ public class Settings
 public class Levels
 {
     public string name;
-    public bool completed;
 } 

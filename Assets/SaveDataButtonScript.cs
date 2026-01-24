@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class SaveDataButtonScript : MonoBehaviour
 {
+    private bool snapTurn = false;
+    private bool continuousTurn = false;
+    private bool tunnelingVignette = false;
     public void saveData()
     {
         SaveData.Instance.settings.snapTurnEnabled = false;
@@ -9,14 +12,67 @@ public class SaveDataButtonScript : MonoBehaviour
         SaveData.Instance.settings.tunnelingVignetteEnabled = false;
         Levels newLevel = new Levels
         {
-            name = "Level_2",
-            completed = false
+            name = "Level_3"
         };
 
         SaveData.Instance.settings.levels.Add(newLevel);
         SaveData.Instance.SaveToJson();
         Debug.Log("Saved");
     }
+
+    public void ChangeSnapTurn()
+    {
+        if (snapTurn)
+        {
+            snapTurn = false;
+            SaveData.Instance.settings.snapTurnEnabled = false;
+            SaveData.Instance.SaveToJson();
+            Debug.Log("disabledSnapTurn");
+        } else
+        {
+            snapTurn = true;
+            SaveData.Instance.settings.snapTurnEnabled = true;
+            SaveData.Instance.SaveToJson();
+            Debug.Log("enabledSnapTurn");
+        }
+    }
+
+    public void ChangeContinuousTurn()
+    {
+        if (continuousTurn)
+        {
+            continuousTurn = false;
+            SaveData.Instance.settings.continuousTurnEnabled = false;
+            SaveData.Instance.SaveToJson();
+            Debug.Log("disabledContinuousTurn");
+        }
+        else
+        {
+            continuousTurn = true;
+            SaveData.Instance.settings.continuousTurnEnabled = true;
+            SaveData.Instance.SaveToJson();
+            Debug.Log("enabledContinuousTurn");
+        }
+    }
+
+    public void ChangeTunnelingVignette()
+    {
+        if (tunnelingVignette)
+        {
+            tunnelingVignette = false;
+            SaveData.Instance.settings.tunnelingVignetteEnabled = false;
+            SaveData.Instance.SaveToJson();
+            Debug.Log("disabledTunnelingVignette");
+        }
+        else
+        {
+            tunnelingVignette = true;
+            SaveData.Instance.settings.tunnelingVignetteEnabled = true;
+            SaveData.Instance.SaveToJson();
+            Debug.Log("enabledTunnelingVignette");
+        }
+    }
+
 
     public void loadData()
     {
