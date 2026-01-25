@@ -4818,9 +4818,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3442317969973597839, guid: ce15f695fa3215a47a8c645419cd7377, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5161516079726238304, guid: ce15f695fa3215a47a8c645419cd7377, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5387579907154234365, guid: ce15f695fa3215a47a8c645419cd7377, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7324839975234191228, guid: ce15f695fa3215a47a8c645419cd7377, type: 3}
       propertyPath: m_LocalPosition.x
