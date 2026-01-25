@@ -51,8 +51,11 @@ public class PlateSocketScript : MonoBehaviour
         {
             if (spawned == false)
             {
-                Debug.Log("Completed burger entered the box!");
+                Debug.Log("Completed burger!");
               //  Instantiate(tape, tapespawn.position, tapespawn.rotation);
+                                                                                                                                                // 
+                                                                                                                                                // Sound change here
+                                                                                                                                                //
                 spawned = true;
                 plate = true;
             }  
