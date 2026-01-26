@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.Audio;
+
 
 public class BulletScript : MonoBehaviour
 {  
@@ -7,6 +9,13 @@ public class BulletScript : MonoBehaviour
 
     protected GameObject spawnedParticle;
     protected Transform spawnPoint;
+    
+    [SerializeField] private AudioClip shootClip;
+
+    [SerializeField] private AudioClip impactClip;
+    [SerializeField] private AudioMixerGroup sfxMixer;
+
+
 
     public void setUpBullet(float shootForce, float timeToDestroy, GameObject spawned, Transform point)
     {
@@ -16,6 +25,7 @@ public class BulletScript : MonoBehaviour
         lifetime = timeToDestroy;
         spawnedParticle = spawned;
         spawnPoint = point;
+        PlayShootSound();
     }
 
     void Update()
@@ -28,7 +38,14 @@ public class BulletScript : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider collision)
-    {
+    {   
+        AudioSourceAtPoint audio = new AudioSourceAtPoint();
+        audio.PlayClipAtPointWithFullControl(
+            impactClip,
+            transform.position,
+            sfxMixer,
+            1f
+        );
         HandleCollision(collision);
         spawnParticleSystem(spawnedParticle, spawnPoint);
     }
@@ -48,10 +65,27 @@ public class BulletScript : MonoBehaviour
     }
 
     void spawnParticleSystem(GameObject spawnedParticle, Transform spawnPoint)
-    {
+    {   
+        
         GameObject particle = Instantiate(spawnedParticle, spawnPoint.position, spawnPoint.rotation);
         particle.GetComponent<ParticleSystem>().Play();
         Destroy(particle, 0.5f);
     }
     
+
+    void PlayShootSound()
+    {
+        AudioSource src = gameObject.AddComponent<AudioSource>();
+        src.clip = shootClip;
+        src.outputAudioMixerGroup = sfxMixer;
+        src.spatialBlend = 1f;               // 3D Sound
+        src.rolloffMode = AudioRolloffMode.Logarithmic;
+        src.minDistance = 0.3f;
+        src.maxDistance = 15f;
+        src.volume = 1f;
+        src.playOnAwake = false;
+
+        src.Play();
+    }
+
 }
