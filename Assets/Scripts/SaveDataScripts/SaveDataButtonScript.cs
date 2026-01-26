@@ -12,12 +12,12 @@ public class SaveDataButtonScript : MonoBehaviour
         SaveData.Instance.settings.snapTurnEnabled = false;
         SaveData.Instance.settings.continuousTurnEnabled = false;
         SaveData.Instance.settings.tunnelingVignetteEnabled = false;
-        Levels newLevel = new Levels
+        /*Levels newLevel = new Levels
         {
             name = "Level_3"
-        };
+        }; */
 
-        SaveData.Instance.settings.levels.Add(newLevel);
+       // SaveData.Instance.settings.levels.Add(newLevel);
         SaveData.Instance.SaveToJson();
         Debug.Log("Saved");
     }
