@@ -8,4 +8,9 @@ public class JukeBoxPlayAudioSource : MonoBehaviour
     {
         audiotrack.SetActive(true);
     }
+
+    public void StopMusic()
+    {
+        audiotrack.SetActive(false);
+    }
 }
