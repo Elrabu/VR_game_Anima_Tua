@@ -5,13 +5,6 @@ public class SaveData : MonoBehaviour
 {
     public static SaveData Instance;
     public Settings settings = new Settings();
-
-    private void Start()
-    {
-        //SaveToJson();
-        //LoadFromJson();
-    }
-
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -46,8 +39,8 @@ public class SaveData : MonoBehaviour
         string settingsData = System.IO.File.ReadAllText(filePath);
 
         settings = JsonUtility.FromJson<Settings>(settingsData);
-        Debug.Log("Data loaded");
-        Debug.Log(settings.snapTurnEnabled +""+ settings.continuousTurnEnabled +""+ settings.tunnelingVignetteEnabled);
+       // Debug.Log("Data loaded");
+       // Debug.Log(settings.snapTurnEnabled +""+ settings.continuousTurnEnabled +""+ settings.tunnelingVignetteEnabled);
     }
 }
 
@@ -57,11 +50,5 @@ public class Settings
     public bool snapTurnEnabled = false;
     public bool continuousTurnEnabled = false;
     public bool tunnelingVignetteEnabled = false;
-    public List<Levels> levels = new List<Levels>();
+    public List<string> levels = new List<string>();
 }
-
-[System.Serializable]
-public class Levels
-{
-    public string name;
-} 

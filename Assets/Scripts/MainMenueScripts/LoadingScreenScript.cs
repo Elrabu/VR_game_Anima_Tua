@@ -6,10 +6,19 @@ using UnityEngine.SceneManagement;
 
 public class LoadingScreenScript : MonoBehaviour
 {
-    public GameObject LoadingScreen;
+    [SerializeField] private string playerTag = "Player";
+    [SerializeField] private GameObject LoadingScreen;
 
-    public GameObject rightHand;
-    public GameObject leftHand;
+    [SerializeField] private GameObject rightHand;
+    [SerializeField] private GameObject leftHand;
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag(playerTag))
+        {
+            LoadScene(1);
+        }
+    }
 
     public void LoadScene(int sceneId)
     {

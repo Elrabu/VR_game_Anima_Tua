@@ -3,8 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneTeleporter : MonoBehaviour
 {
-    public string sceneToLoad;
-    public string playerTag = "Player";
+    [SerializeField] private string sceneToLoad;
+    [SerializeField] private string playerTag = "Player";
 
     private void OnTriggerEnter(Collider other)
     {
