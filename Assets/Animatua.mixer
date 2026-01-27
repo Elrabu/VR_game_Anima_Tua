@@ -26,6 +26,7 @@ AudioMixerGroupController:
   m_Children:
   - {fileID: -7699181244570247131}
   - {fileID: -7071552325735316406}
+  - {fileID: -6574694147707696319}
   m_Volume: 35ba683f30b4716438633314691c76e6
   m_Pitch: 26f3951b58b3b194b8ba9acd3da5b815
   m_Send: 00000000000000000000000000000000
@@ -107,6 +108,20 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+--- !u!244 &-7662390825388545351
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: fedc015742ae9c6448e7df3eb5775a4e
+  m_EffectName: Attenuation
+  m_MixLevel: 995da4e09715e1f40a2dad44f62a228d
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!243 &-7651942211840000726
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -259,6 +274,25 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: -1459118797794405627}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!243 &-6574694147707696319
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Portal
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: f289939e7fe6e694cbc7e7b510eaac0e
+  m_Children: []
+  m_Volume: cc081b1638b60894f82d281bae5b3f93
+  m_Pitch: a8e42320da79f2743a936022a1f01ee2
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -7662390825388545351}
   m_UserColorIndex: 0
   m_Mute: 0
   m_Solo: 0
@@ -652,6 +686,7 @@ AudioMixerController:
     - 7ee5b01fc96d419408e7d5f43f48118a
     - 4a2c6f97b2b46f844ba07adbac014996
     - abe1972c02bc581458cec9996765a719
+    - f289939e7fe6e694cbc7e7b510eaac0e
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -728,6 +763,8 @@ AudioMixerSnapshotController:
     662191dd232c27847aa92462f8961edb: 0.775
     a055984ec4fa4dc4084ad9d5bec7799f: 0.8
     7d8e1c5e10b91114fbbbd81421d3796d: 0
+    fe78e19f20feb384db3fabce0f7387cb: 1.5899994
+    be7e2b9f7f8d9ba43b7fae429b383575: 36.507874
     126a5fcf8ead4444c94c0f2dfc56d1d5: 5.651723
   m_TransitionOverrides: {}
 --- !u!243 &348949501666388924

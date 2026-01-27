@@ -67,12 +67,20 @@ public class SocketIngredientCheckerScript : MonoBehaviour
             return;
         }
 
+        ingredient.TryPlayPlaceSound();
+
+        ingredient.MarkAsBurgerPart();
+
+        BurgerBase burgerBase = GetComponentInChildren<BurgerBase>();
+        if (burgerBase != null)
+            burgerBase.OnIngredientAdded();
+
         currentStack.Add(ingredient.ingredientType);
         Debug.Log($"Added ingredient: {ingredient.ingredientType}");
     }
 
     private void CheckRecipe()
-    {
+    {   
         if (currentStack.Count != correctRecipe.Length)
             return;
 

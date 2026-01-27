@@ -571,7 +571,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -7071552325735316406, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 42a1e5bac0bacb044bb47c967a91225a, type: 3}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -942,10 +942,9 @@ GameObject:
   - component: {fileID: 4932729165961294324}
   - component: {fileID: 1423133177340150420}
   - component: {fileID: 5720407912697854969}
-  - component: {fileID: 5569044764582251587}
   m_Layer: 0
   m_Name: bread_top
-  m_TagString: Untagged
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1208,20 +1207,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientType: 2
---- !u!114 &5569044764582251587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4106791773634370418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe7e03620a097d54084385a040d5326a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dropClip: {fileID: 8300000, guid: 42a1e5bac0bacb044bb47c967a91225a, type: 3}
+  placeSound: {fileID: 8300000, guid: 26f4824ce57b3de45ab2ff91f3eb4802, type: 3}
   audioSource: {fileID: 4462996868073279043}
+  isPartOfBurger: 0
 --- !u!1 &4722568517223704555
 GameObject:
   m_ObjectHideFlags: 0
@@ -1235,12 +1223,13 @@ GameObject:
   - component: {fileID: 4955024705531357268}
   - component: {fileID: 3491464894078665696}
   - component: {fileID: 5733829506422017952}
+  - component: {fileID: 7527546569230169127}
   - component: {fileID: 392854752494723421}
   - component: {fileID: 4049233442295534069}
   - component: {fileID: 6729549428123900668}
   m_Layer: 0
   m_Name: bread_bottom
-  m_TagString: Untagged
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1366,6 +1355,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7527546569230169127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4722568517223704555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c82db13d95a101549b56e87bd05e2c8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 5554209802784376145}
+  assembleSound: {fileID: 8300000, guid: ec7427d22d00c5a449ccabad7ae13605, type: 3}
+  breadClip: {fileID: 8300000, guid: 26f4824ce57b3de45ab2ff91f3eb4802, type: 3}
 --- !u!114 &392854752494723421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1758,10 +1762,9 @@ GameObject:
   - component: {fileID: 6542610457963829381}
   - component: {fileID: 606955934638556824}
   - component: {fileID: 6100370608439296031}
-  - component: {fileID: 8591558081270513870}
   m_Layer: 0
   m_Name: pickels
-  m_TagString: Untagged
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2036,20 +2039,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientType: 1
---- !u!114 &8591558081270513870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5400838576631005452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe7e03620a097d54084385a040d5326a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dropClip: {fileID: 8300000, guid: 39991bb34fd7b444599a8dc04172694b, type: 3}
+  placeSound: {fileID: 8300000, guid: 39991bb34fd7b444599a8dc04172694b, type: 3}
   audioSource: {fileID: 2177374998651419233}
+  isPartOfBurger: 0
 --- !u!1 &5648838216684573104
 GameObject:
   m_ObjectHideFlags: 0
@@ -2093,7 +2085,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -7071552325735316406, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 39991bb34fd7b444599a8dc04172694b, type: 3}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2194,10 +2186,9 @@ GameObject:
   - component: {fileID: 7045092738870611345}
   - component: {fileID: 6110023939491566323}
   - component: {fileID: 6493701608366780514}
-  - component: {fileID: 4597615509745525595}
   m_Layer: 0
   m_Name: patty
-  m_TagString: Untagged
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2473,20 +2464,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientType: 0
---- !u!114 &4597615509745525595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6732149190285897019}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe7e03620a097d54084385a040d5326a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dropClip: {fileID: 8300000, guid: f06ca7105d56da24fb9bb0dd4a0ab337, type: 3}
+  placeSound: {fileID: 8300000, guid: f06ca7105d56da24fb9bb0dd4a0ab337, type: 3}
   audioSource: {fileID: 7126634453252464094}
+  isPartOfBurger: 0
 --- !u!1 &7105163856857266070
 GameObject:
   m_ObjectHideFlags: 0
@@ -2880,7 +2860,7 @@ AudioSource:
   m_GameObject: {fileID: 9057658216340960015}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -7071552325735316406, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
