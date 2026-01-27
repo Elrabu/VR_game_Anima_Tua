@@ -11,7 +11,7 @@ public class CharacterControllerFollowScript : MonoBehaviour
     }
     void Update()
     {
-        Vector3 worldOffset = new Vector3(0f, -0.5f, -0.1f);
+        Vector3 worldOffset = new Vector3(0f, -0.6f, 0f);
         //Debug.Log("Position: " + cam.transform.position);
         transform.position = cam.transform.position + worldOffset;
 
@@ -19,11 +19,11 @@ public class CharacterControllerFollowScript : MonoBehaviour
 
         forward.y = 0f; //remove pitch and roll influence
 
-       /* if (forward.sqrMagnitude > 0.01f)
+        if (forward.sqrMagnitude > 0.01f)
         {
             // transform.rotation = Quaternion.LookRotation(forward);
             Quaternion targetRotation = Quaternion.LookRotation(forward) * initialRotation;
             transform.rotation = targetRotation;
-        } */
+        } 
     }
 }
