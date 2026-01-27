@@ -1,11 +1,14 @@
 using UnityEngine;
 using System.Collections;
 
+
 public class CookScript : MonoBehaviour
 {
     [SerializeField] private GameObject smokePrefab;
+    [SerializeField] private AudioSource sizzlingSource;
     private GameObject smoke;
     private bool cooking = false;
+   
     //private GameObject patty;
     void OnTriggerEnter(Collider collision)
     {
@@ -16,7 +19,7 @@ public class CookScript : MonoBehaviour
 
             var follow = smoke.GetComponent<GameObjectFollowScript>();
             follow.hand = collision.gameObject;
-
+            sizzlingSource.Play();
             cooking = true;
             StartCoroutine(Cook(collision.gameObject));
         }
@@ -26,7 +29,8 @@ public class CookScript : MonoBehaviour
     {
        
         if (collision.gameObject.name == "patty" || collision.gameObject.name == "patty(Clone)")
-        {
+        {   
+            FadeOutAndStop(6f);
             cooking = false;
             Destroy(smoke);
         }
@@ -49,5 +53,23 @@ public class CookScript : MonoBehaviour
                 raw.gameObject.SetActive(false);
             }
         }
+    }
+    public void FadeOutAndStop(float fadeDuration)
+    {
+        StartCoroutine(FadeOutCoroutine(fadeDuration));
+    }
+
+    private IEnumerator FadeOutCoroutine(float duration)
+    {
+        float startVolume = sizzlingSource.volume;
+
+        while (sizzlingSource.volume > 0f)
+        {
+            sizzlingSource.volume -= startVolume * Time.deltaTime / duration;
+            yield return null;
+        }
+
+        sizzlingSource.Stop();
+        sizzlingSource.volume = startVolume; // Lautstärke zurücksetzen
     }
 }

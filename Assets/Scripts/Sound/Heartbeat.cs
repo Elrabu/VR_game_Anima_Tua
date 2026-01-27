@@ -1,4 +1,3 @@
-using System.Security.AccessControl;
 using UnityEngine;
 
 public class Heartbeat : MonoBehaviour
