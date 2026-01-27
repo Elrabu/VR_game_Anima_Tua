@@ -18,6 +18,7 @@ public class SceneTeleporter : MonoBehaviour
     {
         if (!string.IsNullOrEmpty(sceneToLoad))
         {
+            Debug.Log("Sending to scene: " + sceneToLoad);
             SceneManager.LoadScene(sceneToLoad);
         }
         else
