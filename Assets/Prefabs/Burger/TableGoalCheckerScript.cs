@@ -23,6 +23,7 @@ public class TableGoalCheckerScript : MonoBehaviour
                                                                                                                                                 // Sound change here
                                                                                                                                                 //
                 Instantiate(tape, tapespawn.position, tapespawn.rotation);
+                AutoMusicCrossfade.instance.StartMusic();
                 spawned = true;
                 portal.SetActive(true);
             }  

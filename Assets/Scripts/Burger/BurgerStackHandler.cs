@@ -12,6 +12,7 @@ public class BurgerStack : MonoBehaviour
         BurgerIngredientType.TopBun
     };
 
+
     private bool completed = false;
     public bool CompletedBurger => completed; //exposes the variable
 
@@ -44,7 +45,6 @@ public class BurgerStack : MonoBehaviour
             if (currentStack[i] != correctRecipe[i])
                 return;
         }
-
         completed = true;
         Debug.Log("Correct burger assembled!");
     }

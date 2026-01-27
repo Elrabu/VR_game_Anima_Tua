@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class SocketIngredientCheckerScript : MonoBehaviour
 {
+    public static SocketIngredientCheckerScript Instance { get; private set; }
     [SerializeField] private UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor socket1;
     [SerializeField] private UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor socket2;
     [SerializeField] private UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor socket3;
@@ -19,6 +20,8 @@ public class SocketIngredientCheckerScript : MonoBehaviour
 
     private bool completed = false;
     public bool CompletedBurger => completed; //exposes the variable
+
+    
 
     void Awake()
     {
