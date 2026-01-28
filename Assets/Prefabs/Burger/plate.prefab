@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6622470126680329650}
   - component: {fileID: 5417087914830154348}
   - component: {fileID: 1650874171423743357}
+  - component: {fileID: 2062254996377567404}
   m_Layer: 0
   m_Name: plate
   m_TagString: Untagged
@@ -279,6 +280,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   socket: {fileID: 5564138287448891225}
+--- !u!114 &2062254996377567404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2622815381761387618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e13c543e5dc21ef4abd5bff1af5da050, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropClip: {fileID: 8300000, guid: d5e54c90019fa6f418468a3bee58e43d, type: 3}
+  volume: 1
 --- !u!1 &5620175102898613379
 GameObject:
   m_ObjectHideFlags: 0

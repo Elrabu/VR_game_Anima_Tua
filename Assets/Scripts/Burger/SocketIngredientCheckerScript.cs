@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class SocketIngredientCheckerScript : MonoBehaviour
 {
+    public static SocketIngredientCheckerScript Instance { get; private set; }
     [SerializeField] private UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor socket1;
     [SerializeField] private UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor socket2;
     [SerializeField] private UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor socket3;
@@ -19,6 +20,8 @@ public class SocketIngredientCheckerScript : MonoBehaviour
 
     private bool completed = false;
     public bool CompletedBurger => completed; //exposes the variable
+
+    
 
     void Awake()
     {
@@ -54,22 +57,29 @@ public class SocketIngredientCheckerScript : MonoBehaviour
         CheckRecipe();
     }
 
-    private void AddIngredient(SelectEnterEventArgs args)
+private void AddIngredient(SelectEnterEventArgs args)
+{
+    var ingredient =
+        args.interactableObject.transform.GetComponent<BurgerIngredient>();
+
+    if (ingredient == null || ingredient.isPartOfBurger)
+        return;
+
+    ingredient.MarkAsBurgerPart();
+
+    BurgerBase burgerBase = GetComponentInChildren<BurgerBase>();
+    if (burgerBase != null)
     {
-        var ingredient = args.interactableObject.transform.GetComponent<BurgerIngredient>();
-
-        if (ingredient == null)
-        {
-            Debug.LogWarning("Object placed in socket has no BurgerIngredient component.");
-            return;
-        }
-
-        currentStack.Add(ingredient.ingredientType);
-        Debug.Log($"Added ingredient: {ingredient.ingredientType}");
+        burgerBase.OnIngredientAdded();
     }
 
+    currentStack.Add(ingredient.ingredientType);
+}
+
+
+
     private void CheckRecipe()
-    {
+    {   
         if (currentStack.Count != correctRecipe.Length)
             return;
 
