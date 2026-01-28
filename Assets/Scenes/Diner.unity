@@ -37767,9 +37767,9 @@ GameObject:
   - component: {fileID: 1299464455884129000}
   - component: {fileID: 4495751054436782742}
   - component: {fileID: 366039793}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: room_1
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -41752,13 +41752,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67ceb6721d7124d43b9d5678f8c94493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultSurface: {fileID: 0}
-  surfaces: []
-  footOrigin: {fileID: 0}
+  defaultSurface: {fileID: 11400000, guid: 2ea71c918810c8044bfc4b481be6c994, type: 2}
+  surfaces:
+  - {fileID: 11400000, guid: 2ea71c918810c8044bfc4b481be6c994, type: 2}
+  footOrigin: {fileID: 5580267397355108245}
   rayDistance: 1.5
-  stepDistance: 0.4
+  stepDistance: 1
   requireGrounded: 1
-  characterController: {fileID: 0}
+  characterController: {fileID: 5558180856586035703}
 --- !u!82 &6602639455195528195
 AudioSource:
   m_ObjectHideFlags: 0
@@ -41768,10 +41769,10 @@ AudioSource:
   m_GameObject: {fileID: 5161516079415106360}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -3594790878780810321, guid: dc4e4c0923dfa884e984ca53b7bc024d, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -41816,7 +41817,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
