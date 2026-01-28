@@ -7,14 +7,21 @@ public class FireHandShootScript : MonoBehaviour
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private float secondsBetweenShoot = 0.1f;
+
     float trackShoot;
-    void Update()
+
+    void Awake()
     {
+    }
+
+    void Update()
+    {           
         float value = shoot.action.ReadValue<float>();
         
         if (value == 1 && trackShoot <= 0)
         {
             Instantiate(bulletPrefab, spawnPoint.position, spawnPoint.rotation);
+             
             trackShoot = secondsBetweenShoot;
         }
         trackShoot -= Time.deltaTime;

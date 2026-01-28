@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Book
+  - DoorHandle
+  - CookingSmoke
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -13,6 +17,8 @@ TagManager:
   - UI
   - Enemy
   - Player
+  - Stone
+  - Tiles
   - 
   - 
   - 
@@ -34,9 +40,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
+  - Light
   m_SortingLayers:
   - name: Default
     uniqueID: 0

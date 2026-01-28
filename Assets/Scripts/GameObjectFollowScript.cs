@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class GameObjectFollowScript : MonoBehaviour
 {
-    private GameObject hand;
+    public GameObject hand;
 
     public void SetHand(GameObject handObject)
     {

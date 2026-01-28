@@ -15,10 +15,10 @@ MonoBehaviour:
   m_LayerNames:
   - Default
   - NearOnly
-  - 
-  - 
-  - 
-  - 
+  - door
+  - bread_bottom
+  - patty
+  - pickles
   - 
   - 
   - 
