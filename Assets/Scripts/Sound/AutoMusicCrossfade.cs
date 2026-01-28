@@ -1,73 +1,85 @@
-using System.Collections;
 using UnityEngine;
 
 public class AutoMusicCrossfade : MonoBehaviour
-{   
-    public static AutoMusicCrossfade instance { get; private set;  }
-    [SerializeField] private AudioSource[] sources; // Größe = 4
+{
+    public static AutoMusicCrossfade instance { get; private set; }
+
+    [SerializeField] private AudioSource[] sources; // z.B. Größe = 4
     [SerializeField] private float fadeTime = 2f;
-    [SerializeField] private float holdTime = 5f;   // Zeit, die ein Track voll hörbar bleibt
+    [SerializeField] private float holdTime = 5f;
 
     int currentTrack = 0;
-    Coroutine fadeCoroutine;
+    int nextTrack = 0;
+
+    double fadeStartDSP;
+    double nextFadeDSP;
+    bool isFading = false;
 
     void Awake()
     {
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
         instance = this;
     }
 
     public void StartMusic()
     {
         StartAllSynced();
-        StartCoroutine(AutoFadeLoop());
+        nextFadeDSP = AudioSettings.dspTime + holdTime;
     }
 
     void StartAllSynced()
     {
         double startTime = AudioSettings.dspTime + 0.1;
 
-        foreach (var src in sources)
+        for (int i = 0; i < sources.Length; i++)
         {
-            src.volume = 0f;
-            src.loop = true;
-            src.PlayScheduled(startTime);
+            sources[i].volume = 0f;
+            sources[i].loop = true;
+            sources[i].PlayScheduled(startTime);
         }
 
         sources[0].volume = 1f;
+        currentTrack = 0;
     }
 
-    IEnumerator AutoFadeLoop()
+    void Update()
     {
-        while (true)
+        double dspTime = AudioSettings.dspTime;
+
+        // Starte neuen Fade nach Hold-Zeit
+        if (!isFading && dspTime >= nextFadeDSP)
         {
-            yield return new WaitForSeconds(holdTime);
-
-            int nextTrack = (currentTrack + 1) % sources.Length;
-            yield return StartCoroutine(FadeRoutine(currentTrack, nextTrack));
-
-            currentTrack = nextTrack;
-        }
-    }
-
-    IEnumerator FadeRoutine(int from, int to)
-    {
-        float t = 0f;
-
-        float startFrom = sources[from].volume;
-        float startTo = sources[to].volume;
-
-        while (t < fadeTime)
-        {
-            t += Time.deltaTime;
-            float k = t / fadeTime;
-
-            sources[from].volume = Mathf.Lerp(startFrom, 0f, k);
-            sources[to].volume = Mathf.Lerp(startTo, 1f, k);
-
-            yield return null;
+            nextTrack = (currentTrack + 1) % sources.Length;
+            fadeStartDSP = dspTime;
+            isFading = true;
         }
 
-        sources[from].volume = 0f;
-        sources[to].volume = 1f;
+        // Fading
+        if (isFading)
+        {
+            float k = (float)((dspTime - fadeStartDSP) / fadeTime);
+            k = Mathf.Clamp01(k);
+
+            // Equal-Power-Crossfade
+            float fadeOut = Mathf.Cos(k * Mathf.PI * 0.5f);
+            float fadeIn  = Mathf.Sin(k * Mathf.PI * 0.5f);
+
+            sources[currentTrack].volume = fadeOut;
+            sources[nextTrack].volume    = fadeIn;
+
+            if (k >= 1f)
+            {
+                sources[currentTrack].volume = 0f;
+                sources[nextTrack].volume = 1f;
+
+                currentTrack = nextTrack;
+                isFading = false;
+                nextFadeDSP = dspTime + holdTime;
+            }
+        }
     }
 }

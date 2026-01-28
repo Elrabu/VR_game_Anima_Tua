@@ -66,6 +66,7 @@ public class FootstepManager : MonoBehaviour
             foreach (var s in surfaces)
             {
                 if (((1 << hitLayer) & s.layerMask) != 0)
+                    Debug.Log(s);
                     return s;
             }
         }
