@@ -5,6 +5,7 @@ public class TableGoalCheckerScript : MonoBehaviour
     [SerializeField] private GameObject tape;
     [SerializeField] private Transform tapespawn;
     [SerializeField] private GameObject portal;
+    [SerializeField] private GameObject light;
     private bool spawned = false;
 
     void OnTriggerEnter(Collider collision)
@@ -23,6 +24,7 @@ public class TableGoalCheckerScript : MonoBehaviour
                 Instantiate(tape, tapespawn.position, tapespawn.rotation);
                 spawned = true;
                 portal.SetActive(true);
+                light.SetActive(false);
             }  
         }
         else
