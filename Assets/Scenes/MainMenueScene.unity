@@ -1983,7 +1983,7 @@ Transform:
   m_GameObject: {fileID: 875487889}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.526513e-14, y: 0.04500008, z: 0.000000033527613}
+  m_LocalPosition: {x: 5.684342e-14, y: 0.04500008, z: -0.00000008568168}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2752,7 +2752,7 @@ GameObject:
   - component: {fileID: 1183421405}
   - component: {fileID: 1183421404}
   - component: {fileID: 1183421403}
-  - component: {fileID: 1183421402}
+  - component: {fileID: 1183421407}
   m_Layer: 0
   m_Name: CreditsButton
   m_TagString: Untagged
@@ -2760,19 +2760,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1183421402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1183421401}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 372736d995b9ec149a54b544c7a11d1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  portal: {fileID: 1432786286}
 --- !u!114 &1183421403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2862,9 +2849,9 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1183421402}
-        m_TargetAssemblyTypeName: SpawnPortalScript, Assembly-CSharp
-        m_MethodName: spawnPortal
+      - m_Target: {fileID: 1183421407}
+        m_TargetAssemblyTypeName: TeleportToCreditsScript, Assembly-CSharp
+        m_MethodName: TeleportToCredits
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2915,6 +2902,18 @@ Transform:
   - {fileID: 1894986806}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 90}
+--- !u!114 &1183421407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183421401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59dc49d6bc2431b48bcdab20d8287370, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1214904460
 GameObject:
   m_ObjectHideFlags: 0
@@ -3557,7 +3556,7 @@ Transform:
   m_GameObject: {fileID: 1319156151}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0000000037252903, y: 0.044999957, z: -0.000000055283067}
+  m_LocalPosition: {x: 8.526513e-14, y: 0.04500008, z: 0.000000033527613}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4301,7 +4300,7 @@ GameObject:
   - component: {fileID: 1501099092}
   - component: {fileID: 1501099091}
   - component: {fileID: 1501099090}
-  - component: {fileID: 1501099089}
+  - component: {fileID: 1501099094}
   m_Layer: 0
   m_Name: QuitButton
   m_TagString: Untagged
@@ -4309,19 +4308,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1501099089
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1501099088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 372736d995b9ec149a54b544c7a11d1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  portal: {fileID: 1432786286}
 --- !u!114 &1501099090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4411,9 +4397,9 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1501099089}
-        m_TargetAssemblyTypeName: SpawnPortalScript, Assembly-CSharp
-        m_MethodName: spawnPortal
+      - m_Target: {fileID: 1501099094}
+        m_TargetAssemblyTypeName: QuitGameScript, Assembly-CSharp
+        m_MethodName: QuitGameButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4464,6 +4450,18 @@ Transform:
   - {fileID: 13979653}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 90}
+--- !u!114 &1501099094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501099088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ace51fc6f7ef5b44fb0de1b821f23579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1532143337
 GameObject:
   m_ObjectHideFlags: 0
@@ -5600,7 +5598,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Whatch
+  m_Text: 'Watch
 
     Credits'
 --- !u!222 &1694768536
