@@ -397,7 +397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13c543e5dc21ef4abd5bff1af5da050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropClip: {fileID: 0}
+  dropClip: {fileID: 8300000, guid: 686a99ff71e3a1a45b1571c5e0b06874, type: 3}
   volume: 1
 --- !u!1 &13350818
 GameObject:
@@ -979,7 +979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13c543e5dc21ef4abd5bff1af5da050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropClip: {fileID: 0}
+  dropClip: {fileID: 8300000, guid: 686a99ff71e3a1a45b1571c5e0b06874, type: 3}
   volume: 1
 --- !u!1 &54378007
 GameObject:
@@ -1259,7 +1259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13c543e5dc21ef4abd5bff1af5da050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropClip: {fileID: 0}
+  dropClip: {fileID: 8300000, guid: 686a99ff71e3a1a45b1571c5e0b06874, type: 3}
   volume: 1
 --- !u!1 &54388291
 GameObject:
@@ -1539,7 +1539,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13c543e5dc21ef4abd5bff1af5da050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropClip: {fileID: 0}
+  dropClip: {fileID: 8300000, guid: 686a99ff71e3a1a45b1571c5e0b06874, type: 3}
   volume: 1
 --- !u!1 &61761263
 GameObject:
@@ -2423,7 +2423,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13c543e5dc21ef4abd5bff1af5da050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropClip: {fileID: 0}
+  dropClip: {fileID: 8300000, guid: 686a99ff71e3a1a45b1571c5e0b06874, type: 3}
   volume: 1
 --- !u!1 &128690358
 GameObject:
@@ -2703,7 +2703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13c543e5dc21ef4abd5bff1af5da050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropClip: {fileID: 0}
+  dropClip: {fileID: 8300000, guid: 686a99ff71e3a1a45b1571c5e0b06874, type: 3}
   volume: 1
 --- !u!1 &147267252
 GameObject:
@@ -3461,7 +3461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13c543e5dc21ef4abd5bff1af5da050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropClip: {fileID: 0}
+  dropClip: {fileID: 8300000, guid: 686a99ff71e3a1a45b1571c5e0b06874, type: 3}
   volume: 1
 --- !u!1 &185725314
 GameObject:
@@ -4865,7 +4865,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13c543e5dc21ef4abd5bff1af5da050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropClip: {fileID: 0}
+  dropClip: {fileID: 8300000, guid: 686a99ff71e3a1a45b1571c5e0b06874, type: 3}
   volume: 1
 --- !u!64 &254698055
 MeshCollider:
@@ -5239,7 +5239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13c543e5dc21ef4abd5bff1af5da050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropClip: {fileID: 0}
+  dropClip: {fileID: 8300000, guid: 686a99ff71e3a1a45b1571c5e0b06874, type: 3}
   volume: 1
 --- !u!64 &303079935
 MeshCollider:
@@ -5656,7 +5656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13c543e5dc21ef4abd5bff1af5da050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropClip: {fileID: 0}
+  dropClip: {fileID: 8300000, guid: 686a99ff71e3a1a45b1571c5e0b06874, type: 3}
   volume: 1
 --- !u!64 &434148724
 MeshCollider:
@@ -7555,7 +7555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13c543e5dc21ef4abd5bff1af5da050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropClip: {fileID: 0}
+  dropClip: {fileID: 8300000, guid: 686a99ff71e3a1a45b1571c5e0b06874, type: 3}
   volume: 1
 --- !u!1 &543418704
 GameObject:
@@ -7835,7 +7835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13c543e5dc21ef4abd5bff1af5da050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropClip: {fileID: 0}
+  dropClip: {fileID: 8300000, guid: 686a99ff71e3a1a45b1571c5e0b06874, type: 3}
   volume: 1
 --- !u!64 &557630113
 MeshCollider:
@@ -8137,7 +8137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13c543e5dc21ef4abd5bff1af5da050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropClip: {fileID: 0}
+  dropClip: {fileID: 8300000, guid: 686a99ff71e3a1a45b1571c5e0b06874, type: 3}
   volume: 1
 --- !u!1 &581963842
 GameObject:
@@ -8417,7 +8417,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13c543e5dc21ef4abd5bff1af5da050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropClip: {fileID: 0}
+  dropClip: {fileID: 8300000, guid: 686a99ff71e3a1a45b1571c5e0b06874, type: 3}
   volume: 1
 --- !u!64 &587193584
 MeshCollider:
@@ -11221,7 +11221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13c543e5dc21ef4abd5bff1af5da050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropClip: {fileID: 0}
+  dropClip: {fileID: 8300000, guid: 686a99ff71e3a1a45b1571c5e0b06874, type: 3}
   volume: 1
 --- !u!1 &781199073
 GameObject:
@@ -13317,7 +13317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13c543e5dc21ef4abd5bff1af5da050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropClip: {fileID: 0}
+  dropClip: {fileID: 8300000, guid: 686a99ff71e3a1a45b1571c5e0b06874, type: 3}
   volume: 1
 --- !u!1 &923407834
 GameObject:
@@ -14719,7 +14719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13c543e5dc21ef4abd5bff1af5da050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropClip: {fileID: 0}
+  dropClip: {fileID: 8300000, guid: 686a99ff71e3a1a45b1571c5e0b06874, type: 3}
   volume: 1
 --- !u!1 &1133237562
 GameObject:
@@ -16135,7 +16135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13c543e5dc21ef4abd5bff1af5da050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropClip: {fileID: 0}
+  dropClip: {fileID: 8300000, guid: 686a99ff71e3a1a45b1571c5e0b06874, type: 3}
   volume: 1
 --- !u!1 &1229557513
 GameObject:
@@ -17579,7 +17579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13c543e5dc21ef4abd5bff1af5da050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropClip: {fileID: 0}
+  dropClip: {fileID: 8300000, guid: 686a99ff71e3a1a45b1571c5e0b06874, type: 3}
   volume: 1
 --- !u!1 &1337599172
 GameObject:
@@ -18490,7 +18490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13c543e5dc21ef4abd5bff1af5da050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropClip: {fileID: 0}
+  dropClip: {fileID: 8300000, guid: 686a99ff71e3a1a45b1571c5e0b06874, type: 3}
   volume: 1
 --- !u!1 &1378447738
 GameObject:
@@ -19243,7 +19243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13c543e5dc21ef4abd5bff1af5da050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropClip: {fileID: 0}
+  dropClip: {fileID: 8300000, guid: 686a99ff71e3a1a45b1571c5e0b06874, type: 3}
   volume: 1
 --- !u!1 &1403731026
 GameObject:
@@ -20580,7 +20580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13c543e5dc21ef4abd5bff1af5da050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropClip: {fileID: 0}
+  dropClip: {fileID: 8300000, guid: 686a99ff71e3a1a45b1571c5e0b06874, type: 3}
   volume: 1
 --- !u!1001 &1453579466
 PrefabInstance:
@@ -21344,7 +21344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13c543e5dc21ef4abd5bff1af5da050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropClip: {fileID: 0}
+  dropClip: {fileID: 8300000, guid: 686a99ff71e3a1a45b1571c5e0b06874, type: 3}
   volume: 1
 --- !u!64 &1477810606
 MeshCollider:
@@ -21886,7 +21886,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13c543e5dc21ef4abd5bff1af5da050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropClip: {fileID: 0}
+  dropClip: {fileID: 8300000, guid: 686a99ff71e3a1a45b1571c5e0b06874, type: 3}
   volume: 1
 --- !u!1 &1494065895
 GameObject:
@@ -22899,7 +22899,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13c543e5dc21ef4abd5bff1af5da050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropClip: {fileID: 0}
+  dropClip: {fileID: 8300000, guid: 686a99ff71e3a1a45b1571c5e0b06874, type: 3}
   volume: 1
 --- !u!64 &1568244310
 MeshCollider:
@@ -23481,7 +23481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13c543e5dc21ef4abd5bff1af5da050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropClip: {fileID: 0}
+  dropClip: {fileID: 8300000, guid: 686a99ff71e3a1a45b1571c5e0b06874, type: 3}
   volume: 1
 --- !u!1 &1583923101
 GameObject:
@@ -24241,7 +24241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13c543e5dc21ef4abd5bff1af5da050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropClip: {fileID: 0}
+  dropClip: {fileID: 8300000, guid: 686a99ff71e3a1a45b1571c5e0b06874, type: 3}
   volume: 1
 --- !u!1 &1627588497
 GameObject:
@@ -24823,7 +24823,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13c543e5dc21ef4abd5bff1af5da050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropClip: {fileID: 0}
+  dropClip: {fileID: 8300000, guid: 686a99ff71e3a1a45b1571c5e0b06874, type: 3}
   volume: 1
 --- !u!1 &1655490476
 GameObject:
@@ -25670,7 +25670,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13c543e5dc21ef4abd5bff1af5da050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropClip: {fileID: 0}
+  dropClip: {fileID: 8300000, guid: 686a99ff71e3a1a45b1571c5e0b06874, type: 3}
   volume: 1
 --- !u!64 &1737904252
 MeshCollider:
@@ -26016,7 +26016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13c543e5dc21ef4abd5bff1af5da050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropClip: {fileID: 0}
+  dropClip: {fileID: 8300000, guid: 686a99ff71e3a1a45b1571c5e0b06874, type: 3}
   volume: 1
 --- !u!64 &1783728904
 MeshCollider:
@@ -26598,7 +26598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13c543e5dc21ef4abd5bff1af5da050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropClip: {fileID: 0}
+  dropClip: {fileID: 8300000, guid: 686a99ff71e3a1a45b1571c5e0b06874, type: 3}
   volume: 1
 --- !u!1 &1813618734
 GameObject:
@@ -26878,7 +26878,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13c543e5dc21ef4abd5bff1af5da050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropClip: {fileID: 0}
+  dropClip: {fileID: 8300000, guid: 686a99ff71e3a1a45b1571c5e0b06874, type: 3}
   volume: 1
 --- !u!1 &1829797773
 GameObject:
@@ -27438,7 +27438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13c543e5dc21ef4abd5bff1af5da050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropClip: {fileID: 0}
+  dropClip: {fileID: 8300000, guid: 686a99ff71e3a1a45b1571c5e0b06874, type: 3}
   volume: 1
 --- !u!1 &1838932349
 GameObject:
@@ -28580,7 +28580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13c543e5dc21ef4abd5bff1af5da050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropClip: {fileID: 0}
+  dropClip: {fileID: 8300000, guid: 686a99ff71e3a1a45b1571c5e0b06874, type: 3}
   volume: 1
 --- !u!1 &1897186629
 GameObject:
@@ -29829,7 +29829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13c543e5dc21ef4abd5bff1af5da050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropClip: {fileID: 0}
+  dropClip: {fileID: 8300000, guid: 686a99ff71e3a1a45b1571c5e0b06874, type: 3}
   volume: 1
 --- !u!1 &2095910714
 GameObject:
@@ -30109,7 +30109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13c543e5dc21ef4abd5bff1af5da050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropClip: {fileID: 0}
+  dropClip: {fileID: 8300000, guid: 686a99ff71e3a1a45b1571c5e0b06874, type: 3}
   volume: 1
 --- !u!1 &2098490062
 GameObject:
@@ -30389,7 +30389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13c543e5dc21ef4abd5bff1af5da050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropClip: {fileID: 0}
+  dropClip: {fileID: 8300000, guid: 686a99ff71e3a1a45b1571c5e0b06874, type: 3}
   volume: 1
 --- !u!1 &2113257025
 GameObject:
@@ -30669,7 +30669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13c543e5dc21ef4abd5bff1af5da050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropClip: {fileID: 0}
+  dropClip: {fileID: 8300000, guid: 686a99ff71e3a1a45b1571c5e0b06874, type: 3}
   volume: 1
 --- !u!1 &2117447889
 GameObject:
@@ -38299,7 +38299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13c543e5dc21ef4abd5bff1af5da050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropClip: {fileID: 0}
+  dropClip: {fileID: 8300000, guid: 686a99ff71e3a1a45b1571c5e0b06874, type: 3}
   volume: 1
 --- !u!114 &4682331378363568409
 MonoBehaviour:
@@ -42965,7 +42965,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13c543e5dc21ef4abd5bff1af5da050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropClip: {fileID: 0}
+  dropClip: {fileID: 8300000, guid: 686a99ff71e3a1a45b1571c5e0b06874, type: 3}
   volume: 1
 --- !u!1 &7802795903998611251
 GameObject:
@@ -43960,7 +43960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13c543e5dc21ef4abd5bff1af5da050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropClip: {fileID: 0}
+  dropClip: {fileID: 8300000, guid: 686a99ff71e3a1a45b1571c5e0b06874, type: 3}
   volume: 1
 --- !u!1 &8086156877090160958
 GameObject:
@@ -45414,7 +45414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13c543e5dc21ef4abd5bff1af5da050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropClip: {fileID: 0}
+  dropClip: {fileID: 8300000, guid: 686a99ff71e3a1a45b1571c5e0b06874, type: 3}
   volume: 1
 --- !u!114 &9097880385151547779
 MonoBehaviour:
