@@ -11,6 +11,7 @@ public class SetSavedValuesScript : MonoBehaviour
     void Start()
     {
         SaveData.Instance.LoadFromJson();
+        Debug.Log("Loaded verry nice :D");
 
         if (SaveData.Instance.settings.continuousTurnEnabled){
             snapturnProvider.SetActive(false);

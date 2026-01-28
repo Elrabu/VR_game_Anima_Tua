@@ -8645,10 +8645,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snapVignette: {fileID: 174950914}
-  continuousVignette: {fileID: 1093029813}
+  continuousVignette: {fileID: 985174734}
   vignette: {fileID: 1093029813}
   snapturnProvider: {fileID: 1711086192}
-  continuousturnProvider: {fileID: 985174734}
+  continuousturnProvider: {fileID: 1876097815}
 --- !u!4 &1262665931
 Transform:
   m_ObjectHideFlags: 0
@@ -13761,6 +13761,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7015509822748577509, guid: 5557bde19bf772846b82167a38231d91, type: 3}
+--- !u!1 &1876097815 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3913166420914299907, guid: 25467d15cd032c74982562846cf7aade, type: 3}
+  m_PrefabInstance: {fileID: 8950322879406371176}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1876966282 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5467937833009311985, guid: 5557bde19bf772846b82167a38231d91, type: 3}
