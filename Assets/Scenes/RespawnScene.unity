@@ -4382,6 +4382,7 @@ GameObject:
   - component: {fileID: 1733425814573985962}
   - component: {fileID: 8204119896706142843}
   - component: {fileID: 8204119896706142842}
+  - component: {fileID: 8204119896706142844}
   m_Layer: 2
   m_Name: VR Player
   m_TagString: Untagged
@@ -4499,7 +4500,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &638100759263816820
 Transform:
   m_ObjectHideFlags: 0
@@ -7292,7 +7293,7 @@ MonoBehaviour:
     m_InputActionReference: {fileID: 0}
     m_ObjectReferenceObject: {fileID: 0}
     m_ManualValue: {x: 0, y: 0}
-  m_UseGravity: 1
+  m_UseGravity: 0
 --- !u!4 &4580233277941730835
 Transform:
   m_ObjectHideFlags: 0
@@ -8939,6 +8940,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8204119896706142844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258648022495488498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64dac37033af5346ab7e70e73cfb0d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &8217893866485744302
 Transform:
   m_ObjectHideFlags: 0
