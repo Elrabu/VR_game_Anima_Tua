@@ -1,10 +1,13 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections.Generic;
+using System.IO;
 
 public class SaveData : MonoBehaviour
 {
     public static SaveData Instance;
     public Settings settings = new Settings();
+    private string requiredLevelName = "Dungeon01";
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -14,8 +17,7 @@ public class SaveData : MonoBehaviour
         }
 
         Instance = this;
-        DontDestroyOnLoad(gameObject); //Does not need to be attached to another Game Object in another scene
-    }
+    } 
 
     public void SaveToJson()
     {
@@ -23,7 +25,7 @@ public class SaveData : MonoBehaviour
         string filePath = Application.persistentDataPath + "/SettingsData.json";
         Debug.Log(filePath);
         System.IO.File.WriteAllText(filePath, settingsData);
-        Debug.Log("data written!");
+        //Debug.Log("data written!");
     }
 
     public void LoadFromJson()
@@ -39,9 +41,21 @@ public class SaveData : MonoBehaviour
         string settingsData = System.IO.File.ReadAllText(filePath);
 
         settings = JsonUtility.FromJson<Settings>(settingsData);
-       // Debug.Log("Data loaded");
-       // Debug.Log(settings.snapTurnEnabled +""+ settings.continuousTurnEnabled +""+ settings.tunnelingVignetteEnabled);
     }
+
+    public void ResetSettings()
+    {
+        string filePath = Application.persistentDataPath + "/SettingsData.json";
+        if (File.Exists(filePath))
+        {
+            File.Delete(filePath);
+            //Debug.Log("Settings file deleted (VRGameScene).");
+        }
+
+        settings = new Settings(); // re-instantiate defaults
+        SaveToJson();
+    }
+
 }
 
 [System.Serializable]
