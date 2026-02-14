@@ -14,7 +14,7 @@ public class TapeSpawnerScript : MonoBehaviour
             SaveData.Instance.LoadFromJson();
             if (SaveData.Instance.settings.levels.Contains(requiredLevelName))
             {
-                Debug.Log("Spawned Tape");
+              //  Debug.Log("Spawned Tape");
                 SpawnPrefab();
             }
         }
