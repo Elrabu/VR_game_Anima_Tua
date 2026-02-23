@@ -29,7 +29,8 @@ public class PlayerHealthScript : MonoBehaviour
             damagePlayer(1);
         if (heartbeat != null)
         {
-            heartbeat.TriggerHeartbeat(Mathf.Lerp(60f, 120f, 1f - (playerHealth / 10f)));
+            heartbeat.TriggerHeartbeat(Mathf.Lerp(120f, 60f, playerHealth / 10f));
+
         }
              
             cooldownTimer = cooldown;
