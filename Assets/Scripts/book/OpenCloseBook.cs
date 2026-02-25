@@ -92,22 +92,29 @@ public class OpenCloseBook : MonoBehaviour
         {
             var itemRight = grabListenerRight.CurrentlyHeld;
             var itemLeft = grabListenerLeft.CurrentlyHeld;
-            if (itemRight != null) //assign values if book is in right hand
+
+            //only set the variable if the item is the book:
+            bool rightHasBook = itemRight != null && itemRight.transform.name == "book";
+            bool leftHasBook  = itemLeft  != null && itemLeft.transform.name == "book";
+
+            if (rightHasBook) //assign values if book is in right hand
             {
-                bookRight = itemRight.transform.name;
+                bookRight = "book";
                 bookLeft = null;
                 currentBookHand = "right";
-            } else if (itemLeft != null) //assign values if book is in left hand
+            }
+            else if (leftHasBook) //assign values if book is in left hand
             {
-                bookLeft = itemLeft.transform.name;
+                bookLeft = "book";
                 bookRight = null;
                 currentBookHand = "left";
-            } else //set values to null if book was dropped
+            }
+            else //set values to null if book was dropped etc.
             {
                 bookLeft = null;
                 bookRight = null;
+                currentBookHand = null;
             }
-            
         
             if (valueLeft == 1 && bookLeft == "book" || valueRight == 1 && bookRight == "book")
             {

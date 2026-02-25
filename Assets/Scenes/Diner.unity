@@ -39532,7 +39532,7 @@ Transform:
   m_GameObject: {fileID: 7416799080816925588}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.045, y: -5.391, z: 6.599}
+  m_LocalPosition: {x: -0.045, y: -5.391, z: 6.139}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -39958,6 +39958,7 @@ GameObject:
   - component: {fileID: 6602639455195528193}
   - component: {fileID: 6602639455195528195}
   - component: {fileID: 6602639455195528194}
+  - component: {fileID: 6602639455195528196}
   m_Layer: 2
   m_Name: VR Player
   m_TagString: Player
@@ -40719,7 +40720,7 @@ Transform:
   m_GameObject: {fileID: 5161516079415106360}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3, y: -1.526, z: 0.86300004}
+  m_LocalPosition: {x: -3, y: -1.51, z: 0.86300004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -42402,6 +42403,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6602639455195528196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5161516079415106360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64dac37033af5346ab7e70e73cfb0d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!33 &6621517268489567091
 MeshFilter:
   m_ObjectHideFlags: 0

@@ -5,27 +5,27 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/VRGameScene.unity
+  - enabled: 0
+    path: Assets/Scenes/VRGameScene.unity
     guid: 8124e5870f4fd4c779e7a5f994e84ad1
+  - enabled: 1
+    path: Assets/Scenes/MainMenueScene.unity
+    guid: 13158c41e5068af479b983e61c94a2b2
   - enabled: 1
     path: Assets/Scenes/Dungeon_First_Part.unity
     guid: 5d888853a77143e449c1570a8ff18c9b
   - enabled: 1
     path: Assets/Scenes/RespawnScene.unity
     guid: 49956377f9ea2fc46bee623432130213
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SoundTest/TestSceneA.unity
     guid: b8531b69daf4f3e49b762a653e76ff2b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SoundTest/TestSceneB.unity
     guid: a285fa166a40bef42a12cfdc8b402359
   - enabled: 1
     path: Assets/Scenes/Diner.unity
     guid: 9e80e293b79c3ea479c900deb1e8ae3f
-  - enabled: 1
-    path: Assets/Scenes/MainMenueScene.unity
-    guid: 13158c41e5068af479b983e61c94a2b2
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 6ee98d736b28d4e4296188d7fbb3286f
