@@ -3,7 +3,32 @@ guid: 9484097c892faf34a9955e2acc003ba4
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Neuron
+    second: {fileID: 2100000, guid: 5bb0d2b2087756e458ba983002f2720d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: brick.png
+    second: {fileID: 2100000, guid: 61b9eb9501cdd93498d8b38bd9e9aa1c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: door_ark.png
+    second: {fileID: 2100000, guid: 5fc4ae81a6db10e4b8c8561852af6b01, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: start_room.png
+    second: {fileID: 2100000, guid: 02bdc723c176707468142f77ee32b8bf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wooden_door.png
+    second: {fileID: 2100000, guid: 15664d26424ddd8458563384deb92931, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -3,7 +3,12 @@ guid: c467d3c3284ed6d49a20436d1f7d0d23
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: book_stand.png
+    second: {fileID: 2100000, guid: 13ed8ab2b83f6984e97af81ac258df29, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

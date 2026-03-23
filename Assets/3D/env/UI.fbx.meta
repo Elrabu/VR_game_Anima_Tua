@@ -3,7 +3,22 @@ guid: 4bb3c22426943244ba1ef455fad5dcbe
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: UI_base.png
+    second: {fileID: 2100000, guid: bf24eb0198b8ba947855b269565b3848, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: button_top.png
+    second: {fileID: 2100000, guid: e05eab121f596644f8a8db5f713c9c57, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lever.png
+    second: {fileID: 2100000, guid: 01f58f22b12f5b646b8bc4d1e6d63470, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

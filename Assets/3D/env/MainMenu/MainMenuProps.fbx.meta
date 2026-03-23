@@ -3,7 +3,22 @@ guid: 369cd2d6d5b06cf4c9a2224bfcf40cb3
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cassette_deck.png
+    second: {fileID: 2100000, guid: c7ba181e11c0e154cbe7cc2da33a3858, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: desk.png
+    second: {fileID: 2100000, guid: 23f29e5981bc7b64b94824dab6d91882, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shelf.png
+    second: {fileID: 2100000, guid: ec4ae20f5f939f94b96b270a3f8672b0, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
