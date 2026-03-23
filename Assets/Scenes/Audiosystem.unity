@@ -2655,7 +2655,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myButton: {fileID: 547312671}
-  grabListener: {fileID: 1954347487}
 --- !u!1 &561401885
 GameObject:
   m_ObjectHideFlags: 0
@@ -5550,7 +5549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_Material: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_Color: {r: 0, g: 0, b: 0, a: 0.7490196}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -6042,7 +6041,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_Material: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_Color: {r: 0, g: 0, b: 0, a: 0.7490196}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -6258,7 +6257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_Material: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_Color: {r: 0, g: 0, b: 0, a: 0.7490196}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -6452,6 +6451,9 @@ MonoBehaviour:
   Damage: 0
   flashColor: {r: 1, g: 1, b: 1, a: 1}
   flashDuration: 0.5
+  damageDeathAudioSource: {fileID: 0}
+  damageClip: {fileID: 0}
+  deathClip: {fileID: 0}
 --- !u!1 &1336668005
 GameObject:
   m_ObjectHideFlags: 0
@@ -6761,6 +6763,8 @@ MonoBehaviour:
   followHandRight: {fileID: 5686134209048670667}
   followHandLeft: {fileID: 109434732642483906}
   firePrefab: {fileID: 8592427169013271424, guid: 132545a7874d39540b0fcc82c22e401d, type: 3}
+  fireStartSound: {fileID: 0}
+  ignitionSource: {fileID: 0}
 --- !u!1 &1351368490
 GameObject:
   m_ObjectHideFlags: 0
@@ -10470,6 +10474,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactor: {fileID: 1931058243}
+  grabAudioSource: {fileID: 0}
+  grabClip: {fileID: 0}
 --- !u!1 &1932541605
 GameObject:
   m_ObjectHideFlags: 0
@@ -10574,6 +10580,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactor: {fileID: 1954347482}
+  grabAudioSource: {fileID: 0}
+  grabClip: {fileID: 0}
 --- !u!1 &1968391630
 GameObject:
   m_ObjectHideFlags: 0
@@ -10994,7 +11002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_Material: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_Color: {r: 0, g: 0, b: 0, a: 0.7490196}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -12533,6 +12541,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 156005306}
     m_Modifications:
+    - target: {fileID: 19327540209650532, guid: 4b5bc86ffe9bd87418fe8edea44d199c, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 7072681691534468131, guid: 4b5bc86ffe9bd87418fe8edea44d199c, type: 3}
       propertyPath: playOnAwake
       value: 1

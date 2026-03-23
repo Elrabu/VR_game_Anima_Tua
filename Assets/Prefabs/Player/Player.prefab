@@ -1706,6 +1706,8 @@ MonoBehaviour:
   followHandRight: {fileID: 4522556453735800483}
   followHandLeft: {fileID: 5168465952444302256}
   firePrefab: {fileID: 8592427169013271424, guid: 132545a7874d39540b0fcc82c22e401d, type: 3}
+  fireStartSound: {fileID: 0}
+  ignitionSource: {fileID: 0}
 --- !u!1 &1608003188622501822
 GameObject:
   m_ObjectHideFlags: 0
@@ -2094,6 +2096,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactor: {fileID: 8438266906028098584}
+  grabAudioSource: {fileID: 0}
+  grabClip: {fileID: 0}
 --- !u!1 &1737322592141446862
 GameObject:
   m_ObjectHideFlags: 0
@@ -5026,6 +5030,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactor: {fileID: 4007732905344952420}
+  grabAudioSource: {fileID: 0}
+  grabClip: {fileID: 0}
 --- !u!1 &6269914543165300662
 GameObject:
   m_ObjectHideFlags: 0

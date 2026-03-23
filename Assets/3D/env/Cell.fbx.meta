@@ -3,7 +3,12 @@ guid: 4bf9ac1824a437f458a1b773cca6559a
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metal_door.png
+    second: {fileID: 2100000, guid: 6c3e7eb5cc8be6144b6cbc1bdf464fb4, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

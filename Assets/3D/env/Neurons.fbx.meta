@@ -3,7 +3,12 @@ guid: dcfdf258ee8772349804cadf1a063d33
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Neuron
+    second: {fileID: 2100000, guid: 6609104cd10d2e84787cd0fad0806404, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

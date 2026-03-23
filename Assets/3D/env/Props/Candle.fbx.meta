@@ -3,7 +3,12 @@ guid: e897876d45167af4fadc50e2ef8f5951
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: candle.png
+    second: {fileID: 2100000, guid: 533898da2fd9a104da6581ac80352612, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
