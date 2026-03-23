@@ -3589,8 +3589,6 @@ MonoBehaviour:
   bulletPrefab: {fileID: 5380251738750858116, guid: 1ee6a16c5736e3d4091647954b3c858c, type: 3}
   spawnPoint: {fileID: 8949251985777999864}
   secondsBetweenShoot: 0.5
-  shootAudioSource: {fileID: 0}
-  fireShootSound: {fileID: 0}
 --- !u!1 &4988377939501784964
 GameObject:
   m_ObjectHideFlags: 0
@@ -4293,8 +4291,6 @@ MonoBehaviour:
   bulletPrefab: {fileID: 5380251738750858116, guid: 1ee6a16c5736e3d4091647954b3c858c, type: 3}
   spawnPoint: {fileID: 1009653741509223122}
   secondsBetweenShoot: 0.5
-  shootAudioSource: {fileID: 0}
-  fireShootSound: {fileID: 0}
 --- !u!1 &5806164154337042794
 GameObject:
   m_ObjectHideFlags: 0
@@ -5003,6 +4999,7 @@ MonoBehaviour:
   cooldown: 0.5
   cooldownTimer: 0
   dead: 0
+  heartbeat: {fileID: 0}
 --- !u!1 &7191141533126981095
 GameObject:
   m_ObjectHideFlags: 0
