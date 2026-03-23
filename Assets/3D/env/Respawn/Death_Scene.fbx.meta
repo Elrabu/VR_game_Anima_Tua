@@ -3,7 +3,147 @@ guid: 54894b4ec92803c45b329678df2ff909
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Arms
+    second: {fileID: 2100000, guid: 9b5f7ba01373d6540aa548f6b06123e7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Body
+    second: {fileID: 2100000, guid: 277112eba8eaf1a49a9a802828c76fed, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eye Left
+    second: {fileID: 2100000, guid: 52f68a1e482f65841b3b998ee7fb0fe7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eye Right
+    second: {fileID: 2100000, guid: 829484d0dda22e84c96a60d7be0cf384, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EyeMoisture Left
+    second: {fileID: 2100000, guid: 2823af07715b0944d84affa9baf900f8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EyeMoisture Right
+    second: {fileID: 2100000, guid: 3d92c52e5ebbbf6469b28fb86a857038, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eyebrows_Primary
+    second: {fileID: 2100000, guid: 0a440b2b6fd6a65418511ca9050cb9d6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eyebrows_Secondary
+    second: {fileID: 2100000, guid: 80aec3f6314039944ae089ef0af7a911, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eyelashes Lower
+    second: {fileID: 2100000, guid: 52d1d2d25e0ab31478633d9e51623f08, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eyelashes Upper
+    second: {fileID: 2100000, guid: 7932cb3099ccfc24c8fa1b6c2d7ff1d3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Head
+    second: {fileID: 2100000, guid: adee5b1f0216bd940afabc1a259e71d1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Legs
+    second: {fileID: 2100000, guid: 52e55dd4b63e6504d8006e67f631507e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mouth
+    second: {fileID: 2100000, guid: f0b33b2567c0f8140bdf8a04164ea9b2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mouth Cavity
+    second: {fileID: 2100000, guid: 30b9b540e3c849048a672acbdcdbdfbf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Neuron
+    second: {fileID: 2100000, guid: 6bbc83d5aa5e088489943f8177816fe9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pants
+    second: {fileID: 2100000, guid: cfdca3d65d5e1e7499e902f81b3063f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tear
+    second: {fileID: 2100000, guid: ec61c00d822100d46be4d93c7ace3a1b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Teeth
+    second: {fileID: 2100000, guid: fee4d0b889c4fe046871bd31c113001b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Toenails
+    second: {fileID: 2100000, guid: 10a0a7f0830d5b44daf5b94c8656229b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Trim
+    second: {fileID: 2100000, guid: c6faf606cbd4e534dba487ab50bd1b86, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Waistband
+    second: {fileID: 2100000, guid: b2bfa28633ebe504d83165aefe499b8a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bed_back
+    second: {fileID: 2100000, guid: 6f8a8d88514c68e4782410098de7d82a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bed_base
+    second: {fileID: 2100000, guid: fffdc0263c56a764aa3e0c6933d2c501, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bed_front
+    second: {fileID: 2100000, guid: c078866a82aa5154d8364f98bb782f5d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blanket
+    second: {fileID: 2100000, guid: 663c1d039dcb7e74eb8bb5d0bcdbef1e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: brick_crosswalk
+    second: {fileID: 2100000, guid: a47749493f20f2a4db00ccd1ab8831ac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: matraze
+    second: {fileID: 2100000, guid: 00a67b74c60d7ef48aa7f1ad844b7eaa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pillow
+    second: {fileID: 2100000, guid: 4bfa7070899bae34a9e37f182ae43ab3, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

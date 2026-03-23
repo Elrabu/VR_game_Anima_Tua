@@ -3,7 +3,57 @@ guid: 59e0b6997ecdbf14e819935be3cf350c
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Neuron
+    second: {fileID: 2100000, guid: cd8ebe4efeb460e4499a37dd709f32d1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Watcher_Base
+    second: {fileID: 2100000, guid: 984e6dfe5b8b4284e8b6e9f9f0ef2280, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bed_back
+    second: {fileID: 2100000, guid: 3aaffa8336e420b4bb6643b331fa08fb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bed_base
+    second: {fileID: 2100000, guid: 8cbf6bd53b046ce41bc2b25a6f98086b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bed_front
+    second: {fileID: 2100000, guid: ea4468f0bb9975f4db1c407d7d6e78ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blanket
+    second: {fileID: 2100000, guid: 0ea9f8f9dddb5c548b0ec218d27af8fe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: brick_crosswalk
+    second: {fileID: 2100000, guid: 78963f8c42d9fe54abd15e23a2faf4c3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eye
+    second: {fileID: 2100000, guid: 8dc07413f99a77c4a9b2b2218130ed2e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: matraze
+    second: {fileID: 2100000, guid: 263bc959d7f72ab42903dba271f1f7f8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pillow
+    second: {fileID: 2100000, guid: 8685afd71c6a3c541820348d4650a3e4, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

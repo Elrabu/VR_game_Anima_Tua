@@ -1050,37 +1050,8 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 6526328859401897239, guid: 25467d15cd032c74982562846cf7aade, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1988544404672993617, guid: 25467d15cd032c74982562846cf7aade, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1879023441}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25467d15cd032c74982562846cf7aade, type: 3}
---- !u!1 &1879023440 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1988544404672993617, guid: 25467d15cd032c74982562846cf7aade, type: 3}
-  m_PrefabInstance: {fileID: 1879023439}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1879023441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1879023440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92949fe6727a2624a8f2719f4a289f4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerHealth: 5
-  cooldown: 0.5
-  cooldownTimer: 0
-  dead: 0
---- !u!1 &2117747306 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4868063101537953720, guid: 25467d15cd032c74982562846cf7aade, type: 3}
-  m_PrefabInstance: {fileID: 1879023439}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6683650679937874898
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1136,7 +1107,7 @@ PrefabInstance:
     - target: {fileID: 7181707207510782359, guid: 4b53dab10d167bd428ddd860b14cd4d1, type: 3}
       propertyPath: managedReferences[3523306148697735478].m_Value
       value: 
-      objectReference: {fileID: 2117747306}
+      objectReference: {fileID: 0}
     - target: {fileID: 7181707207510782359, guid: 4b53dab10d167bd428ddd860b14cd4d1, type: 3}
       propertyPath: 'managedReferences[3523306156772033016].m_Value.Array.data[0]'
       value: 
@@ -1225,7 +1196,7 @@ PrefabInstance:
     - target: {fileID: 5034181152814471516, guid: 825d36b67db765d4bb80344a3c8335a4, type: 3}
       propertyPath: managedReferences[3523306173536927877].m_Value
       value: 
-      objectReference: {fileID: 2117747306}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

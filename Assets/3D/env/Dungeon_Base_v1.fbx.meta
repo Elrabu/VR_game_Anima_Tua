@@ -3,7 +3,42 @@ guid: 5557bde19bf772846b82167a38231d91
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: brick.png
+    second: {fileID: 2100000, guid: ea5e32d2d98d34a4f825c42537d469e3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: door_ark.png
+    second: {fileID: 2100000, guid: c0c8fd726bd50e542a750fa301140f84, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hall_corner.png
+    second: {fileID: 2100000, guid: 03e2f53988f9de349a12651d2fc40991, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hall_tile.png
+    second: {fileID: 2100000, guid: 3d9df75d953d21f46af9bea0b74b79ae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hall_tile_t_junk.png
+    second: {fileID: 2100000, guid: 45faa267a908029499eccd1a448bc5ee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: start_room.png
+    second: {fileID: 2100000, guid: dc0514d05f98ff5408e437bd292d9961, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wooden_door.png
+    second: {fileID: 2100000, guid: 9f58bd61c1ae1a646a94d8467d129508, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
