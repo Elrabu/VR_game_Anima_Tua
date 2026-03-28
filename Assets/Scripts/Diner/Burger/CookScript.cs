@@ -7,12 +7,11 @@ public class CookScript : MonoBehaviour
     [SerializeField] private GameObject smokePrefab;
     private GameObject smoke;
     private bool cooking = false;
-    //private GameObject patty;
+
     void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.name == "patty" || collision.gameObject.name == "patty(Clone)")
         {
-            //Debug.Log("Interacted with: " + collision.gameObject.name);
             smoke = Instantiate(smokePrefab, collision.gameObject.transform.position, smokePrefab.transform.rotation);
 
             var follow = smoke.GetComponent<GameObjectFollowScript>();
@@ -37,7 +36,6 @@ public class CookScript : MonoBehaviour
 
     IEnumerator Cook(GameObject patty)
     {
-        // Wait 2 seconds
         yield return new WaitForSeconds(2.0f);
 
         if (patty != null)
@@ -50,6 +48,8 @@ public class CookScript : MonoBehaviour
             {
                 grilled.gameObject.SetActive(true);
                 raw.gameObject.SetActive(false);
+                patty.GetComponent<BurgerIngredient>().ingredientType = BurgerIngredientType.Patty_Cooked;
+                Debug.Log(patty.GetComponent<BurgerIngredient>().ingredientType);
             }
         }
     }
@@ -70,6 +70,6 @@ public class CookScript : MonoBehaviour
         }
 
         sizzlingSource.Stop();
-        sizzlingSource.volume = startVolume; // Lautstärke zurücksetzen
+        sizzlingSource.volume = startVolume;
     }
 }
