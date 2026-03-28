@@ -13,7 +13,7 @@ public class SocketIngredientCheckerScript : MonoBehaviour
 
     private readonly BurgerIngredientType[] correctRecipe =
     {
-        BurgerIngredientType.Patty,
+        BurgerIngredientType.Patty_Cooked,
         BurgerIngredientType.Pickles,
         BurgerIngredientType.TopBun
     };
@@ -77,7 +77,6 @@ private void AddIngredient(SelectEnterEventArgs args)
 }
 
 
-
     private void CheckRecipe()
     {   
         if (currentStack.Count != correctRecipe.Length)
@@ -85,9 +84,10 @@ private void AddIngredient(SelectEnterEventArgs args)
 
         for (int i = 0; i < correctRecipe.Length; i++)
         {
+            Debug.Log("Stack: " + currentStack[i] + ", correct: " + correctRecipe[i]);
             if (currentStack[i] != correctRecipe[i])
             {
-                Debug.Log("Wrong recipe");
+                Debug.Log("Wrong recipe: " + currentStack[i] + ", correct: " + correctRecipe[i]);
                 return;
             }
         }
