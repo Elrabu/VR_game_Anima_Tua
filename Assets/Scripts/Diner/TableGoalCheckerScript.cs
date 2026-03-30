@@ -6,6 +6,8 @@ public class TableGoalCheckerScript : MonoBehaviour
     [SerializeField] private GameObject tapeHolder;
     [SerializeField] private GameObject tapeDeck;
     [SerializeField] private GameObject portal;
+    [SerializeField] private GameObject bloodParticles;
+    [SerializeField] private GameObject stand;
 
     [Header("Quest End")]
     [SerializeField] private ParticleSystem questEndParticleSystem;
@@ -32,6 +34,8 @@ public class TableGoalCheckerScript : MonoBehaviour
                 tapeHolder.SetActive(true);
                 tape.SetActive(true);
                 tapeDeck.SetActive(true);
+                bloodParticles.SetActive(true);
+                stand.SetActive(true);
 
                 currentTask.SetActive(false);
                 placeIndicator.SetActive(false);
