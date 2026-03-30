@@ -1,42 +1,66 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 
 public class LoadingScreenScript : MonoBehaviour
-{
-    [SerializeField] private string playerTag = "Player";
-    [SerializeField] private GameObject LoadingScreen;
+{   
+    [SerializeField] Slider progressBar;
+    [SerializeField] TMPro.TextMeshProUGUI tipText;
 
-    [SerializeField] private GameObject rightHand;
-    [SerializeField] private GameObject leftHand;
-
-    private void OnTriggerEnter(Collider other)
+    string[] tips =
     {
-        if (other.CompareTag(playerTag))
+        "Tip: Keep distance to enemies.",
+        "Tip: Try to hide your self from watchers by using the shield",
+        "Tip: Listen to the noises in the dungeon.", 
+    };
+
+    void Start()
+    {
+        StartCoroutine(LoadSceneAsync());
+        StartCoroutine(ShowTips());
+    }
+
+    IEnumerator LoadSceneAsync()
+    {
+        yield return new WaitForEndOfFrame();
+
+        AsyncOperation operation = SceneManager.LoadSceneAsync(
+            LoadingManager.sceneToLoad,
+            LoadSceneMode.Additive
+        );
+
+        while (!operation.isDone)
         {
-            LoadScene(1);
+            float progress = Mathf.Clamp01(operation.progress / 0.9f);
+            
+            progressBar.value = progress;
+            
+
+            yield return null;
         }
-    }
 
-    public void LoadScene(int sceneId)
-    {
-        StartCoroutine(LoadSceneAsync(sceneId));
-    }
-
-    IEnumerator LoadSceneAsync(int sceneId)
-    {
-        leftHand.SetActive(false);
-        rightHand.SetActive(false);
-
-        LoadingScreen.SetActive(true);
-
-        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneId);
-        operation.allowSceneActivation = false;
         
-        yield return new WaitForSeconds(0.3f);
+        Scene targetScene = SceneManager.GetSceneByBuildIndex(LoadingManager.sceneToLoad);
+        SceneManager.SetActiveScene(targetScene);
 
-        operation.allowSceneActivation = true;
+        SceneManager.UnloadSceneAsync("LoadingScreen");
+    }
+
+    IEnumerator ShowTips()
+    {
+        while (true)
+        {
+            int lastTip = -1;
+            int newTip;
+            do
+            {
+                newTip =Random.Range(0, tips.Length);
+            } while(newTip == lastTip);
+            lastTip = newTip;
+            tipText.text = tips[newTip];
+            yield return new WaitForSeconds(4f);
         }
+    }
 }

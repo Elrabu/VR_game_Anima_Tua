@@ -1,29 +1,30 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class SceneTeleporter : MonoBehaviour
 {
-    [SerializeField] private string sceneToLoad;
     [SerializeField] private string playerTag = "Player";
+    [SerializeField] private int sceneId;
+    [SerializeField] private string loadingSceneName = "LoadingScreen";
 
     private void OnTriggerEnter(Collider other)
+{
+    if (other.CompareTag(playerTag))
     {
-        if (other.CompareTag(playerTag))
-        {
-            LoadNewScene();
-        }
+        StartCoroutine(LoadLoadingScene());
     }
+}
 
-    private void LoadNewScene()
+    IEnumerator LoadLoadingScene()
     {
-        if (!string.IsNullOrEmpty(sceneToLoad))
+        LoadingManager.sceneToLoad = sceneId;
+
+        AsyncOperation op = SceneManager.LoadSceneAsync(loadingSceneName);
+
+        while (!op.isDone)
         {
-            Debug.Log("Sending to scene: " + sceneToLoad);
-            SceneManager.LoadScene(sceneToLoad);
-        }
-        else
-        {
-            Debug.LogWarning("Scene name is empty! Please set the scene to load in the inspector.");
+            yield return null;
         }
     }
 }
