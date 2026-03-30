@@ -38,8 +38,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Alpha: 0.77
-    - _EdgeBlend: 0.66
+    - _Alpha: 0.27
+    - _EdgeBlend: 1.74
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
