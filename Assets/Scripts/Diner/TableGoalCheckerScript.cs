@@ -3,9 +3,16 @@ using UnityEngine;
 public class TableGoalCheckerScript : MonoBehaviour
 {
     [SerializeField] private GameObject tape;
-    [SerializeField] private Transform tapespawn;
+    [SerializeField] private GameObject tapeHolder;
+    [SerializeField] private GameObject tapeDeck;
     [SerializeField] private GameObject portal;
-    [SerializeField] private GameObject light;
+
+    [Header("Quest End")]
+    [SerializeField] private ParticleSystem questEndParticleSystem;
+    [SerializeField] private GameObject placeIndicator;
+    [SerializeField] private GameObject currentTask;
+    [SerializeField] private AudioSource newOrder;
+
     private bool spawned = false;
 
     void OnTriggerEnter(Collider collision)
@@ -20,11 +27,16 @@ public class TableGoalCheckerScript : MonoBehaviour
             if (spawned == false)
             {
                 Debug.Log("Completed burger entered the box!");
-                AutoMusicCrossfade.instance.StartMusic();                                                                                                                              //
-                Instantiate(tape, tapespawn.position, tapespawn.rotation);
                 spawned = true;
                 portal.SetActive(true);
-                light.SetActive(false);
+                tapeHolder.SetActive(true);
+                tape.SetActive(true);
+                tapeDeck.SetActive(true);
+
+                currentTask.SetActive(false);
+                placeIndicator.SetActive(false);
+                questEndParticleSystem.Stop();
+                newOrder.Play();
             }  
         }
         else
