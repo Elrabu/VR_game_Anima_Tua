@@ -8,6 +8,8 @@ public class LoadingScreenScript : MonoBehaviour
 {   
     [SerializeField] Slider progressBar;
     [SerializeField] TMPro.TextMeshProUGUI tipText;
+    [SerializeField] Image loadingImage;
+    [SerializeField] Sprite[] images;
 
     string[] tips =
     {
@@ -20,10 +22,12 @@ public class LoadingScreenScript : MonoBehaviour
     {
         StartCoroutine(LoadSceneAsync());
         StartCoroutine(ShowTips());
+        StartCoroutine(ChangeImages());
     }
 
     IEnumerator LoadSceneAsync()
-    {
+    {   
+        yield return new WaitForSeconds(20f); // nur zum Testen
         yield return new WaitForEndOfFrame();
 
         AsyncOperation operation = SceneManager.LoadSceneAsync(
@@ -60,6 +64,24 @@ public class LoadingScreenScript : MonoBehaviour
             } while(newTip == lastTip);
             lastTip = newTip;
             tipText.text = tips[newTip];
+            yield return new WaitForSeconds(4f);
+        }
+    }
+
+    IEnumerator ChangeImages()
+    {
+        int lastImage = -1;
+        while (true)
+        {
+            int newImage;
+            do
+            {
+                newImage = Random.Range(0, images.Length);
+
+            }while(newImage == lastImage);
+            lastImage = newImage;
+            loadingImage.sprite = images[newImage];
+
             yield return new WaitForSeconds(4f);
         }
     }
