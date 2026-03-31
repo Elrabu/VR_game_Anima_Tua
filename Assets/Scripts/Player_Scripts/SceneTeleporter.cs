@@ -16,15 +16,14 @@ public class SceneTeleporter : MonoBehaviour
     }
 }
 
-    IEnumerator LoadLoadingScene()
-    {
-        LoadingManager.sceneToLoad = sceneId;
+IEnumerator LoadLoadingScene()
+{
+    LoadingManager.sceneToLoad = sceneId;
 
-        AsyncOperation op = SceneManager.LoadSceneAsync(loadingSceneName);
+    // Bildschirm schwarz machen
+    yield return StartCoroutine(ScreenFader.Instance.Fade(0, 1));
 
-        while (!op.isDone)
-        {
-            yield return null;
-        }
-    }
+    // Szene wechseln (jetzt ist sowieso alles schwarz)
+    SceneManager.LoadScene(loadingSceneName);
+}
 }
