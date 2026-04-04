@@ -15,6 +15,16 @@ public class AbilityBookEquipOnSelect : MonoBehaviour
 
     private GameObject equippedBook;
 
+    public void SetPreferredHand(bool preferRightHand)
+    {
+        equipInRightHand = preferRightHand;
+
+        if (abilityInventory != null && abilityInventory.CurrentAbility == AbilityType.FireBook)
+        {
+            EquipBook();
+        }
+    }
+
     private void Reset()
     {
         if (abilityInventory == null)
