@@ -1,44 +1,48 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class ScreenFader : MonoBehaviour
 {
-    public static ScreenFader Instance;
+    public Image fadeImage;
+    public float fadeDuration = 1.0f;
 
-    [SerializeField] Image fadeImage;
-    [SerializeField] float duration = 1f;
-
-    void Awake()
+    public void FadeToBlack()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        StartCoroutine(Fade(0, 1));
     }
 
-    public IEnumerator Fade(float start, float end)
+    public void FadeToClear()
     {
-        float t = 0;
-        Color c = fadeImage.color;
+        StartCoroutine(Fade(1, 0));
+    }
 
-        while (t < duration)
+    private IEnumerator Fade(float startAlpha, float endAlpha)
+    {
+        float elapsed = 0f;
+        Color color = fadeImage.color;
+
+        while (elapsed < fadeDuration)
         {
-            float a = Mathf.Lerp(start, end, t / duration);
-            c.a = a;
-            fadeImage.color = c;
-
-            t += Time.deltaTime;
+            elapsed += Time.deltaTime;
+            color.a = Mathf.Lerp(startAlpha, endAlpha, elapsed / fadeDuration);
+            fadeImage.color = color;
             yield return null;
         }
 
-        c.a = end;
-        fadeImage.color = c;
+        color.a = endAlpha;
+        fadeImage.color = color;
+    }
+
+    // Use this to snap the screen to black without waiting for a lerp
+    public void SetImmediateBlack()
+    {
+        if (fadeImage != null)
+        {
+            Color c = fadeImage.color;
+            c.a = 1f;
+            fadeImage.color = c;
+        }
     }
 }
+

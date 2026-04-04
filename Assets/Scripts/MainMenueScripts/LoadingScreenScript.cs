@@ -27,7 +27,7 @@ public class LoadingScreenScript : MonoBehaviour
 
     IEnumerator LoadSceneAsync()
     {   
-        yield return new WaitForSeconds(20f); // nur zum Testen
+        yield return new WaitForSeconds(4f); // nur zum Testen
         yield return new WaitForEndOfFrame();
 
         AsyncOperation operation = SceneManager.LoadSceneAsync(
@@ -45,11 +45,15 @@ public class LoadingScreenScript : MonoBehaviour
             yield return null;
         }
 
-        
+                
         Scene targetScene = SceneManager.GetSceneByBuildIndex(LoadingManager.sceneToLoad);
         SceneManager.SetActiveScene(targetScene);
 
         SceneManager.UnloadSceneAsync("LoadingScreen");
+
+        //Player Freeze + Abgedunkelter bildschirm
+
+        //Shader abspielen
     }
 
     IEnumerator ShowTips()
