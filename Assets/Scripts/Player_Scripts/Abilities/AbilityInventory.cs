@@ -59,6 +59,30 @@ public class AbilityInventory : MonoBehaviour
         return unlockedAbilities.Contains(ability);
     }
 
+    public bool SelectAbility(AbilityType ability)
+    {
+        if (ability == AbilityType.None)
+        {
+            SetCurrentAbility(-1);
+            return true;
+        }
+
+        if (!unlockedAbilities.Contains(ability))
+        {
+            return false;
+        }
+
+        int abilityIndex = abilityOrder.IndexOf(ability);
+        if (abilityIndex < 0)
+        {
+            Debug.LogWarning($"Ability {ability} is not in the fixed ability order on {name}.");
+            return false;
+        }
+
+        SetCurrentAbility(abilityIndex);
+        return true;
+    }
+
     public bool RotateNextAbility()
     {
         if (unlockedAbilities.Count == 0 || abilityOrder.Count == 0)
