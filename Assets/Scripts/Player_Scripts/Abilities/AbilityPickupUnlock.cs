@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class AbilityPickupUnlock : MonoBehaviour
 {
-    [SerializeField] private AbilityType abilityToUnlock = AbilityType.Fire;
+    [SerializeField] private AbilityType abilityToUnlock = AbilityType.FireBook;
     [SerializeField] private AbilityInventory abilityInventory;
     [SerializeField] private bool unlockOnTriggerEnter = true;
     [SerializeField] private bool requirePlayerTag = true;
