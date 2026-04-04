@@ -5,25 +5,34 @@ using System.Collections;
 public class SceneTeleporter : MonoBehaviour
 {
     [SerializeField] private string playerTag = "Player";
-    [SerializeField] private int sceneId;
     [SerializeField] private string loadingSceneName = "LoadingScreen";
+    [SerializeField] private int sceneId;
+    
+    // Drag your Canvas (with the ScreenFader script) into this slot in the Inspector
+    [SerializeField] private ScreenFader fader;
 
     private void OnTriggerEnter(Collider other)
-{
-    if (other.CompareTag(playerTag))
     {
-        StartCoroutine(LoadLoadingScene());
+        if (other.CompareTag(playerTag))
+        {
+            StartCoroutine(LoadLoadingScene());
+        }
     }
-}
 
-IEnumerator LoadLoadingScene()
-{
-    LoadingManager.sceneToLoad = sceneId;
+    IEnumerator LoadLoadingScene() 
+    {   
+        LoadingManager.sceneToLoad = sceneId;
+        
 
-    // Bildschirm schwarz machen
-    yield return StartCoroutine(ScreenFader.Instance.Fade(0, 1));
+        if (fader != null) 
+        {
+            fader.FadeToBlack();
+            
+            yield return new WaitForSeconds(fader.fadeDuration);
+        }
 
-    // Szene wechseln (jetzt ist sowieso alles schwarz)
-    SceneManager.LoadScene(loadingSceneName);
-}
+        SceneManager.LoadScene(loadingSceneName);
+
+        yield break; 
+    }
 }
