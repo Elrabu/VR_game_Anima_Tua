@@ -4240,7 +4240,7 @@ PrefabInstance:
       objectReference: {fileID: 148727823}
     - target: {fileID: 114674067102662047, guid: 4fdd749d894885d498e94ea4a2f47ac3, type: 3}
       propertyPath: sceneId
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 114674067102662047, guid: 4fdd749d894885d498e94ea4a2f47ac3, type: 3}
       propertyPath: m_Enabled
