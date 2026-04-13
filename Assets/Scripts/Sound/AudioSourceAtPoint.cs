@@ -3,7 +3,7 @@ using UnityEngine.Audio;
 
 public class AudioSourceAtPoint : MonoBehaviour
 {
-    public void PlayClipAtPointWithFullControl(
+    public static void PlayClipAtPointWithFullControl(
         AudioClip clip,
         Vector3 position,
         AudioMixerGroup mixerGroup,

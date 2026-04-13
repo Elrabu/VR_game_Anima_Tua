@@ -39,8 +39,7 @@ public class BulletScript : MonoBehaviour
 
     void OnTriggerEnter(Collider collision)
     {   
-        AudioSourceAtPoint audio = new AudioSourceAtPoint();
-        audio.PlayClipAtPointWithFullControl(
+        AudioSourceAtPoint.PlayClipAtPointWithFullControl(
             impactClip,
             transform.position,
             sfxMixer,
