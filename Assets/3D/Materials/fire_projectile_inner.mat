@@ -327,6 +327,7 @@ Material:
     - _UseEmissiveIntensity: 1
     - _UseShadowThreshold: 0
     - _WorkflowMode: 1
+    - _XRMotionVectorsPass: 1
     - _ZTestDepthEqualForOpaque: 3
     - _ZTestGBuffer: 4
     - _ZTestModeDistortion: 4
@@ -337,7 +338,7 @@ Material:
     - _Color: {r: 1, g: 0.55449235, b: 0.33018854, a: 1}
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
-    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 1, g: 0.32610533, b: 0, a: 1}
     - _EmissiveColor: {r: 216.01724, g: 80.47698, b: 0, a: 288.4}
     - _EmissiveColorLDR: {r: 0.88031507, g: 0.56484675, b: 0, a: 1}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
