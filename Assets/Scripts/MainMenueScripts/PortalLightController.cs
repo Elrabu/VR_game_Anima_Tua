@@ -42,7 +42,6 @@ public class PortalLightController : MonoBehaviour
 
     void Update()
     {
-        // Wir berechnen das Zentrum inkl. Offset im lokalen Raum
         Vector3 orbitCenter = transform.TransformPoint(visualOffset);
 
         for (int i = 0; i < lights.Length; i++)
@@ -56,8 +55,7 @@ public class PortalLightController : MonoBehaviour
             float localX = Mathf.Cos(currentAngle) * orbitRadius * scaleX;
             float localY = Mathf.Sin(currentAngle) * orbitRadius * scaleY;
 
-            // Wir nutzen transform.right und transform.up, um die Lichter 
-            // IMMER parallel zur Fläche des Objekts auszurichten
+     
             Vector3 worldPos = orbitCenter + (transform.right * localX) + (transform.up * localY);
 
             entry.light.transform.position = worldPos;
