@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class AbilityBookEquipOnSelect : MonoBehaviour
@@ -15,6 +16,11 @@ public class AbilityBookEquipOnSelect : MonoBehaviour
 
     private GameObject equippedBook;
 
+    public GameObject EquippedBook => equippedBook;
+    public bool IsEquippedInRightHand => equipInRightHand;
+
+    public event Action<GameObject, bool> OnBookInstanceChanged;
+
     public void SetPreferredHand(bool preferRightHand)
     {
         equipInRightHand = preferRightHand;
@@ -23,6 +29,8 @@ public class AbilityBookEquipOnSelect : MonoBehaviour
         {
             EquipBook();
         }
+
+        NotifyBookStateChanged();
     }
 
     private void Reset()
@@ -86,13 +94,21 @@ public class AbilityBookEquipOnSelect : MonoBehaviour
         {
             equippedBook.transform.SetParent(targetHand, false);
             ApplyLocalTransform(equippedBook.transform);
+            NotifyBookStateChanged();
             return;
         }
 
         equippedBook = Instantiate(fireBookPrefab, targetHand);
         equippedBook.name = "book";
 
+        OpenCloseBook[] legacyBookControllers = equippedBook.GetComponentsInChildren<OpenCloseBook>(true);
+        for (int i = 0; i < legacyBookControllers.Length; i++)
+        {
+            legacyBookControllers[i].enabled = false;
+        }
+
         ApplyLocalTransform(equippedBook.transform);
+        NotifyBookStateChanged();
     }
 
     private void UnequipBook()
@@ -104,6 +120,7 @@ public class AbilityBookEquipOnSelect : MonoBehaviour
 
         Destroy(equippedBook);
         equippedBook = null;
+        NotifyBookStateChanged();
     }
 
     private void ApplyLocalTransform(Transform target)
@@ -111,5 +128,10 @@ public class AbilityBookEquipOnSelect : MonoBehaviour
         target.localPosition = localPosition;
         target.localRotation = Quaternion.Euler(localRotationEuler);
         target.localScale = localScale;
+    }
+
+    private void NotifyBookStateChanged()
+    {
+        OnBookInstanceChanged?.Invoke(equippedBook, equipInRightHand);
     }
 }

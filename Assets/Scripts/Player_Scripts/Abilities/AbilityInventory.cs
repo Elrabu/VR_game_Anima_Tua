@@ -7,10 +7,13 @@ public class AbilityInventory : MonoBehaviour
     [SerializeField] private List<AbilityType> abilityOrder = new List<AbilityType>
     {
         AbilityType.FireBook,
+        AbilityType.Teleport,
         AbilityType.TractorBeam,
     };
 
     [SerializeField] private List<AbilityType> startUnlocked = new List<AbilityType>();
+    [SerializeField] private bool includeNoneInRotation = true;
+    [SerializeField] private bool autoRemoveDuplicateAbilities = false;
 
     private readonly HashSet<AbilityType> unlockedAbilities = new HashSet<AbilityType>();
     private int currentIndex = -1;
@@ -91,26 +94,35 @@ public class AbilityInventory : MonoBehaviour
             return false;
         }
 
-        int startIndex = currentIndex;
-
-        for (int offset = 1; offset <= abilityOrder.Count; offset++)
+        List<int> availableIndices = new List<int>();
+        for (int i = 0; i < abilityOrder.Count; i++)
         {
-            int candidateIndex = (currentIndex + offset + abilityOrder.Count) % abilityOrder.Count;
-            AbilityType candidate = abilityOrder[candidateIndex];
-
-            if (unlockedAbilities.Contains(candidate))
+            if (unlockedAbilities.Contains(abilityOrder[i]))
             {
-                SetCurrentAbility(candidateIndex);
-                return true;
+                availableIndices.Add(i);
             }
         }
 
-        if (startIndex < 0)
+        if (includeNoneInRotation)
         {
-            SetCurrentAbility(-1);
+            availableIndices.Add(-1);
         }
 
-        return false;
+        if (availableIndices.Count == 0)
+        {
+            SetCurrentAbility(-1);
+            return false;
+        }
+
+        int currentToken = CurrentAbility == AbilityType.None ? -1 : currentIndex;
+        int currentPosition = availableIndices.IndexOf(currentToken);
+        int nextPosition = (currentPosition + 1 + availableIndices.Count) % availableIndices.Count;
+        int nextToken = availableIndices[nextPosition];
+
+        AbilityType before = CurrentAbility;
+        SetCurrentAbility(nextToken);
+
+        return before != CurrentAbility;
     }
 
     private void InitializeUnlockedAbilities()
@@ -166,21 +178,41 @@ public class AbilityInventory : MonoBehaviour
 
     private void OnValidate()
     {
-        for (int i = abilityOrder.Count - 1; i >= 0; i--)
+        if (abilityOrder == null)
         {
-            if (abilityOrder[i] == AbilityType.None)
-            {
-                abilityOrder.RemoveAt(i);
-            }
+            abilityOrder = new List<AbilityType>();
+            return;
+        }
+
+        if (!autoRemoveDuplicateAbilities)
+        {
+            return;
         }
 
         HashSet<AbilityType> seen = new HashSet<AbilityType>();
         for (int i = abilityOrder.Count - 1; i >= 0; i--)
         {
-            if (!seen.Add(abilityOrder[i]))
+            AbilityType current = abilityOrder[i];
+            if (current == AbilityType.None)
+            {
+                continue;
+            }
+
+            if (!seen.Add(current))
             {
                 abilityOrder.RemoveAt(i);
             }
         }
+    }
+
+    [ContextMenu("Reset Ability Order To Defaults")]
+    private void ResetAbilityOrderToDefaults()
+    {
+        abilityOrder = new List<AbilityType>
+        {
+            AbilityType.FireBook,
+            AbilityType.Teleport,
+            AbilityType.TractorBeam,
+        };
     }
 }
