@@ -17,8 +17,13 @@ public class AnimateHandOnInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float trigger = triggerValue.action.ReadValue<float>();
-        float grip = gripValue.action.ReadValue<float>();
+        if (handAnimator == null)
+        {
+            return;
+        }
+
+        float trigger = triggerValue.action != null ? triggerValue.action.ReadValue<float>() : 0f;
+        float grip = gripValue.action != null ? gripValue.action.ReadValue<float>() : 0f;
 
         handAnimator.SetFloat("Trigger", trigger);
         handAnimator.SetFloat("Grip", grip);
