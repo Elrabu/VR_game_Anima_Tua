@@ -5,6 +5,8 @@ public class GateOpener : MonoBehaviour
     [SerializeField] private Transform gateTransform;
     [SerializeField] private float openOffsetY = 1.5f;
     [SerializeField] private AudioSource gateAudioSource;
+    [SerializeField] private Rigidbody leverRigidbody;
+    [SerializeField] private AudioSource leverAudioSource;
 
     private bool isOpen;
 
@@ -20,6 +22,16 @@ public class GateOpener : MonoBehaviour
         if (gateAudioSource != null)
         {
             gateAudioSource.Play();
+        }
+
+        if (leverAudioSource != null)
+        {
+            leverAudioSource.Play();
+        }
+
+        if (leverRigidbody != null)
+        {
+            leverRigidbody.isKinematic = true;
         }
 
         isOpen = true;
