@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Filtering;
 
-public class PlateSocketScript : MonoBehaviour, IXRSelectFilter
+public class PlateSocketScript : MonoBehaviour//, IXRSelectFilter
 {
     [SerializeField] private UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor socket;
     [SerializeField] private DinerQuestController questController;
@@ -13,6 +13,7 @@ public class PlateSocketScript : MonoBehaviour, IXRSelectFilter
     public bool filledplate => plate;
     public bool canProcess => isActiveAndEnabled;
 
+    /*
     public bool Process(UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor interactor, UnityEngine.XR.Interaction.Toolkit.Interactables.IXRSelectInteractable interactable)
     {
         // Nur XRGrabInteractables prüfen
@@ -30,7 +31,7 @@ public class PlateSocketScript : MonoBehaviour, IXRSelectFilter
 
         return true;
     }
-
+    
     private void Awake()
     {
         // Filter beim Socket registrieren
@@ -40,7 +41,7 @@ public class PlateSocketScript : MonoBehaviour, IXRSelectFilter
     private void OnDestroy()
     {
         socket.selectFilters.Remove(this);
-    }
+    }*/
 
     private void OnEnable()
     {
