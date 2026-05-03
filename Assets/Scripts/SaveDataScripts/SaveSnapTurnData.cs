@@ -1,37 +1,57 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.XR.Interaction.Toolkit.Locomotion.Turning;
 
 public class SaveSnapTurnData : MonoBehaviour
 {
-    private bool snapTurn = false;
+    private bool snapTurn;
     [SerializeField] private Toggle toggle;
-    [SerializeField] private Toggle Continuoustoggle;
-    [SerializeField] private GameObject snapturnProvider;
+    [SerializeField] private Toggle continuousToggle;
+    [SerializeField] private SnapTurnProvider snapTurnProvider;
+    [SerializeField] private ContinuousTurnProvider continuousTurnProvider;
+
     public void Start()
     {
         SaveData.Instance.LoadFromJson();
-        if (SaveData.Instance.settings.snapTurnEnabled)
+
+        snapTurn = SaveData.Instance.settings.snapTurnEnabled;
+
+        if (toggle != null)
         {
-            toggle.isOn = true;
+            toggle.isOn = snapTurn;
         }
+
+        SetTurnProviders(snapTurn, SaveData.Instance.settings.continuousTurnEnabled);
     }
-     public void ChangeSnapTurn()
+
+    public void ChangeSnapTurn()
     {
-        if (snapTurn)
+        snapTurn = !snapTurn;
+
+        SaveData.Instance.settings.snapTurnEnabled = snapTurn;
+        SaveData.Instance.settings.continuousTurnEnabled = false;
+        SaveData.Instance.SaveToJson();
+
+        if (continuousToggle != null)
         {
-            snapTurn = false;
-            snapturnProvider.SetActive(false);
-            SaveData.Instance.settings.snapTurnEnabled = false;
-            SaveData.Instance.SaveToJson();
-            Debug.Log("disabledSnapTurn");
-        } else
+            continuousToggle.isOn = false;
+        }
+
+        SetTurnProviders(snapTurn, false);
+
+        Debug.Log(snapTurn ? "enabledSnapTurn" : "disabledSnapTurn");
+    }
+
+    private void SetTurnProviders(bool snapEnabled, bool continuousEnabled)
+    {
+        if (snapTurnProvider != null)
         {
-            snapTurn = true;
-            snapturnProvider.SetActive(true);
-            Continuoustoggle.isOn = false;
-            SaveData.Instance.settings.snapTurnEnabled = true;
-            SaveData.Instance.SaveToJson();
-            Debug.Log("enabledSnapTurn");
+            snapTurnProvider.enabled = snapEnabled;
+        }
+
+        if (continuousTurnProvider != null)
+        {
+            continuousTurnProvider.enabled = continuousEnabled;
         }
     }
 }

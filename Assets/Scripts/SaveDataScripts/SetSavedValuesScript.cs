@@ -1,40 +1,97 @@
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit.Locomotion.Turning;
 
 public class SetSavedValuesScript : MonoBehaviour
 {
     [SerializeField] private GameObject snapVignette;
     [SerializeField] private GameObject continuousVignette;
     [SerializeField] private GameObject vignette;
-    [SerializeField] private GameObject snapturnProvider;
-    [SerializeField] private GameObject continuousturnProvider;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] private SnapTurnProvider snapTurnProvider;
+    [SerializeField] private ContinuousTurnProvider continuousTurnProvider;
+
     void Start()
     {
         SaveData.Instance.LoadFromJson();
-        //Debug.Log("Loaded verry nice :D");
 
-        if (SaveData.Instance.settings.continuousTurnEnabled){
-            snapturnProvider.SetActive(false);
-            continuousturnProvider.SetActive(true);
-        } else if (SaveData.Instance.settings.snapTurnEnabled)
+        ApplyTurnSettings();
+        ApplyVignetteSettings();
+    }
+
+    private void ApplyTurnSettings()
+    {
+        if (SaveData.Instance.settings.continuousTurnEnabled)
         {
-            snapturnProvider.SetActive(true);
-            continuousturnProvider.SetActive(false);
-        } else
-        {
-            snapturnProvider.SetActive(false);
-            continuousturnProvider.SetActive(false);
+            SetTurnProviders(false, true);
+            return;
         }
 
-        if (SaveData.Instance.settings.tunnelingVignetteEnabled && SaveData.Instance.settings.continuousTurnEnabled)
+        if (SaveData.Instance.settings.snapTurnEnabled)
         {
-            continuousVignette.SetActive(true);
-        } else if (SaveData.Instance.settings.tunnelingVignetteEnabled && SaveData.Instance.settings.snapTurnEnabled)
+            SetTurnProviders(true, false);
+            return;
+        }
+
+        SetTurnProviders(false, false);
+    }
+
+    private void SetTurnProviders(bool snapEnabled, bool continuousEnabled)
+    {
+        if (snapTurnProvider != null)
         {
-            snapVignette.SetActive(true);
-        } else if (SaveData.Instance.settings.tunnelingVignetteEnabled)
+            snapTurnProvider.enabled = snapEnabled;
+        }
+
+        if (continuousTurnProvider != null)
+        {
+            continuousTurnProvider.enabled = continuousEnabled;
+        }
+    }
+
+    private void ApplyVignetteSettings()
+    {
+        if (snapVignette != null)
+        {
+            snapVignette.SetActive(false);
+        }
+
+        if (continuousVignette != null)
+        {
+            continuousVignette.SetActive(false);
+        }
+
+        if (vignette != null)
+        {
+            vignette.SetActive(false);
+        }
+
+        if (!SaveData.Instance.settings.tunnelingVignetteEnabled)
+        {
+            return;
+        }
+
+        if (vignette != null)
         {
             vignette.SetActive(true);
+        }
+
+        if (SaveData.Instance.settings.continuousTurnEnabled)
+        {
+            if (continuousVignette != null)
+            {
+                continuousVignette.SetActive(true);
+            }
+
+            return;
+        }
+
+        if (SaveData.Instance.settings.snapTurnEnabled)
+        {
+            if (snapVignette != null)
+            {
+                snapVignette.SetActive(true);
+            }
+
+            return;
         }
     }
 }
