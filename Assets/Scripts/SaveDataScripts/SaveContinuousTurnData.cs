@@ -1,38 +1,57 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.XR.Interaction.Toolkit.Locomotion.Turning;
 
 public class SaveContinuousTurnData : MonoBehaviour
 {
-    private bool continuousTurn = false;
+    private bool continuousTurn;
     [SerializeField] private Toggle toggle;
-    [SerializeField] private Toggle snaptoggle;
-    [SerializeField] private GameObject continuousturnProvider;
+    [SerializeField] private Toggle snapToggle;
+    [SerializeField] private ContinuousTurnProvider continuousTurnProvider;
+    [SerializeField] private SnapTurnProvider snapTurnProvider;
+
     public void Start()
     {
         SaveData.Instance.LoadFromJson();
-        if (SaveData.Instance.settings.continuousTurnEnabled)
+
+        continuousTurn = SaveData.Instance.settings.continuousTurnEnabled;
+
+        if (toggle != null)
         {
-            toggle.isOn = true;
+            toggle.isOn = continuousTurn;
         }
+
+        SetTurnProviders(SaveData.Instance.settings.snapTurnEnabled, continuousTurn);
     }
+
     public void ChangeContinuousTurn()
     {
-        if (continuousTurn)
+        continuousTurn = !continuousTurn;
+
+        SaveData.Instance.settings.continuousTurnEnabled = continuousTurn;
+        SaveData.Instance.settings.snapTurnEnabled = false;
+        SaveData.Instance.SaveToJson();
+
+        if (snapToggle != null)
         {
-            continuousTurn = false;
-            continuousturnProvider.SetActive(false);
-            SaveData.Instance.settings.continuousTurnEnabled = false;
-            SaveData.Instance.SaveToJson();
-            Debug.Log("disabledContinuousTurn");
+            snapToggle.isOn = false;
         }
-        else
+
+        SetTurnProviders(false, continuousTurn);
+
+        Debug.Log(continuousTurn ? "enabledContinuousTurn" : "disabledContinuousTurn");
+    }
+
+    private void SetTurnProviders(bool snapEnabled, bool continuousEnabled)
+    {
+        if (snapTurnProvider != null)
         {
-            continuousTurn = true;
-            continuousturnProvider.SetActive(true);
-            snaptoggle.isOn = false;
-            SaveData.Instance.settings.continuousTurnEnabled = true;
-            SaveData.Instance.SaveToJson();
-            Debug.Log("enabledContinuousTurn");
+            snapTurnProvider.enabled = snapEnabled;
+        }
+
+        if (continuousTurnProvider != null)
+        {
+            continuousTurnProvider.enabled = continuousEnabled;
         }
     }
 }
