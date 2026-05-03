@@ -13,6 +13,7 @@ public class PlateSocketScript : MonoBehaviour, IXRSelectFilter
     public bool filledplate => plate;
     public bool canProcess => isActiveAndEnabled;
 
+    
     public bool Process(UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor interactor, UnityEngine.XR.Interaction.Toolkit.Interactables.IXRSelectInteractable interactable)
     {
         // Nur XRGrabInteractables prüfen
@@ -30,7 +31,7 @@ public class PlateSocketScript : MonoBehaviour, IXRSelectFilter
 
         return true;
     }
-
+    
     private void Awake()
     {
         // Filter beim Socket registrieren
