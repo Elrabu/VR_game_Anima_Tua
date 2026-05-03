@@ -4250,6 +4250,10 @@ PrefabInstance:
       propertyPath: fader
       value: 
       objectReference: {fileID: 148727823}
+    - target: {fileID: 114674067102662047, guid: 4fdd749d894885d498e94ea4a2f47ac3, type: 3}
+      propertyPath: sceneId
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 167640887165981489, guid: 4fdd749d894885d498e94ea4a2f47ac3, type: 3}
       propertyPath: m_Name
       value: Portal
@@ -4293,6 +4297,10 @@ PrefabInstance:
     - target: {fileID: 5926033488363283477, guid: 4fdd749d894885d498e94ea4a2f47ac3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9175094607336698363, guid: 4fdd749d894885d498e94ea4a2f47ac3, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8944,6 +8952,9 @@ MonoBehaviour:
   bulletPrefab: {fileID: 5380251738750858116, guid: 1ee6a16c5736e3d4091647954b3c858c, type: 3}
   spawnPoint: {fileID: 21397509723774694}
   secondsBetweenShoot: 0.5
+  pressedThreshold: 0.5
+  autoEnableShootAction: 1
+  verboseDebug: 0
 --- !u!1 &1406621151274873386
 GameObject:
   m_ObjectHideFlags: 0
@@ -9538,6 +9549,9 @@ MonoBehaviour:
   bulletPrefab: {fileID: 5380251738750858116, guid: 1ee6a16c5736e3d4091647954b3c858c, type: 3}
   spawnPoint: {fileID: 5581092665921242302}
   secondsBetweenShoot: 0.5
+  pressedThreshold: 0.5
+  autoEnableShootAction: 1
+  verboseDebug: 0
 --- !u!1 &1956537792643410199
 GameObject:
   m_ObjectHideFlags: 0
