@@ -33376,6 +33376,10 @@ PrefabInstance:
       propertyPath: m_InnerSpotPercent
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 4761335881790277480, guid: 4fdd749d894885d498e94ea4a2f47ac3, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5163415071645464032, guid: 4fdd749d894885d498e94ea4a2f47ac3, type: 3}
       propertyPath: m_Version
       value: 15
@@ -44384,8 +44388,8 @@ MonoBehaviour:
   snapVignette: {fileID: 8607066760965884185}
   continuousVignette: {fileID: 3612589408836201090}
   vignette: {fileID: 2136018387369901681}
-  snapturnProvider: {fileID: 3582739866231898852}
-  continuousturnProvider: {fileID: 2667140127156230041}
+  snapTurnProvider: {fileID: 0}
+  continuousTurnProvider: {fileID: 0}
 --- !u!4 &1953954858
 Transform:
   m_ObjectHideFlags: 0
