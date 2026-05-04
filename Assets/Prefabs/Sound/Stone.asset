@@ -17,11 +17,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   footstepClips:
-  - {fileID: 8300000, guid: 537ecef5dbad3d948a9ae178d11c33ac, type: 3}
-  - {fileID: 8300000, guid: 8c2e7b5786995f7448b122f1f975bafc, type: 3}
-  - {fileID: 8300000, guid: 6eba32d11d6702345973bf193b50b0f3, type: 3}
-  - {fileID: 8300000, guid: d7bb6fbc3db00a440b76e5c9e6787ec1, type: 3}
-  - {fileID: 8300000, guid: 758c04f76084a9e4788598229752475f, type: 3}
-  - {fileID: 8300000, guid: 5307b8cfcb547a84f9a1aab1791cac12, type: 3}
+  - {fileID: 8300000, guid: c9d05ffc2e3b2754991cb9891bcd0c78, type: 3}
+  - {fileID: 8300000, guid: 556a91bcb6f1b2e4b809d56595ddda5f, type: 3}
+  - {fileID: 8300000, guid: 7ca5037dfe92d634a92f985c9e0320c1, type: 3}
   volumeRange: {x: 0.8, y: 1}
   pitchRange: {x: 0.9, y: 1.1}
